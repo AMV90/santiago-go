@@ -1,0 +1,686 @@
+/* Combate — clásico limpio, modal grande, menú baixo do campo */
+
+#battle-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgba(10, 14, 24, 0.88);
+}
+
+#battle-overlay.hidden {
+  display: none;
+}
+
+.battle-screen {
+  width: min(720px, 100%);
+  max-height: 96vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #1a1a1a;
+  background: #8cb870;
+  border: 3px solid #2d3436;
+  border-radius: 8px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+}
+
+.battle--bandit .battle-field,
+.battle--bandit.battle-phase-presentation {
+  background: linear-gradient(180deg, #c4a882 0%, #a89068 100%);
+}
+
+.battle--clergy .battle-field,
+.battle--clergy.battle-phase-presentation {
+  background: linear-gradient(180deg, #e8e0d0 0%, #c8b898 55%, #a89878 100%);
+}
+
+.battle--clergy .presentation-card {
+  border-color: #8b7355;
+  background: #faf8f4;
+}
+
+.battle--clergy .presentation-quote-box {
+  background: #f5f0e8;
+  border-color: #8b7355;
+}
+
+/* ── Campo (máis alto, máis espazo entre rival e xogador) ── */
+.battle-field {
+  position: relative;
+  flex: 0 0 auto;
+  height: min(42vh, 300px);
+  min-height: 260px;
+  background: linear-gradient(180deg, #a8d898 0%, #88c070 50%, #78b060 100%);
+  border-bottom: 3px solid #2d3436;
+}
+
+.enemy-hud {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  z-index: 3;
+  max-width: 44%;
+}
+
+.enemy-slot {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  z-index: 2;
+}
+
+.player-slot {
+  position: absolute;
+  bottom: 6%;
+  left: 3%;
+  z-index: 2;
+}
+
+.player-hud {
+  position: absolute;
+  bottom: 8%;
+  right: 3%;
+  z-index: 3;
+  max-width: 50%;
+}
+
+.battle-char-slot::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20%;
+  background: radial-gradient(ellipse, #5a9848 0%, transparent 72%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.battle--bandit .battle-char-slot::before {
+  background: radial-gradient(ellipse, #6a5840 0%, transparent 72%);
+}
+
+.enemy-slot .battle-char {
+  width: 100px;
+  height: 100px;
+}
+
+.player-slot .battle-char {
+  width: 108px;
+  height: 108px;
+}
+
+.battle-char-img {
+  width: 92px;
+  height: 92px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  animation: battle-idle 2.5s ease-in-out infinite;
+}
+
+.player-slot .battle-char-img {
+  width: 100px;
+  height: 100px;
+}
+
+.battle-char-shadow {
+  display: none;
+}
+
+@keyframes battle-idle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes battle-attack-lunge {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(var(--lunge-x, 12px), -6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.battle-char-player .battle-char-img.battle-attack-flash {
+  --lunge-x: 16px;
+  animation: battle-attack-lunge 0.35s ease-out;
+}
+
+.battle-char-enemy .battle-char-img.battle-attack-flash {
+  --lunge-x: -16px;
+  animation: battle-attack-lunge 0.35s ease-out;
+}
+
+/* ── Caixas PS ─────────────────────────────────────── */
+.poke-box {
+  background: #f8f0d0;
+  border: 2px solid #505050;
+  border-radius: 10px;
+  padding: 7px 11px 9px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.hud-name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 5px;
+}
+
+.hud-name {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hud-level {
+  font-size: 13px;
+  font-weight: 600;
+  color: #404040;
+}
+
+.hp-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-hud .hp-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.hp-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffe070;
+  background: #e85050;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.hp-bar {
+  flex: 1;
+  height: 9px;
+  min-width: 72px;
+  background: #404040;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hp-fill {
+  height: 100%;
+  background: #f8e030;
+  transition: width 0.3s ease;
+}
+
+.hp-bar.hp-high .hp-fill {
+  background: #58d854;
+}
+
+.hp-bar.hp-mid .hp-fill {
+  background: #f8e030;
+}
+
+.hp-bar.hp-low .hp-fill {
+  background: #f85858;
+}
+
+.hp-numbers {
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #ffe070;
+  text-shadow: 1px 1px 0 #404040;
+}
+
+.hp-sep {
+  margin: 0 1px;
+}
+
+/* Barra EXP (só xogador, baixo PS — estilo Pokémon) */
+.exp-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(80, 80, 80, 0.2);
+}
+
+.exp-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #3868b0;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.exp-bar {
+  flex: 1;
+  height: 4px;
+  min-width: 48px;
+  background: #404040;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.exp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5098f8, #70b8ff);
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+/* ── Baixo: mensaxe + menú DEBAIXO do canvas ────────── */
+.battle-bottom {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background: #2d3436;
+  border-top: 3px solid #2d3436;
+}
+
+.battle-console {
+  padding: 12px 16px;
+  min-height: 56px;
+  background: linear-gradient(180deg, #3858a8 0%, #284080 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #1a2030;
+}
+
+.battle-console p {
+  margin: 0;
+}
+
+.battle-console strong {
+  font-weight: 700;
+}
+
+.battle-command-panel {
+  padding: 8px 10px 10px;
+  background: #ececec;
+}
+
+.battle-actions-locked .battle-menu-btn:not([data-action='flee']) {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Barra de accións compacta */
+.battle-menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.battle-menu-btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #fff;
+  border: 2px solid #707070;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 12px;
+  text-align: center;
+  transition: background 0.12s ease, transform 0.1s ease;
+}
+
+.battle-menu-btn:hover:not(:disabled) {
+  background: #f0f6ff;
+}
+
+.battle-menu-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.battle-menu-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Pelexar: tamaño medio, destaque suave */
+.battle-menu-btn--fight {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 200px;
+  background: linear-gradient(180deg, #fff 0%, #f0e8e0 100%);
+  border-color: #c05050;
+  color: #8b2020;
+}
+
+.battle-menu-btn--fight:hover:not(:disabled) {
+  background: linear-gradient(180deg, #fff8f8 0%, #ffe8e8 100%);
+}
+
+/* Obxecto: compacto */
+.battle-menu-btn--item {
+  flex: 0 1 120px;
+  font-size: 12px;
+  padding: 8px 10px;
+  background: #f8f8f8;
+}
+
+/* Fuxir: máis pequeno, cor distinta */
+.battle-menu-btn--flee {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  background: #fff8e0;
+  border-color: #c9a020;
+  color: #6a5010;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.battle-menu-btn--flee:hover:not(:disabled) {
+  background: #ffefb8;
+  border-color: #a88010;
+}
+
+.battle-menu-btn--ghost {
+  font-size: 11px;
+  padding: 6px 10px;
+  background: #e0e0e0;
+  border-color: #909090;
+}
+
+.battle-menu-btn--wide {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  flex: none;
+}
+
+/* Submenús */
+.battle-submenu {
+  width: 100%;
+}
+
+.battle-submenu-title {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #505050;
+  letter-spacing: 0.06em;
+}
+
+.battle-menu-moves {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.battle-menu-btn--move {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  padding: 7px 9px;
+  text-transform: none;
+}
+
+.move-btn .pp {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  color: #606060;
+  margin-top: 2px;
+}
+
+.battle-submenu-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.battle-submenu-footer .battle-menu-btn--flee {
+  margin-left: 0;
+}
+
+/* ── Presentación previa (estilo Pokémon) ──────────── */
+.battle-phase-presentation {
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  background: linear-gradient(180deg, #a8d898 0%, #88c070 100%);
+  cursor: pointer;
+}
+
+.battle-presentation-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem 1rem;
+  min-height: 240px;
+  outline: none;
+}
+
+.presentation-flash {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 0 #2d3436, 2px 2px 0 #2d3436, -1px -1px 0 #2d3436;
+  animation: flash-pop 0.5s ease;
+}
+
+@keyframes flash-pop {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.presentation-rival {
+  margin-bottom: 1rem;
+}
+
+.presentation-rival .battle-char {
+  width: 120px;
+  height: 120px;
+}
+
+.presentation-rival .battle-char-img {
+  width: 112px;
+  height: 112px;
+  animation: battle-idle 2s ease-in-out infinite;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+
+.presentation-card {
+  text-align: center;
+  max-width: 90%;
+  padding: 12px 18px;
+}
+
+.presentation-line {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.presentation-name {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.presentation-lv {
+  font-size: 14px;
+  font-weight: 700;
+  color: #505050;
+  text-transform: none;
+}
+
+.presentation-role {
+  margin: 0;
+  font-size: 13px;
+  color: #606060;
+  font-style: italic;
+}
+
+.presentation-quote-box {
+  flex-shrink: 0;
+  padding: 14px 16px 12px;
+  background: linear-gradient(180deg, #3858a8 0%, #284080 100%);
+  border-top: 3px solid #2d3436;
+  color: #fff;
+}
+
+.presentation-quote {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.presentation-hint {
+  margin: 0 0 8px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.presentation-timer {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.presentation-timer-bar {
+  height: 100%;
+  width: 0;
+  background: #ffe070;
+  border-radius: 2px;
+  animation: timer-fill 3s linear forwards;
+}
+
+@keyframes timer-fill {
+  to {
+    width: 100%;
+  }
+}
+
+/* ── Resultado ─────────────────────────────────────── */
+.battle-phase-result {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: #f8f0d0;
+}
+
+.battle-result p {
+  margin: 0 0 1.25rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.battle-result-win p {
+  color: #2d6a2d;
+}
+
+.battle-result-fled p {
+  color: #6a5a20;
+}
+
+.battle-result-lose p {
+  color: #8b2020;
+}
+
+/* Legacy */
+.battle-dock,
+.battle-menu-grid,
+.battle-chrome,
+.battle-lv-badge,
+.hp-text {
+  display: none;
+}
+
+.player-stats-hud {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 0.35rem 0.45rem;
+  background: rgba(12, 16, 22, 0.82);
+  border: 2px solid rgba(244, 211, 94, 0.75);
+  border-radius: 8px;
+  pointer-events: none;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  max-width: 140px;
+}
+
+@media (max-width: 480px) {
+  .battle-field {
+    min-height: 220px;
+    height: 36vh;
+  }
+
+  .battle-menu-bar {
+    flex-wrap: wrap;
+  }
+
+  .battle-menu-btn--fight {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+
+  .battle-menu-btn--item {
+    flex: 1 1 35%;
+  }
+
+  .battle-menu-btn--flee {
+    flex: 0 0 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}

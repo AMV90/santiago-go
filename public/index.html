@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="gl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santiago Go</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/battle.css" />
+  </head>
+  <body>
+    <div id="login-screen" class="login-screen" role="dialog" aria-labelledby="login-title">
+      <div class="login-card">
+        <h1 id="login-title">Santiago Go</h1>
+        <p class="login-tagline">Santiago de Compostela · multixogador</p>
+        <label for="login-name">O teu nome</label>
+        <input
+          id="login-name"
+          type="text"
+          maxlength="20"
+          placeholder="Peregrino"
+          autocomplete="nickname"
+        />
+        <button type="button" id="login-submit" class="login-btn">Entrar ao xogo</button>
+        <p id="login-server-status" class="login-server-status">Comprobando servidor…</p>
+        <p id="login-error" class="login-error" hidden></p>
+      </div>
+    </div>
+
+    <div id="app-shell" class="app-shell hidden">
+      <header>
+        <h1>Santiago Go</h1>
+        <span id="header-player-name" class="header-player"></span>
+      </header>
+
+      <main>
+        <section id="panel-game">
+          <aside id="player-stats-hud" class="player-stats-hud" aria-live="polite">
+            <img
+              class="hud-portrait"
+              src="assets/battle/player.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <div class="hud-stats-col">
+              <span class="hud-ps" id="hud-hp-text">PS —</span>
+              <div class="hud-xp-bar" aria-hidden="true">
+                <div class="hud-xp-fill" id="hud-xp-fill"></div>
+              </div>
+              <span class="hud-xp-text" id="hud-xp-text">XP —</span>
+            </div>
+          </aside>
+          <div id="game-container"></div>
+          <div id="game-minimap" class="game-minimap" title="~10 km ao redor de ti">
+            <span class="minimap-label">10 km</span>
+            <canvas id="minimap-canvas" width="128" height="128"></canvas>
+          </div>
+          <button
+            type="button"
+            id="toggle-nametags"
+            class="nametags-toggle"
+            aria-pressed="false"
+            title="Amosar ou ocultar nomes dos outros xogadores"
+          >
+            Mostrar nomes
+          </button>
+          <div class="hud" id="hud-location">WASD · Clic mapa · Espazo: cidadáns · Enter chat · M: desconectar · E: combate</div>
+        </section>
+      </main>
+    </div>
+
+    <div id="battle-overlay" class="hidden" aria-hidden="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

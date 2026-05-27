@@ -1,0 +1,12 @@
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: santiago-go
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

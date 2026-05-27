@@ -1,0 +1,26 @@
+{
+  "name": "santiago-go",
+  "version": "0.2.0",
+  "private": true,
+  "description": "RPG 2D estilo Pokémon en Santiago de Compostela (multixogador)",
+  "scripts": {
+    "build:map": "node scripts/build-map-data.mjs",
+    "sprites": "node scripts/generate-example-sprites.mjs",
+    "sprites:battle": "node scripts/generate-battle-sprites.mjs",
+    "dev": "npx --yes serve public -l 5173",
+    "dev:full": "npm run build:map && npm run dev",
+    "play": "node server/index.js",
+    "start": "npm run play"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "pngjs": "^7.0.0"
+  }
+}
