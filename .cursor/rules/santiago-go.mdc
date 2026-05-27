@@ -1,0 +1,32 @@
+---
+description: Contexto Santiago Go, convenciones y flujo de trabajo
+alwaysApply: true
+---
+
+# Santiago Go — reglas del proyecto
+
+Al iniciar una tarea en este repo, **lee primero** `docs/CONTEXTO-PROYECTO.md` (mapa de arquitectura, Render, APIs, archivos clave).
+
+## Esencia
+
+- RPG 2D Phaser en Santiago de Compostela; **servidor Node** (`server/`) + cliente (`public/`).
+- Juego completo: `npm run play` → **http://localhost:3000** (no solo `:5173`).
+- Producción: https://santiago-go.onrender.com — Start: `node server/index.js`.
+- Repo GitHub: **AMV90/santiago-go** (no confundir con AMV90/SGO).
+
+## Convenciones
+
+- Responder al usuario en **español**.
+- Cambios mínimos; seguir estilo del código existente.
+- Tras implementar cambios: **commit + push a `main`** (salvo que el usuario pida no subir).
+- No tocar `git config`; no force-push a main.
+
+## Backend vs frontend
+
+- **Clic en mapa / rutas / bootstrap / A*** → servidor (`street-graph.js`, `map-service.js`).
+- **WASD, dibujo, combate UI, animaciones** → navegador (`game.js`, `movement-controller.js`).
+- `Map.values()` no tiene `.map` en Node → usar `Array.from()`.
+
+## Interiores
+
+Patrón: `public/js/interiors/layouts/` + `places/` → `places/index.js`.
