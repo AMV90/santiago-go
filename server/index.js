@@ -4,18 +4,19 @@ import { Server } from 'socket.io';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import {
-  initMapService,
+  startMapServiceAsync,
   getBootstrap,
   getStreetsChunk,
   getMinimapStreets,
   findPath,
+  respawnOverworldNpc,
+  isMapReady,
+  getMapInitError,
 } from './map-service.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const PORT = process.env.PORT || 3000;
-
-initMapService();
 
 const app = express();
 const httpServer = createServer(app);
@@ -25,8 +26,24 @@ const io = new Server(httpServer, {
 
 app.use(express.json({ limit: '32kb' }));
 
+app.get('/api/health', (_req, res) => {
+  if (getMapInitError()) {
+    return res.status(500).json({ ok: false, error: getMapInitError().message });
+  }
+  if (!isMapReady()) {
+    return res.status(503).json({ ok: false, status: 'loading' });
+  }
+  res.json({ ok: true, status: 'ready' });
+});
+
 /** API do xogo — o cliente non descarga map-data.json */
 app.get('/api/bootstrap', (_req, res) => {
+  if (getMapInitError()) {
+    return res.status(500).json({ error: getMapInitError().message });
+  }
+  if (!isMapReady()) {
+    return res.status(503).json({ error: 'Mapa cargando, reintenta en uns segundos' });
+  }
   try {
     res.json(getBootstrap());
   } catch (err) {
@@ -35,6 +52,9 @@ app.get('/api/bootstrap', (_req, res) => {
 });
 
 app.get('/api/streets', (req, res) => {
+  if (!isMapReady()) {
+    return res.status(503).json({ error: 'Mapa cargando' });
+  }
   const x = Number(req.query.x);
   const y = Number(req.query.y);
   const r = Number(req.query.r) || 2400;
@@ -49,6 +69,9 @@ app.get('/api/streets', (req, res) => {
 });
 
 app.get('/api/minimap-streets', (req, res) => {
+  if (!isMapReady()) {
+    return res.status(503).json({ error: 'Mapa cargando' });
+  }
   const x = Number(req.query.x);
   const y = Number(req.query.y);
   const r = Number(req.query.r) || 5000;
@@ -63,6 +86,9 @@ app.get('/api/minimap-streets', (req, res) => {
 });
 
 app.post('/api/path', (req, res) => {
+  if (!isMapReady()) {
+    return res.status(503).json({ error: 'Mapa cargando' });
+  }
   const { fromX, fromY, toX, toY } = req.body || {};
   if ([fromX, fromY, toX, toY].some((v) => !Number.isFinite(Number(v)))) {
     return res.status(400).json({ error: 'Coordenadas inválidas' });
@@ -95,6 +121,9 @@ app.get('/api/tiles/:z/:x/:y', async (req, res) => {
 });
 
 app.post('/api/respawn-npc', (req, res) => {
+  if (!isMapReady()) {
+    return res.status(503).json({ error: 'Mapa cargando' });
+  }
   const level = Number(req.body?.level);
   const faction = req.body?.faction === 'fontinas' ? 'fontinas' : 'urban';
   const awayFromX = Number(req.body?.awayFromX) || 0;
@@ -206,6 +235,9 @@ function broadcastToZone(zone, event, payload, exceptId = null) {
 }
 
 httpServer.listen(PORT, () => {
-  console.log(`Santiago Go — http://localhost:${PORT}`);
-  console.log('Mapa e rutas no servidor · cliente lixeiro');
+  console.log(`Santiago Go — porto ${PORT}`);
+  console.log('Cargando mapa en segundo plano…');
+  startMapServiceAsync()
+    .then(() => console.log('Mapa listo · API /api/bootstrap dispoñible'))
+    .catch((err) => console.error('Fallo ao cargar mapa:', err.message));
 });

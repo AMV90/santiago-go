@@ -1,6 +1,6 @@
 import { initGame, resizeGame } from './game.js';
 import { initNametagsToggle } from './player-nametags.js';
-import { fetchBootstrap } from './game-api.js';
+import { fetchHealth, isRenderHost } from './game-api.js';
 
 const loginScreen = document.getElementById('login-screen');
 const appShell = document.getElementById('app-shell');
@@ -42,20 +42,37 @@ function showBootLoading(on, text = 'Cargando…', pct = null) {
   wrap.classList.toggle('hidden', !on);
 }
 
+function serverLabel() {
+  if (typeof location === 'undefined') return 'servidor';
+  const host = location.host;
+  return host || 'localhost:3000';
+}
+
 async function pingServer() {
   if (!loginStatus) return false;
-  loginStatus.textContent = 'Comprobando servidor…';
+  const onRender = isRenderHost();
+  loginStatus.textContent = onRender
+    ? 'Despertando servidor en Render (pode tardar 1 min)…'
+    : 'Comprobando servidor…';
   loginStatus.className = 'login-server-status';
+  showLoginError('');
+
   try {
-    await fetchBootstrap();
-    loginStatus.textContent = 'Servidor listo · http://localhost:3000';
+    await fetchHealth();
+    loginStatus.textContent = `Servidor listo · ${serverLabel()}`;
     loginStatus.className = 'login-server-status ok';
     return true;
   } catch (err) {
-    loginStatus.textContent =
-      'Servidor apagado. Na carpeta do xogo executa: npm run play';
+    loginStatus.textContent = onRender
+      ? 'Servidor aínda arrancando ou durmido en Render'
+      : 'Servidor apagado';
     loginStatus.className = 'login-server-status err';
-    showLoginError(err.message || 'Non se puido conectar co servidor.');
+    showLoginError(
+      err.message ||
+        (onRender
+          ? 'Recarga a páxina dentro dun minuto. O plan gratis de Render é lento ao inicio.'
+          : 'Na carpeta do xogo executa: npm run play')
+    );
     return false;
   }
 }
@@ -85,7 +102,7 @@ async function enterGame() {
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(
         () => reject(new Error('Tempo de espera esgotado. Recarga a páxina e tenta de novo.')),
-        90000
+        120000
       );
     });
     await Promise.race([bootPromise, timeoutPromise]);

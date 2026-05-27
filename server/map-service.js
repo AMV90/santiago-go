@@ -29,8 +29,20 @@ let streetGraph = null;
 let streetWalker = null;
 let world = null;
 let wanderPoints = null;
+let mapReady = false;
+let mapInitError = null;
+
+export function isMapReady() {
+  return mapReady;
+}
+
+export function getMapInitError() {
+  return mapInitError;
+}
 
 export function initMapService() {
+  if (mapReady) return;
+  mapInitError = null;
   const mapPath = path.join(root, 'data', 'map-data.json');
   if (!fs.existsSync(mapPath)) {
     const legacy = path.join(root, 'public', 'map-data.json');
@@ -71,6 +83,25 @@ export function initMapService() {
   console.log(
     `Servidor: ${mapData.streets.length} rúas · ${npcs.length} NPC · ${walkBots.length} cidadáns · grafo listo`
   );
+  mapReady = true;
+}
+
+/** Carga o mapa en segundo plano (Render abre o porto antes). */
+export function startMapServiceAsync() {
+  if (mapReady) return Promise.resolve();
+  if (mapInitError) return Promise.reject(mapInitError);
+  return new Promise((resolve, reject) => {
+    setImmediate(() => {
+      try {
+        initMapService();
+        resolve();
+      } catch (err) {
+        mapInitError = err;
+        console.error('Servidor: erro ao cargar mapa', err);
+        reject(err);
+      }
+    });
+  });
 }
 
 export function streetsInRadius(streets, x, y, radiusPx) {
