@@ -59,7 +59,9 @@ export function buildStreetGraph(streets) {
   }
 
   /** @type {Map<number, { id: number, x: number, y: number }>} */
-  const nodesById = new Map(nodeByKey.values().map((n) => [n.id, n]));
+  const nodesById = new Map(
+    Array.from(nodeByKey.values(), (n) => [n.id, n])
+  );
 
   function nearestNodeId(x, y, maxDist = 120) {
     const cx = Math.floor(x / NODE_GRID);
