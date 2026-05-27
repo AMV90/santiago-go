@@ -13,6 +13,12 @@ export function setupMapClickNavigation(scene) {
 
     const cam = scene.cameras.main;
     const world = cam.getWorldPoint(pointer.x, pointer.y);
+
+    if (scene.navClickMarker) scene.navClickMarker.destroy();
+    scene.navClickMarker = scene.add.circle(world.x, world.y, 10, 0xf4d35e, 0.85);
+    scene.navClickMarker.setStrokeStyle(2, 0x2c3e50, 1);
+    scene.navClickMarker.setDepth(25);
+
     requestNavigateTo(scene, world.x, world.y);
   });
 }

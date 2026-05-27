@@ -108,14 +108,21 @@ export function buildStreetGraph(streets) {
       return Math.hypot(n.x - endNode.x, n.y - endNode.y);
     };
 
-    const open = [startId];
+    const open = new MinHeap((id) => fScore.get(id) ?? Infinity);
+    const closed = new Set();
     const cameFrom = new Map();
     const gScore = new Map([[startId, 0]]);
     const fScore = new Map([[startId, h(startId)]]);
+    open.push(startId);
 
-    while (open.length) {
-      open.sort((a, b) => (fScore.get(a) ?? Infinity) - (fScore.get(b) ?? Infinity));
-      const current = open.shift();
+    const MAX_EXPLORE = 32000;
+    let explored = 0;
+
+    while (open.size) {
+      if (++explored > MAX_EXPLORE) return null;
+
+      const current = open.pop();
+      if (closed.has(current)) continue;
       if (current === endId) {
         const ids = [];
         let c = current;
@@ -135,14 +142,16 @@ export function buildStreetGraph(streets) {
         return simplifyPath(waypoints);
       }
 
+      closed.add(current);
       const neighbors = adj.get(current) || [];
       for (const { to, w } of neighbors) {
+        if (closed.has(to)) continue;
         const tg = (gScore.get(current) ?? Infinity) + w;
         if (tg >= (gScore.get(to) ?? Infinity)) continue;
         cameFrom.set(to, current);
         gScore.set(to, tg);
         fScore.set(to, tg + h(to));
-        if (!open.includes(to)) open.push(to);
+        open.push(to);
       }
     }
 
@@ -164,4 +173,59 @@ function simplifyPath(points) {
   }
   out.push(points[points.length - 1]);
   return out;
+}
+
+/** Cola de prioridade mínima para A* (evita open.sort cada iteración). */
+class MinHeap {
+  constructor(scoreFn) {
+    this.data = [];
+    this.scoreFn = scoreFn;
+  }
+
+  get size() {
+    return this.data.length;
+  }
+
+  push(item) {
+    this.data.push(item);
+    this.bubbleUp(this.data.length - 1);
+  }
+
+  pop() {
+    if (!this.data.length) return undefined;
+    const top = this.data[0];
+    const tail = this.data.pop();
+    if (this.data.length) {
+      this.data[0] = tail;
+      this.bubbleDown(0);
+    }
+    return top;
+  }
+
+  bubbleUp(i) {
+    const d = this.data;
+    const score = this.scoreFn;
+    while (i > 0) {
+      const parent = (i - 1) >> 1;
+      if (score(d[i]) >= score(d[parent])) break;
+      [d[i], d[parent]] = [d[parent], d[i]];
+      i = parent;
+    }
+  }
+
+  bubbleDown(i) {
+    const d = this.data;
+    const score = this.scoreFn;
+    const n = d.length;
+    while (true) {
+      const left = i * 2 + 1;
+      const right = left + 1;
+      let smallest = i;
+      if (left < n && score(d[left]) < score(d[smallest])) smallest = left;
+      if (right < n && score(d[right]) < score(d[smallest])) smallest = right;
+      if (smallest === i) break;
+      [d[i], d[smallest]] = [d[smallest], d[i]];
+      i = smallest;
+    }
+  }
 }

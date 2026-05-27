@@ -117,7 +117,11 @@ export function fetchMinimapStreets(x, y, r = 5000) {
 }
 
 export function fetchPath(fromX, fromY, toX, toY) {
-  return apiPost('/api/path', { fromX, fromY, toX, toY });
+  return apiPost(
+    '/api/path',
+    { fromX, fromY, toX, toY },
+    { timeoutMs: 90000 }
+  );
 }
 
 export function fetchRespawnNpc({ level, faction, awayFromX, awayFromY, minDist }) {

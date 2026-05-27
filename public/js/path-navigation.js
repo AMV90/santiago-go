@@ -70,18 +70,29 @@ export function updateNavigationMovement(scene, delta) {
 
 export async function requestNavigateTo(scene, worldX, worldY) {
   if (!scene.player) return;
+  if (scene._pathRequesting) {
+    showNavToast('Xa se calcula unha ruta…');
+    return;
+  }
 
+  scene._pathRequesting = true;
+  showNavToast('Calculando ruta no servidor…');
+
+  const t0 = performance.now();
   try {
     const result = await fetchPath(scene.player.x, scene.player.y, worldX, worldY);
+    const ms = Math.round(performance.now() - t0);
     if (!result.path?.length) {
       showNavToast(result.error || 'Sen ruta');
       return;
     }
     setNavigationPath(scene, result.path, result.destination);
     const dist = pathLength(result.path);
-    showNavToast(`Ruta: ${Math.round(dist)} px`);
+    showNavToast(`Ruta: ${Math.round(dist)} px · ${ms} ms`);
   } catch (err) {
     showNavToast(err.message || 'Erro de ruta');
+  } finally {
+    scene._pathRequesting = false;
   }
 }
 
