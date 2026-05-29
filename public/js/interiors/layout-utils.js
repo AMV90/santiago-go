@@ -23,8 +23,13 @@ export function createLayout({
   colors = {},
   blocked = ['#'],
   entry = { tx: 1, ty: 1 },
+  entryFromUp = null,
+  entryFromDown = null,
   exitChar = 'D',
   drawTileExtra = null,
+  drawOverlay = null,
+  tileset = null,
+  stairLabels = null,
 }) {
   const height = rows.length;
   const width = rows[0]?.length ?? 0;
@@ -61,7 +66,15 @@ export function createLayout({
     isBlocked,
     tileToWorld,
     getEntrySpawn: () => tileToWorld(entry.tx, entry.ty),
+    getSpawnForLink: (via) => {
+      if (via === 'up' && entryFromUp) return tileToWorld(entryFromUp.tx, entryFromUp.ty);
+      if (via === 'down' && entryFromDown) return tileToWorld(entryFromDown.tx, entryFromDown.ty);
+      return tileToWorld(entry.tx, entry.ty);
+    },
     isExitTile: (tx, ty) => getTileAt(tx, ty) === exitChar,
     drawTileExtra,
+    drawOverlay,
+    tileset,
+    stairLabels,
   };
 }

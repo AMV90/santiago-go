@@ -19,8 +19,8 @@ export const HOSPITAL_RECEPTIONIST = {
   counterFrontTy: 5,
   healRange: 52,
   dwellMs: 3000,
-  healedLine: 'Xa estás curado. PS e movementos restaurados.',
-  farewellLine: 'Volve pronto.',
+  healedLine: 'Xa estás curado. PS e movementos restaurados. Non me fagas volver hoxe.',
+  farewellLine: 'Volve pronto… pero non por lo mesmo, que tamén temos retranca.',
   cooldownMs: 6000,
 };
 

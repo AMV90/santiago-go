@@ -189,21 +189,23 @@ function renderPresentation(state) {
 
   overlay.innerHTML = `
     <div class="battle-screen battle-phase-presentation ${factionClass(enemy)}" role="dialog" aria-label="Presentación do rival">
-      <div class="battle-presentation-stage" tabindex="0">
+      <div class="battle-presentation-body" tabindex="0">
         <div class="presentation-flash">!</div>
-        <div class="presentation-rival">
-          ${renderBattleSprite('enemy', { enemy })}
+        <div class="battle-field presentation-unified-field">
+          <div class="battle-char-slot enemy-slot">
+            ${renderBattleSprite('enemy', { enemy })}
+          </div>
+          <div class="presentation-dialog" aria-live="polite">
+            <p class="presentation-line">${presentationLine(enemy)}</p>
+            <p class="presentation-name">${enemy.name} <span class="presentation-lv">Nv${enemy.level}</span></p>
+            <p class="presentation-role">${title}</p>
+            <div class="presentation-quote-block">
+              <p class="presentation-quote">«${quote}»</p>
+            </div>
+            <p class="presentation-hint">Enter · clic · ou agarda 3 s</p>
+            <div class="presentation-timer" aria-hidden="true"><div class="presentation-timer-bar"></div></div>
+          </div>
         </div>
-        <div class="presentation-card poke-box">
-          <p class="presentation-line">${presentationLine(enemy)}</p>
-          <p class="presentation-name">${enemy.name} <span class="presentation-lv">Nv${enemy.level}</span></p>
-          <p class="presentation-role">${title}</p>
-        </div>
-      </div>
-      <div class="presentation-quote-box">
-        <p class="presentation-quote">«${quote}»</p>
-        <p class="presentation-hint">Enter · clic · ou agarda 3 s</p>
-        <div class="presentation-timer" aria-hidden="true"><div class="presentation-timer-bar"></div></div>
       </div>
     </div>`;
 
@@ -218,9 +220,8 @@ function bindPresentationAdvance(state) {
     renderFight(state);
   };
 
-  const stage = overlay.querySelector('.battle-presentation-stage');
+  const stage = overlay.querySelector('.battle-presentation-body');
   stage?.addEventListener('click', advance, { once: true });
-  overlay.querySelector('.presentation-quote-box')?.addEventListener('click', advance, { once: true });
 
   presentationKeyHandler = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {

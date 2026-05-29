@@ -3,7 +3,9 @@
  * exit: { kind: 'south'|'west'|'north'|'east', margin?: number }
  */
 export function createExitCheck(exitDef, layout) {
-  const margin = exitDef?.margin ?? 2.5;
+  if (!exitDef) return () => false;
+
+  const margin = exitDef.margin ?? 2.5;
   const tile = layout.tileSize;
 
   return (scene, tx, ty, player) => {

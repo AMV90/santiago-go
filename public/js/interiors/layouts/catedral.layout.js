@@ -123,6 +123,8 @@ export const CATHEDRAL_BATTLE_NPCS = [
     tx: 11,
     ty: 15,
     sprite: 'priest',
+    archetype: 'clergy',
+    characterId: 'priest',
     faction: 'clergy',
     presentationLine: 'Un crego da nave alza a cruz e non cede terreo!',
     battleQuote:
@@ -136,6 +138,8 @@ export const CATHEDRAL_BATTLE_NPCS = [
     tx: 45,
     ty: 15,
     sprite: 'priest',
+    archetype: 'clergy',
+    characterId: 'priest',
     faction: 'clergy',
     presentationLine: 'O canónigo do cruzeiro mira desde o altar… e acepta o duelo.',
     battleQuote:

@@ -16,8 +16,8 @@
 }
 
 .battle-screen {
-  width: min(720px, 100%);
-  max-height: 96vh;
+  width: min(920px, 98vw);
+  max-height: 98vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -41,22 +41,13 @@
   background: linear-gradient(180deg, #e8e0d0 0%, #c8b898 55%, #a89878 100%);
 }
 
-.battle--clergy .presentation-card {
-  border-color: #8b7355;
-  background: #faf8f4;
-}
-
-.battle--clergy .presentation-quote-box {
-  background: #f5f0e8;
-  border-color: #8b7355;
-}
 
 /* ── Campo (máis alto, máis espazo entre rival e xogador) ── */
 .battle-field {
   position: relative;
   flex: 0 0 auto;
-  height: min(42vh, 300px);
-  min-height: 260px;
+  height: min(50vh, 400px);
+  min-height: 340px;
   background: linear-gradient(180deg, #a8d898 0%, #88c070 50%, #78b060 100%);
   border-bottom: 3px solid #2d3436;
 }
@@ -118,17 +109,37 @@
   height: 108px;
 }
 
-.battle-char-img {
-  width: 92px;
-  height: 92px;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+/* Oscilación no mapa o frame: evita bleed de celdas brancas do spritesheet */
+.battle-char {
   animation: battle-idle 2.5s ease-in-out infinite;
+  will-change: transform;
 }
 
-.player-slot .battle-char-img {
-  width: 100px;
-  height: 100px;
+.battle-lpc-clip {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  background: transparent;
+  contain: paint;
+}
+
+.battle-char-img,
+.battle-lpc-portrait {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.battle-lpc-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #555;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }
 
 .battle-char-shadow {
@@ -157,12 +168,12 @@
   }
 }
 
-.battle-char-player .battle-char-img.battle-attack-flash {
+.battle-char-player.battle-attack-flash {
   --lunge-x: 16px;
   animation: battle-attack-lunge 0.35s ease-out;
 }
 
-.battle-char-enemy .battle-char-img.battle-attack-flash {
+.battle-char-enemy.battle-attack-flash {
   --lunge-x: -16px;
   animation: battle-attack-lunge 0.35s ease-out;
 }
@@ -301,12 +312,13 @@
 }
 
 .battle-console {
-  padding: 12px 16px;
-  min-height: 56px;
+  padding: 14px 18px;
+  min-height: 80px;
   background: linear-gradient(180deg, #3858a8 0%, #284080 100%);
   color: #fff;
   font-size: 15px;
   font-weight: 500;
+  line-height: 1.5;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #1a2030;
@@ -314,6 +326,8 @@
 
 .battle-console p {
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .battle-console strong {
@@ -471,21 +485,122 @@
 .battle-phase-presentation {
   display: flex;
   flex-direction: column;
-  min-height: 380px;
-  background: linear-gradient(180deg, #a8d898 0%, #88c070 100%);
+  min-height: 420px;
   cursor: pointer;
+  background: #8cb870;
 }
 
-.battle-presentation-stage {
+/* Presentación: un só fondo verde; texto encima, xusto baixo do avatar */
+.battle-presentation-body {
   flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1rem 1rem;
-  min-height: 240px;
+  align-items: stretch;
   outline: none;
+  min-height: 0;
+}
+
+.battle-phase-presentation .presentation-unified-field {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: min(48vh, 380px);
+  border-bottom: 3px solid #2d3436;
+}
+
+.battle-phase-presentation .presentation-unified-field .enemy-slot {
+  top: 6%;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.battle-phase-presentation .presentation-unified-field .presentation-dialog {
+  position: absolute;
+  left: 50%;
+  top: auto;
+  bottom: 8%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: min(94%, 560px);
+  max-width: calc(100% - 24px);
+  text-align: center;
+  padding: 14px 20px 12px;
+  pointer-events: none;
+  background: linear-gradient(180deg, #fffef9 0%, #f8f0d0 55%, #f0e8c8 100%);
+  border: 3px solid #2d3436;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 0 #2d3436,
+    0 10px 28px rgba(0, 0, 0, 0.22);
+  box-sizing: border-box;
+}
+
+/* Pico do bocadillo cara ao avatar (riba) */
+.battle-phase-presentation .presentation-dialog::before,
+.battle-phase-presentation .presentation-dialog::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  top: auto;
+  bottom: auto;
+  border-bottom: none;
+}
+
+.battle-phase-presentation .presentation-dialog::before {
+  bottom: 100%;
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: 13px solid #2d3436;
+}
+
+.battle-phase-presentation .presentation-dialog::after {
+  bottom: calc(100% - 4px);
+  border-bottom: 10px solid #fffef9;
+}
+
+.battle-phase-presentation .presentation-dialog .presentation-hint,
+.battle-phase-presentation .presentation-dialog .presentation-timer {
+  pointer-events: auto;
+}
+
+.battle-phase-presentation .presentation-quote-block {
+  margin: 8px 0 6px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  border: 1px solid rgba(80, 80, 80, 0.15);
+}
+
+.battle--bandit .presentation-dialog {
+  background: linear-gradient(180deg, #fff8f0 0%, #f5e6d0 100%);
+}
+
+.battle--bandit .presentation-dialog::after {
+  border-bottom-color: #fff8f0;
+}
+
+.battle--clergy .presentation-dialog {
+  background: linear-gradient(180deg, #faf8f4 0%, #ebe4d4 100%);
+  border-color: #6b5344;
+  box-shadow:
+    0 4px 0 #6b5344,
+    0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.battle--clergy .presentation-dialog::before {
+  border-bottom-color: #6b5344;
+}
+
+.battle--clergy .presentation-dialog::after {
+  border-bottom-color: #faf8f4;
 }
 
 .presentation-flash {
@@ -514,82 +629,59 @@
   }
 }
 
-.presentation-rival {
-  margin-bottom: 1rem;
-}
-
-.presentation-rival .battle-char {
-  width: 120px;
-  height: 120px;
-}
-
-.presentation-rival .battle-char-img {
-  width: 112px;
-  height: 112px;
-  animation: battle-idle 2s ease-in-out infinite;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
-}
-
-.presentation-card {
-  text-align: center;
-  max-width: 90%;
-  padding: 12px 18px;
-}
-
 .presentation-line {
   margin: 0 0 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #2d3436;
+  color: #3d4a3a;
+  line-height: 1.45;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .presentation-name {
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  color: #1a1a1a;
 }
 
 .presentation-lv {
   font-size: 14px;
   font-weight: 700;
-  color: #505050;
+  color: #b71c1c;
   text-transform: none;
 }
 
 .presentation-role {
   margin: 0;
-  font-size: 13px;
-  color: #606060;
+  font-size: 12px;
+  color: #5a5a5a;
   font-style: italic;
-}
-
-.presentation-quote-box {
-  flex-shrink: 0;
-  padding: 14px 16px 12px;
-  background: linear-gradient(180deg, #3858a8 0%, #284080 100%);
-  border-top: 3px solid #2d3436;
-  color: #fff;
 }
 
 .presentation-quote {
-  margin: 0 0 8px;
-  font-size: 15px;
+  margin: 0;
+  font-size: 14px;
   font-style: italic;
-  line-height: 1.45;
+  line-height: 1.5;
+  color: #1e3a6e;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .presentation-hint {
-  margin: 0 0 8px;
-  font-size: 12px;
-  opacity: 0.75;
+  margin: 0 0 6px;
+  font-size: 11px;
+  color: #6a6a6a;
 }
 
 .presentation-timer {
-  height: 4px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -656,13 +748,36 @@
   pointer-events: none;
   font-family: 'Segoe UI', system-ui, sans-serif;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-  max-width: 140px;
+  max-width: 168px;
 }
 
 @media (max-width: 480px) {
+  .battle-screen {
+    width: 100%;
+  }
+
   .battle-field {
-    min-height: 220px;
-    height: 36vh;
+    min-height: 280px;
+    height: 42vh;
+  }
+
+  .battle-phase-presentation {
+    min-height: 360px;
+  }
+
+  .battle-phase-presentation .presentation-unified-field {
+    min-height: 300px;
+  }
+
+  .battle-phase-presentation .presentation-unified-field .presentation-dialog {
+    width: min(96%, 100%);
+    bottom: 6%;
+    padding: 12px 14px 10px;
+  }
+
+  .battle-console {
+    min-height: 72px;
+    padding: 12px 14px;
   }
 
   .battle-menu-bar {

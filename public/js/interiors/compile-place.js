@@ -1,6 +1,7 @@
 import { resolveWorldPosition } from './world-position.js';
 import { createExitCheck } from './interior-exits.js';
 import { createInteriorActors } from './interior-actors.js';
+import { checkInteriorLinks } from './interior-links.js';
 
 /**
  * Converte unha PlaceDefinition en runtime config para interior-zone.
@@ -25,16 +26,24 @@ export function compilePlace(place) {
     isBlocked: layout.isBlocked.bind(layout),
     getTileAt: layout.getTileAt.bind(layout),
     getEntrySpawn: layout.getEntrySpawn.bind(layout),
+    getSpawnForLink: layout.getSpawnForLink?.bind(layout) ?? layout.getEntrySpawn.bind(layout),
     isExitTile: layout.isExitTile.bind(layout),
     drawTileExtra: layout.drawTileExtra,
+    drawOverlay: layout.drawOverlay,
+    spawnZoneBanners: layout.spawnZoneBanners,
+    stairLabels: layout.stairLabels,
+    tileset: layout.tileset,
     enterToast: place.enterToast,
     exitToast: place.exitToast,
     door: place.door,
     getReturnPosition: (scene) => resolveWorldPosition(place.world, scene),
     onEnter: (scene) => actorsRuntime?.enter(scene),
     onExit: (scene) => actorsRuntime?.exit(scene),
-    onUpdate: (scene, delta, showToast, onBattleEnd) =>
-      actorsRuntime?.update(scene, delta, showToast, onBattleEnd),
+    onUpdate: (scene, delta, showToast, onBattleEnd) => {
+      checkInteriorLinks(scene, scene.interiorConfig?.links ?? place.links, showToast);
+      actorsRuntime?.update(scene, delta, showToast, onBattleEnd);
+    },
+    links: place.links,
     setVisible: (scene, visible) => actorsRuntime?.setVisible(scene, visible),
     shouldExit: createExitCheck(place.exit, layout),
   };

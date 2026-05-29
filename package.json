@@ -6,11 +6,17 @@
   "scripts": {
     "build:map": "node scripts/build-map-data.mjs",
     "sprites": "node scripts/generate-example-sprites.mjs",
+    "lpc:sync": "node scripts/lpc-sync.mjs",
+    "lpc:expand": "node scripts/lpc/expand-lpc-roster.mjs",
+    "sprites:lpc": "node scripts/lpc/expand-lpc-roster.mjs && node scripts/build-lpc-sprites.mjs",
+    "sprites:peleteiro": "node scripts/build-peleteiro-tileset.mjs",
+    "forge:setup": "node scripts/interiors/setup-sprite-forge.mjs",
+    "forge:peleteiro": "npm run sprites:peleteiro && node scripts/interiors/peleteiro-bake.mjs",
     "sprites:battle": "node scripts/generate-battle-sprites.mjs",
     "dev": "npx --yes serve public -l 5173",
     "dev:full": "npm run build:map && npm run dev",
-    "play": "node server/index.js",
-    "start": "node server/index.js"
+    "play": "node scripts/ensure-play-assets.mjs && node server/index.js",
+    "start": "node scripts/ensure-play-assets.mjs && node server/index.js"
   },
   "type": "module",
   "engines": {

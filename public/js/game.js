@@ -12,6 +12,9 @@ import {
   applyCharacterSprite,
   updateWalkAnim,
 } from './sprites.js';
+import { ensurePeleteiroTextureFilter } from './interiors/peleteiro-tile-render.js';
+import { ensureLpcTextureFilter } from './sprites.js';
+import { setupCameraPan, notifyPlayerMoved } from './camera-pan.js';
 import {
   connectMultiplayer,
   joinMultiplayer,
@@ -70,6 +73,7 @@ import {
   RIQUELA_ZONE_ID,
   MODUS_VIVENDI_ZONE_ID,
   AREA_CENTRAL_ZONE_ID,
+  ESTACION_TREN_ZONE_ID,
 } from './interior-zone.js';
 
 const MAP_ZOOM = 16;
@@ -203,14 +207,18 @@ export async function initGame(mpOptions = null, onProgress) {
         this._bootstrapNpcs = JSON.parse(JSON.stringify(npcs));
       },
       preload() {
+        this.load.on('loaderror', (file) => {
+          console.error('[Santiago Go] Erro ao cargar:', file?.key, file?.src);
+        });
         createFallbackTextures(this);
         queueSpriteAssets(this);
-        // Icono SVG de curación (se renderiza como textura)
         this.load.image('first-aid', 'assets/icons/first-aid.svg');
       },
       create() {
         try {
         resolveSpriteKeys(this);
+        ensurePeleteiroTextureFilter(this);
+        ensureLpcTextureFilter(this);
         setupSpriteAnimations(this);
         this.applyBotSprite = (spr, i) => applyCharacterSprite(spr, 'bot', this, i);
         this.updateBotWalkAnim = (spr, dx, dy) => updateWalkAnim(spr, dx, dy, this, 'bot');
@@ -464,14 +472,34 @@ function showIntroOnce() {
   document.getElementById('intro-close').onclick = () => el.remove();
 }
 
+function hpHudToneClass(pct) {
+  if (pct > 50) return 'hp-high';
+  if (pct > 25) return 'hp-mid';
+  return 'hp-low';
+}
+
 function updateStatsHud(player) {
-  const hp = document.getElementById('hud-hp-text');
+  const hpRow = document.getElementById('hud-hp-bar');
+  const hpFill = document.getElementById('hud-hp-fill');
+  const hpText = document.getElementById('hud-hp-text');
   const xpFill = document.getElementById('hud-xp-fill');
   const xpText = document.getElementById('hud-xp-text');
-  if (!hp) return;
+  if (!hpRow) return;
 
   const xp = xpProgress(player);
-  hp.textContent = `PS ${player.hp}/${player.maxHp}`;
+  const pct =
+    player.maxHp > 0 ? Math.max(0, Math.min(100, (player.hp / player.maxHp) * 100)) : 0;
+  const tone = hpHudToneClass(pct);
+
+  const innerBar = hpRow.querySelector('.hp-bar');
+  if (hpFill) hpFill.style.width = `${pct}%`;
+  if (innerBar) {
+    innerBar.classList.remove('hp-high', 'hp-mid', 'hp-low');
+    innerBar.classList.add(tone);
+  }
+  if (hpText) hpText.textContent = `${player.hp}/${player.maxHp}`;
+  hpRow.setAttribute('aria-valuenow', String(Math.round(pct)));
+
   if (xpFill) xpFill.style.width = `${xp.pct}%`;
   if (xpText) xpText.textContent = `Nv${player.level} · ${xp.current}/${xp.need}`;
 }
@@ -501,7 +529,9 @@ function showWorldToast(msg) {
 
 function addBattleNpcSprite(scene, npc) {
   const spr = scene.add.sprite(npc.x, npc.y, 'char-npc');
-  applyCharacterSprite(spr, 'npc', scene, scene.npcSprites.length % 6);
+  applyCharacterSprite(spr, 'npc', scene, scene.npcSprites.length % 6, {
+    lpcId: npc.characterId ?? npc.lpcId,
+  });
   spr.setData('npc', npc);
   spr.setDepth(9);
   scene.npcSprites.push(spr);
@@ -618,6 +648,7 @@ function createWorld(scene) {
   scene.minimap = createMinimap(mapData, scene);
   setupMapClickNavigation(scene);
   setupCameraZoom(scene);
+  setupCameraPan(scene);
 
   scene.scale.on('resize', (size) => {
     scene.cameras.main.setViewport(0, 0, size.width, size.height);
@@ -632,6 +663,8 @@ function handleMovement(scene, delta) {
   const p = scene.player;
   const moved = updatePlayerMovement(scene, delta);
   if (!moved) return;
+
+  notifyPlayerMoved(scene);
 
   const { dx, dy } = getLastMoveDelta(scene);
   updateWalkAnim(p, dx, dy, scene, 'player');
@@ -793,7 +826,7 @@ function triggerEncounter(scene, npc, spr) {
 
   startBattle({
     player: scene.playerState,
-    enemy: createEnemyFromNpc(npc),
+    enemy: createEnemyFromNpc(npc, spr),
     onEnd: (result, updatedPlayer) => {
       scene.inBattle = false;
       scene.encounterCooldown = 2000;
@@ -845,7 +878,8 @@ function updateHud(scene) {
       return;
     }
     if (scene.interiorZone === BAR_MOMO_ZONE_ID) {
-      label.textContent = 'Pub Momo · WASD ou clic · ← ou E na porta para saír';
+      label.textContent =
+        'Pub Momo · Barra e terraza ao fondo · ← ou E na porta para saír';
       return;
     }
     if (scene.interiorZone === RIQUELA_ZONE_ID) {
@@ -861,6 +895,29 @@ function updateHud(scene) {
     if (scene.interiorZone === AREA_CENTRAL_ZONE_ID) {
       label.textContent =
         'Área Central · Galería donut · Parque no centro · ↓ ou E para saír';
+      return;
+    }
+    if (scene.interiorZone === ESTACION_TREN_ZONE_ID) {
+      label.textContent =
+        'Estación · Andéns ao fondo · Taquillas · ↓ ou E na porta para saír';
+      return;
+    }
+    if (scene.interiorZone === 'parque-alameda') {
+      label.textContent =
+        'Alameda (grande) · Ferradura · Santa Susana · Pilar · Patos · ↓ ou E saír';
+      return;
+    }
+    if (scene.interiorZone?.startsWith('corte-ingles-')) {
+      label.textContent = `${scene.interiorConfig?.label || 'Corte Inglés'} · Zonas por cor · Escaleiras ↑↓ · Planta baixa: saír ↓`;
+      return;
+    }
+    if (scene.interiorZone?.startsWith('peleteiro-')) {
+      const name = scene.interiorConfig?.label || 'Peleteiro';
+      label.textContent = `${name} · Escaleiras: camiña ↑ ou ↓ (sen E) · Saír á rúa: ↓ no patio`;
+      return;
+    }
+    if (scene.interiorConfig?.label && scene.interiorZone?.match(/^(mercado-|museo-|hostal-|convento-|pazo-|biblioteca-|auditorio-|cidade-|casa-|parque-|palacio-|as-|estadio-|cgac|san-martin|colexio-)/)) {
+      label.textContent = `${scene.interiorConfig.label} · Explora o lugar · ↓ ou E na porta`;
       return;
     }
     if (scene.interiorZone?.startsWith('hospital-')) {

@@ -1,0 +1,3014 @@
+{
+  "generator": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/",
+  "license": "CC-BY-SA 3.0 / varias — ver CREDITS no repo LPC e assets/lpc/CREDITS.md",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "walk": {
+    "up": {
+      "start": 0,
+      "end": 7
+    },
+    "left": {
+      "start": 9,
+      "end": 16
+    },
+    "down": {
+      "start": 18,
+      "end": 25
+    },
+    "right": {
+      "start": 27,
+      "end": 34
+    }
+  },
+  "characters": {
+    "player": {
+      "texture": "lpc-player",
+      "path": "assets/lpc/characters/player.png",
+      "scale": 0.5,
+      "label": "Xogador"
+    },
+    "remote": {
+      "texture": "lpc-remote",
+      "path": "assets/lpc/characters/remote.png",
+      "scale": 0.5,
+      "label": "Multixogador"
+    },
+    "bot-0": {
+      "texture": "lpc-bot-0",
+      "path": "assets/lpc/characters/bot-0.png",
+      "scale": 0.496,
+      "label": "Peregrino",
+      "tint": 16777215
+    },
+    "bot-1": {
+      "texture": "lpc-bot-1",
+      "path": "assets/lpc/characters/bot-1.png",
+      "scale": 0.5,
+      "label": "Comerciante",
+      "tint": 16775408
+    },
+    "bot-2": {
+      "texture": "lpc-bot-2",
+      "path": "assets/lpc/characters/bot-2.png",
+      "scale": 0.504,
+      "label": "Veciña",
+      "tint": 15792383
+    },
+    "bot-3": {
+      "texture": "lpc-bot-3",
+      "path": "assets/lpc/characters/bot-3.png",
+      "scale": 0.508,
+      "label": "Estudiante",
+      "tint": 16773365
+    },
+    "npc-0": {
+      "texture": "lpc-npc-0",
+      "path": "assets/lpc/characters/npc-0.png",
+      "scale": 0.5,
+      "label": "npc-0"
+    },
+    "npc-1": {
+      "texture": "lpc-npc-1",
+      "path": "assets/lpc/characters/npc-1.png",
+      "scale": 0.5,
+      "label": "npc-1"
+    },
+    "npc-2": {
+      "texture": "lpc-npc-2",
+      "path": "assets/lpc/characters/npc-2.png",
+      "scale": 0.5,
+      "label": "npc-2"
+    },
+    "npc-3": {
+      "texture": "lpc-npc-3",
+      "path": "assets/lpc/characters/npc-3.png",
+      "scale": 0.5,
+      "label": "npc-3"
+    },
+    "npc-4": {
+      "texture": "lpc-npc-4",
+      "path": "assets/lpc/characters/npc-4.png",
+      "scale": 0.5,
+      "label": "npc-4"
+    },
+    "npc-5": {
+      "texture": "lpc-npc-5",
+      "path": "assets/lpc/characters/npc-5.png",
+      "scale": 0.5,
+      "label": "npc-5"
+    },
+    "peleteiro-student": {
+      "texture": "lpc-peleteiro-student",
+      "path": "assets/lpc/characters/peleteiro-student.png",
+      "scale": 0.46,
+      "label": "peleteiro-student"
+    },
+    "priest": {
+      "texture": "lpc-priest",
+      "path": "assets/lpc/characters/priest.png",
+      "scale": 0.5,
+      "label": "priest"
+    },
+    "receptionist": {
+      "texture": "lpc-receptionist",
+      "path": "assets/lpc/characters/receptionist.png",
+      "scale": 0.5,
+      "label": "receptionist"
+    },
+    "urban-0": {
+      "texture": "lpc-urban-0",
+      "path": "assets/lpc/characters/urban-0.png",
+      "scale": 0.5,
+      "label": "Peregrino"
+    },
+    "urban-1": {
+      "texture": "lpc-urban-1",
+      "path": "assets/lpc/characters/urban-1.png",
+      "scale": 0.5,
+      "label": "Turista"
+    },
+    "urban-2": {
+      "texture": "lpc-urban-2",
+      "path": "assets/lpc/characters/urban-2.png",
+      "scale": 0.5,
+      "label": "Hosteleiro"
+    },
+    "urban-3": {
+      "texture": "lpc-urban-3",
+      "path": "assets/lpc/characters/urban-3.png",
+      "scale": 0.5,
+      "label": "Músico"
+    },
+    "urban-4": {
+      "texture": "lpc-urban-4",
+      "path": "assets/lpc/characters/urban-4.png",
+      "scale": 0.5,
+      "label": "Pensionista"
+    },
+    "urban-5": {
+      "texture": "lpc-urban-5",
+      "path": "assets/lpc/characters/urban-5.png",
+      "scale": 0.46,
+      "label": "Estudante rúa"
+    },
+    "urban-6": {
+      "texture": "lpc-urban-6",
+      "path": "assets/lpc/characters/urban-6.png",
+      "scale": 0.5,
+      "label": "Vendedor"
+    },
+    "urban-7": {
+      "texture": "lpc-urban-7",
+      "path": "assets/lpc/characters/urban-7.png",
+      "scale": 0.5,
+      "label": "Guía"
+    },
+    "urban-8": {
+      "texture": "lpc-urban-8",
+      "path": "assets/lpc/characters/urban-8.png",
+      "scale": 0.5,
+      "label": "Veciño"
+    },
+    "urban-9": {
+      "texture": "lpc-urban-9",
+      "path": "assets/lpc/characters/urban-9.png",
+      "scale": 0.5,
+      "label": "Rival"
+    },
+    "bandit-0": {
+      "texture": "lpc-bandit-0",
+      "path": "assets/lpc/characters/bandit-0.png",
+      "scale": 0.5,
+      "label": "Bandido"
+    },
+    "bandit-1": {
+      "texture": "lpc-bandit-1",
+      "path": "assets/lpc/characters/bandit-1.png",
+      "scale": 0.5,
+      "label": "bandit-1"
+    },
+    "bandit-2": {
+      "texture": "lpc-bandit-2",
+      "path": "assets/lpc/characters/bandit-2.png",
+      "scale": 0.5,
+      "label": "bandit-2"
+    },
+    "bandit-3": {
+      "texture": "lpc-bandit-3",
+      "path": "assets/lpc/characters/bandit-3.png",
+      "scale": 0.48,
+      "label": "bandit-3"
+    },
+    "bandit-4": {
+      "texture": "lpc-bandit-4",
+      "path": "assets/lpc/characters/bandit-4.png",
+      "scale": 0.5,
+      "label": "bandit-4"
+    },
+    "peleteiro-mendigo-0": {
+      "texture": "lpc-peleteiro-mendigo-0",
+      "path": "assets/lpc/characters/peleteiro-mendigo-0.png",
+      "scale": 0.48,
+      "label": "Mendigo Peleteiro"
+    },
+    "peleteiro-mendigo-1": {
+      "texture": "lpc-peleteiro-mendigo-1",
+      "path": "assets/lpc/characters/peleteiro-mendigo-1.png",
+      "scale": 0.48,
+      "label": "peleteiro-mendigo-1"
+    },
+    "peleteiro-student-1": {
+      "texture": "lpc-peleteiro-student-1",
+      "path": "assets/lpc/characters/peleteiro-student-1.png",
+      "scale": 0.46,
+      "label": "peleteiro-student-1"
+    },
+    "peleteiro-student-2": {
+      "texture": "lpc-peleteiro-student-2",
+      "path": "assets/lpc/characters/peleteiro-student-2.png",
+      "scale": 0.46,
+      "label": "peleteiro-student-2"
+    },
+    "peleteiro-student-3": {
+      "texture": "lpc-peleteiro-student-3",
+      "path": "assets/lpc/characters/peleteiro-student-3.png",
+      "scale": 0.46,
+      "label": "peleteiro-student-3"
+    },
+    "peleteiro-ghost-0": {
+      "texture": "lpc-peleteiro-ghost-0",
+      "path": "assets/lpc/characters/peleteiro-ghost-0.png",
+      "scale": 0.46,
+      "label": "Alma en pena"
+    },
+    "peleteiro-ghost-1": {
+      "texture": "lpc-peleteiro-ghost-1",
+      "path": "assets/lpc/characters/peleteiro-ghost-1.png",
+      "scale": 0.46,
+      "label": "peleteiro-ghost-1"
+    },
+    "peleteiro-ghost-2": {
+      "texture": "lpc-peleteiro-ghost-2",
+      "path": "assets/lpc/characters/peleteiro-ghost-2.png",
+      "scale": 0.46,
+      "label": "peleteiro-ghost-2"
+    },
+    "peleteiro-ghost-3": {
+      "texture": "lpc-peleteiro-ghost-3",
+      "path": "assets/lpc/characters/peleteiro-ghost-3.png",
+      "scale": 0.45,
+      "label": "peleteiro-ghost-3"
+    },
+    "peleteiro-director": {
+      "texture": "lpc-peleteiro-director",
+      "path": "assets/lpc/characters/peleteiro-director.png",
+      "scale": 0.48,
+      "label": "Director espectro"
+    },
+    "peleteiro-prof-0": {
+      "texture": "lpc-peleteiro-prof-0",
+      "path": "assets/lpc/characters/peleteiro-prof-0.png",
+      "scale": 0.5,
+      "label": "Profesor"
+    },
+    "peleteiro-prof-1": {
+      "texture": "lpc-peleteiro-prof-1",
+      "path": "assets/lpc/characters/peleteiro-prof-1.png",
+      "scale": 0.5,
+      "label": "peleteiro-prof-1"
+    },
+    "peleteiro-prof-2": {
+      "texture": "lpc-peleteiro-prof-2",
+      "path": "assets/lpc/characters/peleteiro-prof-2.png",
+      "scale": 0.5,
+      "label": "peleteiro-prof-2"
+    },
+    "bot-4": {
+      "texture": "lpc-bot-4",
+      "path": "assets/lpc/characters/bot-4.png",
+      "scale": 0.512,
+      "label": "Artesán",
+      "tint": 16121845
+    },
+    "bot-5": {
+      "texture": "lpc-bot-5",
+      "path": "assets/lpc/characters/bot-5.png",
+      "scale": 0.48,
+      "label": "Xubilado",
+      "tint": 16777200
+    },
+    "bot-6": {
+      "texture": "lpc-bot-6",
+      "path": "assets/lpc/characters/bot-6.png",
+      "scale": 0.484,
+      "label": "Visitante",
+      "tint": 16777215
+    },
+    "bot-7": {
+      "texture": "lpc-bot-7",
+      "path": "assets/lpc/characters/bot-7.png",
+      "scale": 0.488,
+      "label": "Profesor",
+      "tint": 16775408
+    },
+    "bot-8": {
+      "texture": "lpc-bot-8",
+      "path": "assets/lpc/characters/bot-8.png",
+      "scale": 0.492,
+      "label": "Retrancero",
+      "tint": 15792383
+    },
+    "bot-9": {
+      "texture": "lpc-bot-9",
+      "path": "assets/lpc/characters/bot-9.png",
+      "scale": 0.496,
+      "label": "Maior",
+      "tint": 16773365
+    },
+    "bot-10": {
+      "texture": "lpc-bot-10",
+      "path": "assets/lpc/characters/bot-10.png",
+      "scale": 0.512,
+      "label": "Hosteleira",
+      "tint": 16121845
+    },
+    "bot-11": {
+      "texture": "lpc-bot-11",
+      "path": "assets/lpc/characters/bot-11.png",
+      "scale": 0.508,
+      "label": "Guía",
+      "tint": 16777200
+    },
+    "bot-12": {
+      "texture": "lpc-bot-12",
+      "path": "assets/lpc/characters/bot-12.png",
+      "scale": 0.504,
+      "label": "Mariscador",
+      "tint": 16777215
+    },
+    "bot-13": {
+      "texture": "lpc-bot-13",
+      "path": "assets/lpc/characters/bot-13.png",
+      "scale": 0.5,
+      "label": "Gaiteiro",
+      "tint": 16775408
+    },
+    "bot-14": {
+      "texture": "lpc-bot-14",
+      "path": "assets/lpc/characters/bot-14.png",
+      "scale": 0.496,
+      "label": "Ciclista",
+      "tint": 15792383
+    },
+    "bot-15": {
+      "texture": "lpc-bot-15",
+      "path": "assets/lpc/characters/bot-15.png",
+      "scale": 0.492,
+      "label": "Foraneiro",
+      "tint": 16773365
+    },
+    "bot-16": {
+      "texture": "lpc-bot-16",
+      "path": "assets/lpc/characters/bot-16.png",
+      "scale": 0.488,
+      "label": "Peregrino",
+      "tint": 16121845
+    },
+    "bot-17": {
+      "texture": "lpc-bot-17",
+      "path": "assets/lpc/characters/bot-17.png",
+      "scale": 0.484,
+      "label": "Comerciante",
+      "tint": 16777200
+    },
+    "bot-18": {
+      "texture": "lpc-bot-18",
+      "path": "assets/lpc/characters/bot-18.png",
+      "scale": 0.48,
+      "label": "Veciña",
+      "tint": 16777215
+    },
+    "bot-19": {
+      "texture": "lpc-bot-19",
+      "path": "assets/lpc/characters/bot-19.png",
+      "scale": 0.512,
+      "label": "Estudiante",
+      "tint": 16775408
+    },
+    "bot-20": {
+      "texture": "lpc-bot-20",
+      "path": "assets/lpc/characters/bot-20.png",
+      "scale": 0.496,
+      "label": "Artesán",
+      "tint": 15792383
+    },
+    "bot-21": {
+      "texture": "lpc-bot-21",
+      "path": "assets/lpc/characters/bot-21.png",
+      "scale": 0.492,
+      "label": "Xubilado",
+      "tint": 16773365
+    },
+    "bot-22": {
+      "texture": "lpc-bot-22",
+      "path": "assets/lpc/characters/bot-22.png",
+      "scale": 0.488,
+      "label": "Visitante",
+      "tint": 16121845
+    },
+    "bot-23": {
+      "texture": "lpc-bot-23",
+      "path": "assets/lpc/characters/bot-23.png",
+      "scale": 0.484,
+      "label": "Profesor",
+      "tint": 16777200
+    },
+    "bot-24": {
+      "texture": "lpc-bot-24",
+      "path": "assets/lpc/characters/bot-24.png",
+      "scale": 0.48,
+      "label": "Retrancero",
+      "tint": 16777215
+    },
+    "bot-25": {
+      "texture": "lpc-bot-25",
+      "path": "assets/lpc/characters/bot-25.png",
+      "scale": 0.512,
+      "label": "Maior",
+      "tint": 16775408
+    },
+    "bot-26": {
+      "texture": "lpc-bot-26",
+      "path": "assets/lpc/characters/bot-26.png",
+      "scale": 0.508,
+      "label": "Hosteleira",
+      "tint": 15792383
+    },
+    "bot-27": {
+      "texture": "lpc-bot-27",
+      "path": "assets/lpc/characters/bot-27.png",
+      "scale": 0.504,
+      "label": "Guía",
+      "tint": 16773365
+    },
+    "bot-28": {
+      "texture": "lpc-bot-28",
+      "path": "assets/lpc/characters/bot-28.png",
+      "scale": 0.5,
+      "label": "Mariscador",
+      "tint": 16121845
+    },
+    "bot-29": {
+      "texture": "lpc-bot-29",
+      "path": "assets/lpc/characters/bot-29.png",
+      "scale": 0.496,
+      "label": "Gaiteiro",
+      "tint": 16777200
+    },
+    "bot-30": {
+      "texture": "lpc-bot-30",
+      "path": "assets/lpc/characters/bot-30.png",
+      "scale": 0.48,
+      "label": "Ciclista",
+      "tint": 16777215
+    },
+    "bot-31": {
+      "texture": "lpc-bot-31",
+      "path": "assets/lpc/characters/bot-31.png",
+      "scale": 0.512,
+      "label": "Foraneiro",
+      "tint": 16775408
+    },
+    "bot-32": {
+      "texture": "lpc-bot-32",
+      "path": "assets/lpc/characters/bot-32.png",
+      "scale": 0.508,
+      "label": "Peregrino",
+      "tint": 15792383
+    },
+    "bot-33": {
+      "texture": "lpc-bot-33",
+      "path": "assets/lpc/characters/bot-33.png",
+      "scale": 0.504,
+      "label": "Comerciante",
+      "tint": 16773365
+    },
+    "bot-34": {
+      "texture": "lpc-bot-34",
+      "path": "assets/lpc/characters/bot-34.png",
+      "scale": 0.5,
+      "label": "Veciña",
+      "tint": 16121845
+    },
+    "bot-35": {
+      "texture": "lpc-bot-35",
+      "path": "assets/lpc/characters/bot-35.png",
+      "scale": 0.496,
+      "label": "Estudiante",
+      "tint": 16777200
+    },
+    "bot-36": {
+      "texture": "lpc-bot-36",
+      "path": "assets/lpc/characters/bot-36.png",
+      "scale": 0.492,
+      "label": "Artesán",
+      "tint": 16777215
+    },
+    "bot-37": {
+      "texture": "lpc-bot-37",
+      "path": "assets/lpc/characters/bot-37.png",
+      "scale": 0.488,
+      "label": "Xubilado",
+      "tint": 16775408
+    },
+    "bot-38": {
+      "texture": "lpc-bot-38",
+      "path": "assets/lpc/characters/bot-38.png",
+      "scale": 0.484,
+      "label": "Visitante",
+      "tint": 15792383
+    },
+    "bot-39": {
+      "texture": "lpc-bot-39",
+      "path": "assets/lpc/characters/bot-39.png",
+      "scale": 0.48,
+      "label": "Profesor",
+      "tint": 16773365
+    },
+    "bot-40": {
+      "texture": "lpc-bot-40",
+      "path": "assets/lpc/characters/bot-40.png",
+      "scale": 0.5,
+      "label": "Retrancero",
+      "tint": 16121845
+    },
+    "bot-41": {
+      "texture": "lpc-bot-41",
+      "path": "assets/lpc/characters/bot-41.png",
+      "scale": 0.496,
+      "label": "Maior",
+      "tint": 16777200
+    },
+    "bot-42": {
+      "texture": "lpc-bot-42",
+      "path": "assets/lpc/characters/bot-42.png",
+      "scale": 0.492,
+      "label": "Hosteleira",
+      "tint": 16777215
+    },
+    "bot-43": {
+      "texture": "lpc-bot-43",
+      "path": "assets/lpc/characters/bot-43.png",
+      "scale": 0.488,
+      "label": "Guía",
+      "tint": 16775408
+    },
+    "bot-44": {
+      "texture": "lpc-bot-44",
+      "path": "assets/lpc/characters/bot-44.png",
+      "scale": 0.484,
+      "label": "Mariscador",
+      "tint": 15792383
+    },
+    "bot-45": {
+      "texture": "lpc-bot-45",
+      "path": "assets/lpc/characters/bot-45.png",
+      "scale": 0.48,
+      "label": "Gaiteiro",
+      "tint": 16773365
+    },
+    "bot-46": {
+      "texture": "lpc-bot-46",
+      "path": "assets/lpc/characters/bot-46.png",
+      "scale": 0.512,
+      "label": "Ciclista",
+      "tint": 16121845
+    },
+    "bot-47": {
+      "texture": "lpc-bot-47",
+      "path": "assets/lpc/characters/bot-47.png",
+      "scale": 0.508,
+      "label": "Foraneiro",
+      "tint": 16777200
+    },
+    "bot-48": {
+      "texture": "lpc-bot-48",
+      "path": "assets/lpc/characters/bot-48.png",
+      "scale": 0.504,
+      "label": "Peregrino",
+      "tint": 16777215
+    },
+    "bot-49": {
+      "texture": "lpc-bot-49",
+      "path": "assets/lpc/characters/bot-49.png",
+      "scale": 0.5,
+      "label": "Comerciante",
+      "tint": 16775408
+    },
+    "bot-50": {
+      "texture": "lpc-bot-50",
+      "path": "assets/lpc/characters/bot-50.png",
+      "scale": 0.484,
+      "label": "Veciña",
+      "tint": 15792383
+    },
+    "bot-51": {
+      "texture": "lpc-bot-51",
+      "path": "assets/lpc/characters/bot-51.png",
+      "scale": 0.48,
+      "label": "Estudiante",
+      "tint": 16773365
+    },
+    "bot-52": {
+      "texture": "lpc-bot-52",
+      "path": "assets/lpc/characters/bot-52.png",
+      "scale": 0.512,
+      "label": "Artesán",
+      "tint": 16121845
+    },
+    "bot-53": {
+      "texture": "lpc-bot-53",
+      "path": "assets/lpc/characters/bot-53.png",
+      "scale": 0.508,
+      "label": "Xubilado",
+      "tint": 16777200
+    },
+    "bot-54": {
+      "texture": "lpc-bot-54",
+      "path": "assets/lpc/characters/bot-54.png",
+      "scale": 0.504,
+      "label": "Visitante",
+      "tint": 16777215
+    },
+    "bot-55": {
+      "texture": "lpc-bot-55",
+      "path": "assets/lpc/characters/bot-55.png",
+      "scale": 0.5,
+      "label": "Profesor",
+      "tint": 16775408
+    },
+    "bot-56": {
+      "texture": "lpc-bot-56",
+      "path": "assets/lpc/characters/bot-56.png",
+      "scale": 0.496,
+      "label": "Retrancero",
+      "tint": 15792383
+    },
+    "bot-57": {
+      "texture": "lpc-bot-57",
+      "path": "assets/lpc/characters/bot-57.png",
+      "scale": 0.492,
+      "label": "Maior",
+      "tint": 16773365
+    },
+    "bot-58": {
+      "texture": "lpc-bot-58",
+      "path": "assets/lpc/characters/bot-58.png",
+      "scale": 0.488,
+      "label": "Hosteleira",
+      "tint": 16121845
+    },
+    "bot-59": {
+      "texture": "lpc-bot-59",
+      "path": "assets/lpc/characters/bot-59.png",
+      "scale": 0.484,
+      "label": "Guía",
+      "tint": 16777200
+    },
+    "bot-60": {
+      "texture": "lpc-bot-60",
+      "path": "assets/lpc/characters/bot-60.png",
+      "scale": 0.504,
+      "label": "Mariscador",
+      "tint": 16777215
+    },
+    "bot-61": {
+      "texture": "lpc-bot-61",
+      "path": "assets/lpc/characters/bot-61.png",
+      "scale": 0.5,
+      "label": "Gaiteiro",
+      "tint": 16775408
+    },
+    "bot-62": {
+      "texture": "lpc-bot-62",
+      "path": "assets/lpc/characters/bot-62.png",
+      "scale": 0.496,
+      "label": "Ciclista",
+      "tint": 15792383
+    },
+    "bot-63": {
+      "texture": "lpc-bot-63",
+      "path": "assets/lpc/characters/bot-63.png",
+      "scale": 0.492,
+      "label": "Foraneiro",
+      "tint": 16773365
+    },
+    "bot-64": {
+      "texture": "lpc-bot-64",
+      "path": "assets/lpc/characters/bot-64.png",
+      "scale": 0.488,
+      "label": "Peregrino",
+      "tint": 16121845
+    },
+    "bot-65": {
+      "texture": "lpc-bot-65",
+      "path": "assets/lpc/characters/bot-65.png",
+      "scale": 0.484,
+      "label": "Comerciante",
+      "tint": 16777200
+    },
+    "bot-66": {
+      "texture": "lpc-bot-66",
+      "path": "assets/lpc/characters/bot-66.png",
+      "scale": 0.48,
+      "label": "Veciña",
+      "tint": 16777215
+    },
+    "bot-67": {
+      "texture": "lpc-bot-67",
+      "path": "assets/lpc/characters/bot-67.png",
+      "scale": 0.512,
+      "label": "Estudiante",
+      "tint": 16775408
+    },
+    "bot-68": {
+      "texture": "lpc-bot-68",
+      "path": "assets/lpc/characters/bot-68.png",
+      "scale": 0.508,
+      "label": "Artesán",
+      "tint": 15792383
+    },
+    "bot-69": {
+      "texture": "lpc-bot-69",
+      "path": "assets/lpc/characters/bot-69.png",
+      "scale": 0.504,
+      "label": "Xubilado",
+      "tint": 16773365
+    },
+    "bot-70": {
+      "texture": "lpc-bot-70",
+      "path": "assets/lpc/characters/bot-70.png",
+      "scale": 0.488,
+      "label": "Visitante",
+      "tint": 16121845
+    },
+    "bot-71": {
+      "texture": "lpc-bot-71",
+      "path": "assets/lpc/characters/bot-71.png",
+      "scale": 0.484,
+      "label": "Profesor",
+      "tint": 16777200
+    },
+    "bot-72": {
+      "texture": "lpc-bot-72",
+      "path": "assets/lpc/characters/bot-72.png",
+      "scale": 0.48,
+      "label": "Retrancero",
+      "tint": 16777215
+    },
+    "bot-73": {
+      "texture": "lpc-bot-73",
+      "path": "assets/lpc/characters/bot-73.png",
+      "scale": 0.512,
+      "label": "Maior",
+      "tint": 16775408
+    },
+    "bot-74": {
+      "texture": "lpc-bot-74",
+      "path": "assets/lpc/characters/bot-74.png",
+      "scale": 0.508,
+      "label": "Hosteleira",
+      "tint": 15792383
+    },
+    "bot-75": {
+      "texture": "lpc-bot-75",
+      "path": "assets/lpc/characters/bot-75.png",
+      "scale": 0.504,
+      "label": "Guía",
+      "tint": 16773365
+    },
+    "bot-76": {
+      "texture": "lpc-bot-76",
+      "path": "assets/lpc/characters/bot-76.png",
+      "scale": 0.5,
+      "label": "Mariscador",
+      "tint": 16121845
+    },
+    "bot-77": {
+      "texture": "lpc-bot-77",
+      "path": "assets/lpc/characters/bot-77.png",
+      "scale": 0.496,
+      "label": "Gaiteiro",
+      "tint": 16777200
+    },
+    "bot-78": {
+      "texture": "lpc-bot-78",
+      "path": "assets/lpc/characters/bot-78.png",
+      "scale": 0.492,
+      "label": "Ciclista",
+      "tint": 16777215
+    },
+    "bot-79": {
+      "texture": "lpc-bot-79",
+      "path": "assets/lpc/characters/bot-79.png",
+      "scale": 0.488,
+      "label": "Foraneiro",
+      "tint": 16775408
+    },
+    "bot-80": {
+      "texture": "lpc-bot-80",
+      "path": "assets/lpc/characters/bot-80.png",
+      "scale": 0.508,
+      "label": "Peregrino",
+      "tint": 15792383
+    },
+    "bot-81": {
+      "texture": "lpc-bot-81",
+      "path": "assets/lpc/characters/bot-81.png",
+      "scale": 0.504,
+      "label": "Comerciante",
+      "tint": 16773365
+    },
+    "bot-82": {
+      "texture": "lpc-bot-82",
+      "path": "assets/lpc/characters/bot-82.png",
+      "scale": 0.5,
+      "label": "Veciña",
+      "tint": 16121845
+    },
+    "bot-83": {
+      "texture": "lpc-bot-83",
+      "path": "assets/lpc/characters/bot-83.png",
+      "scale": 0.496,
+      "label": "Estudiante",
+      "tint": 16777200
+    },
+    "bot-84": {
+      "texture": "lpc-bot-84",
+      "path": "assets/lpc/characters/bot-84.png",
+      "scale": 0.492,
+      "label": "Artesán",
+      "tint": 16777215
+    },
+    "bot-85": {
+      "texture": "lpc-bot-85",
+      "path": "assets/lpc/characters/bot-85.png",
+      "scale": 0.488,
+      "label": "Xubilado",
+      "tint": 16775408
+    },
+    "bot-86": {
+      "texture": "lpc-bot-86",
+      "path": "assets/lpc/characters/bot-86.png",
+      "scale": 0.484,
+      "label": "Visitante",
+      "tint": 15792383
+    },
+    "bot-87": {
+      "texture": "lpc-bot-87",
+      "path": "assets/lpc/characters/bot-87.png",
+      "scale": 0.48,
+      "label": "Profesor",
+      "tint": 16773365
+    },
+    "bot-88": {
+      "texture": "lpc-bot-88",
+      "path": "assets/lpc/characters/bot-88.png",
+      "scale": 0.512,
+      "label": "Retrancero",
+      "tint": 16121845
+    },
+    "bot-89": {
+      "texture": "lpc-bot-89",
+      "path": "assets/lpc/characters/bot-89.png",
+      "scale": 0.508,
+      "label": "Maior",
+      "tint": 16777200
+    },
+    "bot-90": {
+      "texture": "lpc-bot-90",
+      "path": "assets/lpc/characters/bot-90.png",
+      "scale": 0.492,
+      "label": "Hosteleira",
+      "tint": 16777215
+    },
+    "bot-91": {
+      "texture": "lpc-bot-91",
+      "path": "assets/lpc/characters/bot-91.png",
+      "scale": 0.488,
+      "label": "Guía",
+      "tint": 16775408
+    },
+    "bot-92": {
+      "texture": "lpc-bot-92",
+      "path": "assets/lpc/characters/bot-92.png",
+      "scale": 0.484,
+      "label": "Mariscador",
+      "tint": 15792383
+    },
+    "bot-93": {
+      "texture": "lpc-bot-93",
+      "path": "assets/lpc/characters/bot-93.png",
+      "scale": 0.48,
+      "label": "Gaiteiro",
+      "tint": 16773365
+    },
+    "bot-94": {
+      "texture": "lpc-bot-94",
+      "path": "assets/lpc/characters/bot-94.png",
+      "scale": 0.512,
+      "label": "Ciclista",
+      "tint": 16121845
+    },
+    "bot-95": {
+      "texture": "lpc-bot-95",
+      "path": "assets/lpc/characters/bot-95.png",
+      "scale": 0.508,
+      "label": "Foraneiro",
+      "tint": 16777200
+    },
+    "bot-96": {
+      "texture": "lpc-bot-96",
+      "path": "assets/lpc/characters/bot-96.png",
+      "scale": 0.504,
+      "label": "Peregrino",
+      "tint": 16777215
+    },
+    "bot-97": {
+      "texture": "lpc-bot-97",
+      "path": "assets/lpc/characters/bot-97.png",
+      "scale": 0.5,
+      "label": "Comerciante",
+      "tint": 16775408
+    },
+    "bot-98": {
+      "texture": "lpc-bot-98",
+      "path": "assets/lpc/characters/bot-98.png",
+      "scale": 0.496,
+      "label": "Veciña",
+      "tint": 15792383
+    },
+    "bot-99": {
+      "texture": "lpc-bot-99",
+      "path": "assets/lpc/characters/bot-99.png",
+      "scale": 0.492,
+      "label": "Estudiante",
+      "tint": 16773365
+    },
+    "bot-100": {
+      "texture": "lpc-bot-100",
+      "path": "assets/lpc/characters/bot-100.png",
+      "scale": 0.488,
+      "label": "Artesán",
+      "tint": 16121845
+    },
+    "bot-101": {
+      "texture": "lpc-bot-101",
+      "path": "assets/lpc/characters/bot-101.png",
+      "scale": 0.492,
+      "label": "Xubilado",
+      "tint": 16777200
+    },
+    "bot-102": {
+      "texture": "lpc-bot-102",
+      "path": "assets/lpc/characters/bot-102.png",
+      "scale": 0.496,
+      "label": "Visitante",
+      "tint": 16777215
+    },
+    "bot-103": {
+      "texture": "lpc-bot-103",
+      "path": "assets/lpc/characters/bot-103.png",
+      "scale": 0.5,
+      "label": "Profesor",
+      "tint": 16775408
+    },
+    "npc-6": {
+      "texture": "lpc-npc-6",
+      "path": "assets/lpc/characters/npc-6.png",
+      "scale": 0.492,
+      "label": "Rival 6"
+    },
+    "npc-7": {
+      "texture": "lpc-npc-7",
+      "path": "assets/lpc/characters/npc-7.png",
+      "scale": 0.496,
+      "label": "Rival 7"
+    },
+    "npc-8": {
+      "texture": "lpc-npc-8",
+      "path": "assets/lpc/characters/npc-8.png",
+      "scale": 0.5,
+      "label": "Rival 8"
+    },
+    "npc-9": {
+      "texture": "lpc-npc-9",
+      "path": "assets/lpc/characters/npc-9.png",
+      "scale": 0.504,
+      "label": "Rival 9"
+    },
+    "npc-10": {
+      "texture": "lpc-npc-10",
+      "path": "assets/lpc/characters/npc-10.png",
+      "scale": 0.48,
+      "label": "Rival 10"
+    },
+    "npc-11": {
+      "texture": "lpc-npc-11",
+      "path": "assets/lpc/characters/npc-11.png",
+      "scale": 0.512,
+      "label": "Rival 11"
+    },
+    "npc-12": {
+      "texture": "lpc-npc-12",
+      "path": "assets/lpc/characters/npc-12.png",
+      "scale": 0.508,
+      "label": "Rival 12"
+    },
+    "npc-13": {
+      "texture": "lpc-npc-13",
+      "path": "assets/lpc/characters/npc-13.png",
+      "scale": 0.504,
+      "label": "Rival 13"
+    },
+    "npc-14": {
+      "texture": "lpc-npc-14",
+      "path": "assets/lpc/characters/npc-14.png",
+      "scale": 0.5,
+      "label": "Rival 14"
+    },
+    "npc-15": {
+      "texture": "lpc-npc-15",
+      "path": "assets/lpc/characters/npc-15.png",
+      "scale": 0.496,
+      "label": "Rival 15"
+    },
+    "npc-16": {
+      "texture": "lpc-npc-16",
+      "path": "assets/lpc/characters/npc-16.png",
+      "scale": 0.492,
+      "label": "Rival 16"
+    },
+    "npc-17": {
+      "texture": "lpc-npc-17",
+      "path": "assets/lpc/characters/npc-17.png",
+      "scale": 0.488,
+      "label": "Rival 17"
+    },
+    "npc-18": {
+      "texture": "lpc-npc-18",
+      "path": "assets/lpc/characters/npc-18.png",
+      "scale": 0.484,
+      "label": "Rival 18"
+    },
+    "npc-19": {
+      "texture": "lpc-npc-19",
+      "path": "assets/lpc/characters/npc-19.png",
+      "scale": 0.48,
+      "label": "Rival 19"
+    },
+    "npc-20": {
+      "texture": "lpc-npc-20",
+      "path": "assets/lpc/characters/npc-20.png",
+      "scale": 0.5,
+      "label": "Rival 20"
+    },
+    "npc-21": {
+      "texture": "lpc-npc-21",
+      "path": "assets/lpc/characters/npc-21.png",
+      "scale": 0.496,
+      "label": "Rival 21"
+    },
+    "npc-22": {
+      "texture": "lpc-npc-22",
+      "path": "assets/lpc/characters/npc-22.png",
+      "scale": 0.492,
+      "label": "Rival 22"
+    },
+    "npc-23": {
+      "texture": "lpc-npc-23",
+      "path": "assets/lpc/characters/npc-23.png",
+      "scale": 0.488,
+      "label": "Rival 23"
+    },
+    "npc-24": {
+      "texture": "lpc-npc-24",
+      "path": "assets/lpc/characters/npc-24.png",
+      "scale": 0.484,
+      "label": "Rival 24"
+    },
+    "npc-25": {
+      "texture": "lpc-npc-25",
+      "path": "assets/lpc/characters/npc-25.png",
+      "scale": 0.48,
+      "label": "Rival 25"
+    },
+    "npc-26": {
+      "texture": "lpc-npc-26",
+      "path": "assets/lpc/characters/npc-26.png",
+      "scale": 0.512,
+      "label": "Rival 26"
+    },
+    "npc-27": {
+      "texture": "lpc-npc-27",
+      "path": "assets/lpc/characters/npc-27.png",
+      "scale": 0.508,
+      "label": "Rival 27"
+    },
+    "npc-28": {
+      "texture": "lpc-npc-28",
+      "path": "assets/lpc/characters/npc-28.png",
+      "scale": 0.504,
+      "label": "Rival 28"
+    },
+    "npc-29": {
+      "texture": "lpc-npc-29",
+      "path": "assets/lpc/characters/npc-29.png",
+      "scale": 0.5,
+      "label": "Rival 29"
+    },
+    "npc-30": {
+      "texture": "lpc-npc-30",
+      "path": "assets/lpc/characters/npc-30.png",
+      "scale": 0.484,
+      "label": "Rival 30"
+    },
+    "npc-31": {
+      "texture": "lpc-npc-31",
+      "path": "assets/lpc/characters/npc-31.png",
+      "scale": 0.48,
+      "label": "Rival 31"
+    },
+    "npc-32": {
+      "texture": "lpc-npc-32",
+      "path": "assets/lpc/characters/npc-32.png",
+      "scale": 0.512,
+      "label": "Rival 32"
+    },
+    "npc-33": {
+      "texture": "lpc-npc-33",
+      "path": "assets/lpc/characters/npc-33.png",
+      "scale": 0.508,
+      "label": "Rival 33"
+    },
+    "npc-34": {
+      "texture": "lpc-npc-34",
+      "path": "assets/lpc/characters/npc-34.png",
+      "scale": 0.504,
+      "label": "Rival 34"
+    },
+    "npc-35": {
+      "texture": "lpc-npc-35",
+      "path": "assets/lpc/characters/npc-35.png",
+      "scale": 0.5,
+      "label": "Rival 35"
+    },
+    "npc-36": {
+      "texture": "lpc-npc-36",
+      "path": "assets/lpc/characters/npc-36.png",
+      "scale": 0.496,
+      "label": "Rival 36"
+    },
+    "npc-37": {
+      "texture": "lpc-npc-37",
+      "path": "assets/lpc/characters/npc-37.png",
+      "scale": 0.492,
+      "label": "Rival 37"
+    },
+    "npc-38": {
+      "texture": "lpc-npc-38",
+      "path": "assets/lpc/characters/npc-38.png",
+      "scale": 0.488,
+      "label": "Rival 38"
+    },
+    "npc-39": {
+      "texture": "lpc-npc-39",
+      "path": "assets/lpc/characters/npc-39.png",
+      "scale": 0.484,
+      "label": "Rival 39"
+    },
+    "npc-40": {
+      "texture": "lpc-npc-40",
+      "path": "assets/lpc/characters/npc-40.png",
+      "scale": 0.504,
+      "label": "Rival 40"
+    },
+    "npc-41": {
+      "texture": "lpc-npc-41",
+      "path": "assets/lpc/characters/npc-41.png",
+      "scale": 0.5,
+      "label": "Rival 41"
+    },
+    "npc-42": {
+      "texture": "lpc-npc-42",
+      "path": "assets/lpc/characters/npc-42.png",
+      "scale": 0.496,
+      "label": "Rival 42"
+    },
+    "npc-43": {
+      "texture": "lpc-npc-43",
+      "path": "assets/lpc/characters/npc-43.png",
+      "scale": 0.492,
+      "label": "Rival 43"
+    },
+    "npc-44": {
+      "texture": "lpc-npc-44",
+      "path": "assets/lpc/characters/npc-44.png",
+      "scale": 0.488,
+      "label": "Rival 44"
+    },
+    "npc-45": {
+      "texture": "lpc-npc-45",
+      "path": "assets/lpc/characters/npc-45.png",
+      "scale": 0.484,
+      "label": "Rival 45"
+    },
+    "npc-46": {
+      "texture": "lpc-npc-46",
+      "path": "assets/lpc/characters/npc-46.png",
+      "scale": 0.48,
+      "label": "Rival 46"
+    },
+    "npc-47": {
+      "texture": "lpc-npc-47",
+      "path": "assets/lpc/characters/npc-47.png",
+      "scale": 0.512,
+      "label": "Rival 47"
+    },
+    "npc-48": {
+      "texture": "lpc-npc-48",
+      "path": "assets/lpc/characters/npc-48.png",
+      "scale": 0.508,
+      "label": "Rival 48"
+    },
+    "npc-49": {
+      "texture": "lpc-npc-49",
+      "path": "assets/lpc/characters/npc-49.png",
+      "scale": 0.504,
+      "label": "Rival 49"
+    },
+    "npc-50": {
+      "texture": "lpc-npc-50",
+      "path": "assets/lpc/characters/npc-50.png",
+      "scale": 0.488,
+      "label": "Rival 50"
+    },
+    "npc-51": {
+      "texture": "lpc-npc-51",
+      "path": "assets/lpc/characters/npc-51.png",
+      "scale": 0.484,
+      "label": "Rival 51"
+    },
+    "npc-52": {
+      "texture": "lpc-npc-52",
+      "path": "assets/lpc/characters/npc-52.png",
+      "scale": 0.48,
+      "label": "Rival 52"
+    },
+    "npc-53": {
+      "texture": "lpc-npc-53",
+      "path": "assets/lpc/characters/npc-53.png",
+      "scale": 0.512,
+      "label": "Rival 53"
+    },
+    "npc-54": {
+      "texture": "lpc-npc-54",
+      "path": "assets/lpc/characters/npc-54.png",
+      "scale": 0.508,
+      "label": "Rival 54"
+    },
+    "npc-55": {
+      "texture": "lpc-npc-55",
+      "path": "assets/lpc/characters/npc-55.png",
+      "scale": 0.504,
+      "label": "Rival 55"
+    },
+    "npc-56": {
+      "texture": "lpc-npc-56",
+      "path": "assets/lpc/characters/npc-56.png",
+      "scale": 0.5,
+      "label": "Rival 56"
+    },
+    "npc-57": {
+      "texture": "lpc-npc-57",
+      "path": "assets/lpc/characters/npc-57.png",
+      "scale": 0.496,
+      "label": "Rival 57"
+    },
+    "npc-58": {
+      "texture": "lpc-npc-58",
+      "path": "assets/lpc/characters/npc-58.png",
+      "scale": 0.492,
+      "label": "Rival 58"
+    },
+    "npc-59": {
+      "texture": "lpc-npc-59",
+      "path": "assets/lpc/characters/npc-59.png",
+      "scale": 0.488,
+      "label": "Rival 59"
+    },
+    "npc-60": {
+      "texture": "lpc-npc-60",
+      "path": "assets/lpc/characters/npc-60.png",
+      "scale": 0.508,
+      "label": "Rival 60"
+    },
+    "npc-61": {
+      "texture": "lpc-npc-61",
+      "path": "assets/lpc/characters/npc-61.png",
+      "scale": 0.504,
+      "label": "Rival 61"
+    },
+    "npc-62": {
+      "texture": "lpc-npc-62",
+      "path": "assets/lpc/characters/npc-62.png",
+      "scale": 0.5,
+      "label": "Rival 62"
+    },
+    "npc-63": {
+      "texture": "lpc-npc-63",
+      "path": "assets/lpc/characters/npc-63.png",
+      "scale": 0.496,
+      "label": "Rival 63"
+    },
+    "npc-64": {
+      "texture": "lpc-npc-64",
+      "path": "assets/lpc/characters/npc-64.png",
+      "scale": 0.492,
+      "label": "Rival 64"
+    },
+    "npc-65": {
+      "texture": "lpc-npc-65",
+      "path": "assets/lpc/characters/npc-65.png",
+      "scale": 0.488,
+      "label": "Rival 65"
+    },
+    "npc-66": {
+      "texture": "lpc-npc-66",
+      "path": "assets/lpc/characters/npc-66.png",
+      "scale": 0.484,
+      "label": "Rival 66"
+    },
+    "npc-67": {
+      "texture": "lpc-npc-67",
+      "path": "assets/lpc/characters/npc-67.png",
+      "scale": 0.48,
+      "label": "Rival 67"
+    },
+    "npc-68": {
+      "texture": "lpc-npc-68",
+      "path": "assets/lpc/characters/npc-68.png",
+      "scale": 0.512,
+      "label": "Rival 68"
+    },
+    "npc-69": {
+      "texture": "lpc-npc-69",
+      "path": "assets/lpc/characters/npc-69.png",
+      "scale": 0.508,
+      "label": "Rival 69"
+    },
+    "npc-70": {
+      "texture": "lpc-npc-70",
+      "path": "assets/lpc/characters/npc-70.png",
+      "scale": 0.492,
+      "label": "Rival 70"
+    },
+    "npc-71": {
+      "texture": "lpc-npc-71",
+      "path": "assets/lpc/characters/npc-71.png",
+      "scale": 0.488,
+      "label": "Rival 71"
+    },
+    "npc-72": {
+      "texture": "lpc-npc-72",
+      "path": "assets/lpc/characters/npc-72.png",
+      "scale": 0.484,
+      "label": "Rival 72"
+    },
+    "npc-73": {
+      "texture": "lpc-npc-73",
+      "path": "assets/lpc/characters/npc-73.png",
+      "scale": 0.48,
+      "label": "Rival 73"
+    },
+    "npc-74": {
+      "texture": "lpc-npc-74",
+      "path": "assets/lpc/characters/npc-74.png",
+      "scale": 0.512,
+      "label": "Rival 74"
+    },
+    "npc-75": {
+      "texture": "lpc-npc-75",
+      "path": "assets/lpc/characters/npc-75.png",
+      "scale": 0.508,
+      "label": "Rival 75"
+    },
+    "npc-76": {
+      "texture": "lpc-npc-76",
+      "path": "assets/lpc/characters/npc-76.png",
+      "scale": 0.504,
+      "label": "Rival 76"
+    },
+    "npc-77": {
+      "texture": "lpc-npc-77",
+      "path": "assets/lpc/characters/npc-77.png",
+      "scale": 0.5,
+      "label": "Rival 77"
+    },
+    "npc-78": {
+      "texture": "lpc-npc-78",
+      "path": "assets/lpc/characters/npc-78.png",
+      "scale": 0.496,
+      "label": "Rival 78"
+    },
+    "npc-79": {
+      "texture": "lpc-npc-79",
+      "path": "assets/lpc/characters/npc-79.png",
+      "scale": 0.492,
+      "label": "Rival 79"
+    },
+    "npc-80": {
+      "texture": "lpc-npc-80",
+      "path": "assets/lpc/characters/npc-80.png",
+      "scale": 0.512,
+      "label": "Rival 80"
+    },
+    "npc-81": {
+      "texture": "lpc-npc-81",
+      "path": "assets/lpc/characters/npc-81.png",
+      "scale": 0.508,
+      "label": "Rival 81"
+    },
+    "npc-82": {
+      "texture": "lpc-npc-82",
+      "path": "assets/lpc/characters/npc-82.png",
+      "scale": 0.504,
+      "label": "Rival 82"
+    },
+    "npc-83": {
+      "texture": "lpc-npc-83",
+      "path": "assets/lpc/characters/npc-83.png",
+      "scale": 0.5,
+      "label": "Rival 83"
+    },
+    "npc-84": {
+      "texture": "lpc-npc-84",
+      "path": "assets/lpc/characters/npc-84.png",
+      "scale": 0.496,
+      "label": "Rival 84"
+    },
+    "npc-85": {
+      "texture": "lpc-npc-85",
+      "path": "assets/lpc/characters/npc-85.png",
+      "scale": 0.492,
+      "label": "Rival 85"
+    },
+    "npc-86": {
+      "texture": "lpc-npc-86",
+      "path": "assets/lpc/characters/npc-86.png",
+      "scale": 0.488,
+      "label": "Rival 86"
+    },
+    "npc-87": {
+      "texture": "lpc-npc-87",
+      "path": "assets/lpc/characters/npc-87.png",
+      "scale": 0.484,
+      "label": "Rival 87"
+    },
+    "npc-88": {
+      "texture": "lpc-npc-88",
+      "path": "assets/lpc/characters/npc-88.png",
+      "scale": 0.48,
+      "label": "Rival 88"
+    },
+    "npc-89": {
+      "texture": "lpc-npc-89",
+      "path": "assets/lpc/characters/npc-89.png",
+      "scale": 0.512,
+      "label": "Rival 89"
+    },
+    "npc-90": {
+      "texture": "lpc-npc-90",
+      "path": "assets/lpc/characters/npc-90.png",
+      "scale": 0.496,
+      "label": "Rival 90"
+    },
+    "npc-91": {
+      "texture": "lpc-npc-91",
+      "path": "assets/lpc/characters/npc-91.png",
+      "scale": 0.492,
+      "label": "Rival 91"
+    },
+    "npc-92": {
+      "texture": "lpc-npc-92",
+      "path": "assets/lpc/characters/npc-92.png",
+      "scale": 0.488,
+      "label": "Rival 92"
+    },
+    "npc-93": {
+      "texture": "lpc-npc-93",
+      "path": "assets/lpc/characters/npc-93.png",
+      "scale": 0.484,
+      "label": "Rival 93"
+    },
+    "npc-94": {
+      "texture": "lpc-npc-94",
+      "path": "assets/lpc/characters/npc-94.png",
+      "scale": 0.48,
+      "label": "Rival 94"
+    },
+    "npc-95": {
+      "texture": "lpc-npc-95",
+      "path": "assets/lpc/characters/npc-95.png",
+      "scale": 0.512,
+      "label": "Rival 95"
+    },
+    "npc-96": {
+      "texture": "lpc-npc-96",
+      "path": "assets/lpc/characters/npc-96.png",
+      "scale": 0.508,
+      "label": "Rival 96"
+    },
+    "npc-97": {
+      "texture": "lpc-npc-97",
+      "path": "assets/lpc/characters/npc-97.png",
+      "scale": 0.504,
+      "label": "Rival 97"
+    },
+    "npc-98": {
+      "texture": "lpc-npc-98",
+      "path": "assets/lpc/characters/npc-98.png",
+      "scale": 0.5,
+      "label": "Rival 98"
+    },
+    "npc-99": {
+      "texture": "lpc-npc-99",
+      "path": "assets/lpc/characters/npc-99.png",
+      "scale": 0.496,
+      "label": "Rival 99"
+    },
+    "npc-100": {
+      "texture": "lpc-npc-100",
+      "path": "assets/lpc/characters/npc-100.png",
+      "scale": 0.512,
+      "label": "Rival 100"
+    },
+    "npc-101": {
+      "texture": "lpc-npc-101",
+      "path": "assets/lpc/characters/npc-101.png",
+      "scale": 0.48,
+      "label": "Rival 101"
+    },
+    "npc-102": {
+      "texture": "lpc-npc-102",
+      "path": "assets/lpc/characters/npc-102.png",
+      "scale": 0.484,
+      "label": "Rival 102"
+    },
+    "npc-103": {
+      "texture": "lpc-npc-103",
+      "path": "assets/lpc/characters/npc-103.png",
+      "scale": 0.488,
+      "label": "Rival 103"
+    },
+    "npc-104": {
+      "texture": "lpc-npc-104",
+      "path": "assets/lpc/characters/npc-104.png",
+      "scale": 0.492,
+      "label": "Rival 104"
+    },
+    "npc-105": {
+      "texture": "lpc-npc-105",
+      "path": "assets/lpc/characters/npc-105.png",
+      "scale": 0.496,
+      "label": "Rival 105"
+    },
+    "npc-106": {
+      "texture": "lpc-npc-106",
+      "path": "assets/lpc/characters/npc-106.png",
+      "scale": 0.5,
+      "label": "Rival 106"
+    },
+    "npc-107": {
+      "texture": "lpc-npc-107",
+      "path": "assets/lpc/characters/npc-107.png",
+      "scale": 0.504,
+      "label": "Rival 107"
+    },
+    "npc-108": {
+      "texture": "lpc-npc-108",
+      "path": "assets/lpc/characters/npc-108.png",
+      "scale": 0.508,
+      "label": "Rival 108"
+    },
+    "npc-109": {
+      "texture": "lpc-npc-109",
+      "path": "assets/lpc/characters/npc-109.png",
+      "scale": 0.512,
+      "label": "Rival 109"
+    },
+    "npc-110": {
+      "texture": "lpc-npc-110",
+      "path": "assets/lpc/characters/npc-110.png",
+      "scale": 0.492,
+      "label": "Rival 110"
+    },
+    "npc-111": {
+      "texture": "lpc-npc-111",
+      "path": "assets/lpc/characters/npc-111.png",
+      "scale": 0.496,
+      "label": "Rival 111"
+    },
+    "npc-112": {
+      "texture": "lpc-npc-112",
+      "path": "assets/lpc/characters/npc-112.png",
+      "scale": 0.5,
+      "label": "Rival 112"
+    },
+    "npc-113": {
+      "texture": "lpc-npc-113",
+      "path": "assets/lpc/characters/npc-113.png",
+      "scale": 0.504,
+      "label": "Rival 113"
+    },
+    "npc-114": {
+      "texture": "lpc-npc-114",
+      "path": "assets/lpc/characters/npc-114.png",
+      "scale": 0.508,
+      "label": "Rival 114"
+    },
+    "npc-115": {
+      "texture": "lpc-npc-115",
+      "path": "assets/lpc/characters/npc-115.png",
+      "scale": 0.512,
+      "label": "Rival 115"
+    },
+    "npc-116": {
+      "texture": "lpc-npc-116",
+      "path": "assets/lpc/characters/npc-116.png",
+      "scale": 0.48,
+      "label": "Rival 116"
+    },
+    "npc-117": {
+      "texture": "lpc-npc-117",
+      "path": "assets/lpc/characters/npc-117.png",
+      "scale": 0.484,
+      "label": "Rival 117"
+    },
+    "npc-118": {
+      "texture": "lpc-npc-118",
+      "path": "assets/lpc/characters/npc-118.png",
+      "scale": 0.488,
+      "label": "Rival 118"
+    },
+    "npc-119": {
+      "texture": "lpc-npc-119",
+      "path": "assets/lpc/characters/npc-119.png",
+      "scale": 0.492,
+      "label": "Rival 119"
+    },
+    "npc-120": {
+      "texture": "lpc-npc-120",
+      "path": "assets/lpc/characters/npc-120.png",
+      "scale": 0.508,
+      "label": "Rival 120"
+    },
+    "npc-121": {
+      "texture": "lpc-npc-121",
+      "path": "assets/lpc/characters/npc-121.png",
+      "scale": 0.512,
+      "label": "Rival 121"
+    },
+    "npc-122": {
+      "texture": "lpc-npc-122",
+      "path": "assets/lpc/characters/npc-122.png",
+      "scale": 0.48,
+      "label": "Rival 122"
+    },
+    "npc-123": {
+      "texture": "lpc-npc-123",
+      "path": "assets/lpc/characters/npc-123.png",
+      "scale": 0.484,
+      "label": "Rival 123"
+    },
+    "npc-124": {
+      "texture": "lpc-npc-124",
+      "path": "assets/lpc/characters/npc-124.png",
+      "scale": 0.488,
+      "label": "Rival 124"
+    },
+    "npc-125": {
+      "texture": "lpc-npc-125",
+      "path": "assets/lpc/characters/npc-125.png",
+      "scale": 0.492,
+      "label": "Rival 125"
+    },
+    "urban-10": {
+      "texture": "lpc-urban-10",
+      "path": "assets/lpc/characters/urban-10.png",
+      "scale": 0.504,
+      "label": "urban-10"
+    },
+    "urban-11": {
+      "texture": "lpc-urban-11",
+      "path": "assets/lpc/characters/urban-11.png",
+      "scale": 0.5,
+      "label": "urban-11"
+    },
+    "urban-12": {
+      "texture": "lpc-urban-12",
+      "path": "assets/lpc/characters/urban-12.png",
+      "scale": 0.496,
+      "label": "urban-12"
+    },
+    "urban-13": {
+      "texture": "lpc-urban-13",
+      "path": "assets/lpc/characters/urban-13.png",
+      "scale": 0.492,
+      "label": "urban-13"
+    },
+    "urban-14": {
+      "texture": "lpc-urban-14",
+      "path": "assets/lpc/characters/urban-14.png",
+      "scale": 0.488,
+      "label": "urban-14"
+    },
+    "urban-15": {
+      "texture": "lpc-urban-15",
+      "path": "assets/lpc/characters/urban-15.png",
+      "scale": 0.484,
+      "label": "urban-15"
+    },
+    "urban-16": {
+      "texture": "lpc-urban-16",
+      "path": "assets/lpc/characters/urban-16.png",
+      "scale": 0.48,
+      "label": "urban-16"
+    },
+    "urban-17": {
+      "texture": "lpc-urban-17",
+      "path": "assets/lpc/characters/urban-17.png",
+      "scale": 0.512,
+      "label": "urban-17"
+    },
+    "urban-18": {
+      "texture": "lpc-urban-18",
+      "path": "assets/lpc/characters/urban-18.png",
+      "scale": 0.508,
+      "label": "urban-18"
+    },
+    "urban-19": {
+      "texture": "lpc-urban-19",
+      "path": "assets/lpc/characters/urban-19.png",
+      "scale": 0.504,
+      "label": "urban-19"
+    },
+    "urban-20": {
+      "texture": "lpc-urban-20",
+      "path": "assets/lpc/characters/urban-20.png",
+      "scale": 0.488,
+      "label": "urban-20"
+    },
+    "urban-21": {
+      "texture": "lpc-urban-21",
+      "path": "assets/lpc/characters/urban-21.png",
+      "scale": 0.484,
+      "label": "urban-21"
+    },
+    "urban-22": {
+      "texture": "lpc-urban-22",
+      "path": "assets/lpc/characters/urban-22.png",
+      "scale": 0.48,
+      "label": "urban-22"
+    },
+    "urban-23": {
+      "texture": "lpc-urban-23",
+      "path": "assets/lpc/characters/urban-23.png",
+      "scale": 0.512,
+      "label": "urban-23"
+    },
+    "urban-24": {
+      "texture": "lpc-urban-24",
+      "path": "assets/lpc/characters/urban-24.png",
+      "scale": 0.508,
+      "label": "urban-24"
+    },
+    "urban-25": {
+      "texture": "lpc-urban-25",
+      "path": "assets/lpc/characters/urban-25.png",
+      "scale": 0.504,
+      "label": "urban-25"
+    },
+    "urban-26": {
+      "texture": "lpc-urban-26",
+      "path": "assets/lpc/characters/urban-26.png",
+      "scale": 0.5,
+      "label": "urban-26"
+    },
+    "urban-27": {
+      "texture": "lpc-urban-27",
+      "path": "assets/lpc/characters/urban-27.png",
+      "scale": 0.496,
+      "label": "urban-27"
+    },
+    "urban-28": {
+      "texture": "lpc-urban-28",
+      "path": "assets/lpc/characters/urban-28.png",
+      "scale": 0.492,
+      "label": "urban-28"
+    },
+    "urban-29": {
+      "texture": "lpc-urban-29",
+      "path": "assets/lpc/characters/urban-29.png",
+      "scale": 0.488,
+      "label": "urban-29"
+    },
+    "urban-30": {
+      "texture": "lpc-urban-30",
+      "path": "assets/lpc/characters/urban-30.png",
+      "scale": 0.508,
+      "label": "urban-30"
+    },
+    "urban-31": {
+      "texture": "lpc-urban-31",
+      "path": "assets/lpc/characters/urban-31.png",
+      "scale": 0.504,
+      "label": "urban-31"
+    },
+    "urban-32": {
+      "texture": "lpc-urban-32",
+      "path": "assets/lpc/characters/urban-32.png",
+      "scale": 0.5,
+      "label": "urban-32"
+    },
+    "urban-33": {
+      "texture": "lpc-urban-33",
+      "path": "assets/lpc/characters/urban-33.png",
+      "scale": 0.496,
+      "label": "urban-33"
+    },
+    "urban-34": {
+      "texture": "lpc-urban-34",
+      "path": "assets/lpc/characters/urban-34.png",
+      "scale": 0.492,
+      "label": "urban-34"
+    },
+    "urban-35": {
+      "texture": "lpc-urban-35",
+      "path": "assets/lpc/characters/urban-35.png",
+      "scale": 0.488,
+      "label": "urban-35"
+    },
+    "urban-36": {
+      "texture": "lpc-urban-36",
+      "path": "assets/lpc/characters/urban-36.png",
+      "scale": 0.484,
+      "label": "urban-36"
+    },
+    "urban-37": {
+      "texture": "lpc-urban-37",
+      "path": "assets/lpc/characters/urban-37.png",
+      "scale": 0.48,
+      "label": "urban-37"
+    },
+    "urban-38": {
+      "texture": "lpc-urban-38",
+      "path": "assets/lpc/characters/urban-38.png",
+      "scale": 0.512,
+      "label": "urban-38"
+    },
+    "urban-39": {
+      "texture": "lpc-urban-39",
+      "path": "assets/lpc/characters/urban-39.png",
+      "scale": 0.508,
+      "label": "urban-39"
+    },
+    "urban-40": {
+      "texture": "lpc-urban-40",
+      "path": "assets/lpc/characters/urban-40.png",
+      "scale": 0.492,
+      "label": "urban-40"
+    },
+    "urban-41": {
+      "texture": "lpc-urban-41",
+      "path": "assets/lpc/characters/urban-41.png",
+      "scale": 0.488,
+      "label": "urban-41"
+    },
+    "urban-42": {
+      "texture": "lpc-urban-42",
+      "path": "assets/lpc/characters/urban-42.png",
+      "scale": 0.484,
+      "label": "urban-42"
+    },
+    "urban-43": {
+      "texture": "lpc-urban-43",
+      "path": "assets/lpc/characters/urban-43.png",
+      "scale": 0.48,
+      "label": "urban-43"
+    },
+    "urban-44": {
+      "texture": "lpc-urban-44",
+      "path": "assets/lpc/characters/urban-44.png",
+      "scale": 0.512,
+      "label": "urban-44"
+    },
+    "urban-45": {
+      "texture": "lpc-urban-45",
+      "path": "assets/lpc/characters/urban-45.png",
+      "scale": 0.508,
+      "label": "urban-45"
+    },
+    "urban-46": {
+      "texture": "lpc-urban-46",
+      "path": "assets/lpc/characters/urban-46.png",
+      "scale": 0.504,
+      "label": "urban-46"
+    },
+    "urban-47": {
+      "texture": "lpc-urban-47",
+      "path": "assets/lpc/characters/urban-47.png",
+      "scale": 0.5,
+      "label": "urban-47"
+    },
+    "urban-48": {
+      "texture": "lpc-urban-48",
+      "path": "assets/lpc/characters/urban-48.png",
+      "scale": 0.496,
+      "label": "urban-48"
+    },
+    "urban-49": {
+      "texture": "lpc-urban-49",
+      "path": "assets/lpc/characters/urban-49.png",
+      "scale": 0.492,
+      "label": "urban-49"
+    },
+    "urban-50": {
+      "texture": "lpc-urban-50",
+      "path": "assets/lpc/characters/urban-50.png",
+      "scale": 0.512,
+      "label": "urban-50"
+    },
+    "urban-51": {
+      "texture": "lpc-urban-51",
+      "path": "assets/lpc/characters/urban-51.png",
+      "scale": 0.508,
+      "label": "urban-51"
+    },
+    "urban-52": {
+      "texture": "lpc-urban-52",
+      "path": "assets/lpc/characters/urban-52.png",
+      "scale": 0.504,
+      "label": "urban-52"
+    },
+    "urban-53": {
+      "texture": "lpc-urban-53",
+      "path": "assets/lpc/characters/urban-53.png",
+      "scale": 0.5,
+      "label": "urban-53"
+    },
+    "urban-54": {
+      "texture": "lpc-urban-54",
+      "path": "assets/lpc/characters/urban-54.png",
+      "scale": 0.496,
+      "label": "urban-54"
+    },
+    "urban-55": {
+      "texture": "lpc-urban-55",
+      "path": "assets/lpc/characters/urban-55.png",
+      "scale": 0.492,
+      "label": "urban-55"
+    },
+    "urban-56": {
+      "texture": "lpc-urban-56",
+      "path": "assets/lpc/characters/urban-56.png",
+      "scale": 0.488,
+      "label": "urban-56"
+    },
+    "urban-57": {
+      "texture": "lpc-urban-57",
+      "path": "assets/lpc/characters/urban-57.png",
+      "scale": 0.484,
+      "label": "urban-57"
+    },
+    "urban-58": {
+      "texture": "lpc-urban-58",
+      "path": "assets/lpc/characters/urban-58.png",
+      "scale": 0.48,
+      "label": "urban-58"
+    },
+    "urban-59": {
+      "texture": "lpc-urban-59",
+      "path": "assets/lpc/characters/urban-59.png",
+      "scale": 0.512,
+      "label": "urban-59"
+    },
+    "school-0": {
+      "texture": "lpc-school-0",
+      "path": "assets/lpc/characters/school-0.png",
+      "scale": 0.512,
+      "label": "Alumno 0"
+    },
+    "school-1": {
+      "texture": "lpc-school-1",
+      "path": "assets/lpc/characters/school-1.png",
+      "scale": 0.508,
+      "label": "Alumno 1"
+    },
+    "school-2": {
+      "texture": "lpc-school-2",
+      "path": "assets/lpc/characters/school-2.png",
+      "scale": 0.504,
+      "label": "Alumno 2"
+    },
+    "school-3": {
+      "texture": "lpc-school-3",
+      "path": "assets/lpc/characters/school-3.png",
+      "scale": 0.5,
+      "label": "Alumno 3"
+    },
+    "school-4": {
+      "texture": "lpc-school-4",
+      "path": "assets/lpc/characters/school-4.png",
+      "scale": 0.496,
+      "label": "Alumno 4"
+    },
+    "school-5": {
+      "texture": "lpc-school-5",
+      "path": "assets/lpc/characters/school-5.png",
+      "scale": 0.492,
+      "label": "Alumno 5"
+    },
+    "school-6": {
+      "texture": "lpc-school-6",
+      "path": "assets/lpc/characters/school-6.png",
+      "scale": 0.488,
+      "label": "Alumno 6"
+    },
+    "school-7": {
+      "texture": "lpc-school-7",
+      "path": "assets/lpc/characters/school-7.png",
+      "scale": 0.484,
+      "label": "Alumno 7"
+    },
+    "school-8": {
+      "texture": "lpc-school-8",
+      "path": "assets/lpc/characters/school-8.png",
+      "scale": 0.48,
+      "label": "Alumno 8"
+    },
+    "school-9": {
+      "texture": "lpc-school-9",
+      "path": "assets/lpc/characters/school-9.png",
+      "scale": 0.512,
+      "label": "Alumno 9"
+    },
+    "school-10": {
+      "texture": "lpc-school-10",
+      "path": "assets/lpc/characters/school-10.png",
+      "scale": 0.496,
+      "label": "Alumno 10"
+    },
+    "school-11": {
+      "texture": "lpc-school-11",
+      "path": "assets/lpc/characters/school-11.png",
+      "scale": 0.5,
+      "label": "Alumno 11"
+    },
+    "school-12": {
+      "texture": "lpc-school-12",
+      "path": "assets/lpc/characters/school-12.png",
+      "scale": 0.504,
+      "label": "Alumno 12"
+    },
+    "school-13": {
+      "texture": "lpc-school-13",
+      "path": "assets/lpc/characters/school-13.png",
+      "scale": 0.508,
+      "label": "Alumno 13"
+    },
+    "school-14": {
+      "texture": "lpc-school-14",
+      "path": "assets/lpc/characters/school-14.png",
+      "scale": 0.512,
+      "label": "Alumno 14"
+    },
+    "school-15": {
+      "texture": "lpc-school-15",
+      "path": "assets/lpc/characters/school-15.png",
+      "scale": 0.48,
+      "label": "Alumno 15"
+    },
+    "school-16": {
+      "texture": "lpc-school-16",
+      "path": "assets/lpc/characters/school-16.png",
+      "scale": 0.484,
+      "label": "Alumno 16"
+    },
+    "school-17": {
+      "texture": "lpc-school-17",
+      "path": "assets/lpc/characters/school-17.png",
+      "scale": 0.488,
+      "label": "Alumno 17"
+    },
+    "school-18": {
+      "texture": "lpc-school-18",
+      "path": "assets/lpc/characters/school-18.png",
+      "scale": 0.492,
+      "label": "Alumno 18"
+    },
+    "school-19": {
+      "texture": "lpc-school-19",
+      "path": "assets/lpc/characters/school-19.png",
+      "scale": 0.496,
+      "label": "Alumno 19"
+    },
+    "school-20": {
+      "texture": "lpc-school-20",
+      "path": "assets/lpc/characters/school-20.png",
+      "scale": 0.512,
+      "label": "Alumno 20"
+    },
+    "school-21": {
+      "texture": "lpc-school-21",
+      "path": "assets/lpc/characters/school-21.png",
+      "scale": 0.48,
+      "label": "Alumno 21"
+    },
+    "school-22": {
+      "texture": "lpc-school-22",
+      "path": "assets/lpc/characters/school-22.png",
+      "scale": 0.484,
+      "label": "Alumno 22"
+    },
+    "school-23": {
+      "texture": "lpc-school-23",
+      "path": "assets/lpc/characters/school-23.png",
+      "scale": 0.488,
+      "label": "Alumno 23"
+    },
+    "school-24": {
+      "texture": "lpc-school-24",
+      "path": "assets/lpc/characters/school-24.png",
+      "scale": 0.492,
+      "label": "Alumno 24"
+    },
+    "school-25": {
+      "texture": "lpc-school-25",
+      "path": "assets/lpc/characters/school-25.png",
+      "scale": 0.496,
+      "label": "Alumno 25"
+    },
+    "school-26": {
+      "texture": "lpc-school-26",
+      "path": "assets/lpc/characters/school-26.png",
+      "scale": 0.5,
+      "label": "Alumno 26"
+    },
+    "school-27": {
+      "texture": "lpc-school-27",
+      "path": "assets/lpc/characters/school-27.png",
+      "scale": 0.504,
+      "label": "Alumno 27"
+    },
+    "school-28": {
+      "texture": "lpc-school-28",
+      "path": "assets/lpc/characters/school-28.png",
+      "scale": 0.508,
+      "label": "Alumno 28"
+    },
+    "school-29": {
+      "texture": "lpc-school-29",
+      "path": "assets/lpc/characters/school-29.png",
+      "scale": 0.512,
+      "label": "Alumno 29"
+    },
+    "skeleton-0": {
+      "texture": "lpc-skeleton-0",
+      "path": "assets/lpc/characters/skeleton-0.png",
+      "scale": 0.512,
+      "label": "Esqueleto 0",
+      "tint": 13164784
+    },
+    "skeleton-1": {
+      "texture": "lpc-skeleton-1",
+      "path": "assets/lpc/characters/skeleton-1.png",
+      "scale": 0.508,
+      "label": "Esqueleto 1",
+      "tint": 13164784
+    },
+    "skeleton-2": {
+      "texture": "lpc-skeleton-2",
+      "path": "assets/lpc/characters/skeleton-2.png",
+      "scale": 0.504,
+      "label": "Esqueleto 2",
+      "tint": 13164784
+    },
+    "skeleton-3": {
+      "texture": "lpc-skeleton-3",
+      "path": "assets/lpc/characters/skeleton-3.png",
+      "scale": 0.5,
+      "label": "Esqueleto 3",
+      "tint": 13164784
+    },
+    "skeleton-4": {
+      "texture": "lpc-skeleton-4",
+      "path": "assets/lpc/characters/skeleton-4.png",
+      "scale": 0.496,
+      "label": "Esqueleto 4",
+      "tint": 13164784
+    },
+    "skeleton-5": {
+      "texture": "lpc-skeleton-5",
+      "path": "assets/lpc/characters/skeleton-5.png",
+      "scale": 0.492,
+      "label": "Esqueleto 5",
+      "tint": 13164784
+    },
+    "skeleton-6": {
+      "texture": "lpc-skeleton-6",
+      "path": "assets/lpc/characters/skeleton-6.png",
+      "scale": 0.488,
+      "label": "Esqueleto 6",
+      "tint": 13164784
+    },
+    "skeleton-7": {
+      "texture": "lpc-skeleton-7",
+      "path": "assets/lpc/characters/skeleton-7.png",
+      "scale": 0.484,
+      "label": "Esqueleto 7",
+      "tint": 13164784
+    },
+    "skeleton-8": {
+      "texture": "lpc-skeleton-8",
+      "path": "assets/lpc/characters/skeleton-8.png",
+      "scale": 0.48,
+      "label": "Esqueleto 8",
+      "tint": 13164784
+    },
+    "skeleton-9": {
+      "texture": "lpc-skeleton-9",
+      "path": "assets/lpc/characters/skeleton-9.png",
+      "scale": 0.512,
+      "label": "Esqueleto 9",
+      "tint": 13164784
+    },
+    "skeleton-10": {
+      "texture": "lpc-skeleton-10",
+      "path": "assets/lpc/characters/skeleton-10.png",
+      "scale": 0.508,
+      "label": "Esqueleto 10",
+      "tint": 13164784
+    },
+    "skeleton-11": {
+      "texture": "lpc-skeleton-11",
+      "path": "assets/lpc/characters/skeleton-11.png",
+      "scale": 0.504,
+      "label": "Esqueleto 11",
+      "tint": 13164784
+    },
+    "skeleton-12": {
+      "texture": "lpc-skeleton-12",
+      "path": "assets/lpc/characters/skeleton-12.png",
+      "scale": 0.5,
+      "label": "Esqueleto 12",
+      "tint": 13164784
+    },
+    "skeleton-13": {
+      "texture": "lpc-skeleton-13",
+      "path": "assets/lpc/characters/skeleton-13.png",
+      "scale": 0.496,
+      "label": "Esqueleto 13",
+      "tint": 13164784
+    },
+    "skeleton-14": {
+      "texture": "lpc-skeleton-14",
+      "path": "assets/lpc/characters/skeleton-14.png",
+      "scale": 0.492,
+      "label": "Esqueleto 14",
+      "tint": 13164784
+    },
+    "skeleton-15": {
+      "texture": "lpc-skeleton-15",
+      "path": "assets/lpc/characters/skeleton-15.png",
+      "scale": 0.488,
+      "label": "Esqueleto 15",
+      "tint": 13164784
+    },
+    "skeleton-16": {
+      "texture": "lpc-skeleton-16",
+      "path": "assets/lpc/characters/skeleton-16.png",
+      "scale": 0.484,
+      "label": "Esqueleto 16",
+      "tint": 13164784
+    },
+    "skeleton-17": {
+      "texture": "lpc-skeleton-17",
+      "path": "assets/lpc/characters/skeleton-17.png",
+      "scale": 0.48,
+      "label": "Esqueleto 17",
+      "tint": 13164784
+    },
+    "skeleton-18": {
+      "texture": "lpc-skeleton-18",
+      "path": "assets/lpc/characters/skeleton-18.png",
+      "scale": 0.512,
+      "label": "Esqueleto 18",
+      "tint": 13164784
+    },
+    "skeleton-19": {
+      "texture": "lpc-skeleton-19",
+      "path": "assets/lpc/characters/skeleton-19.png",
+      "scale": 0.508,
+      "label": "Esqueleto 19",
+      "tint": 13164784
+    },
+    "skeleton-20": {
+      "texture": "lpc-skeleton-20",
+      "path": "assets/lpc/characters/skeleton-20.png",
+      "scale": 0.492,
+      "label": "Esqueleto 20",
+      "tint": 13164784
+    },
+    "skeleton-21": {
+      "texture": "lpc-skeleton-21",
+      "path": "assets/lpc/characters/skeleton-21.png",
+      "scale": 0.488,
+      "label": "Esqueleto 21",
+      "tint": 13164784
+    },
+    "skeleton-22": {
+      "texture": "lpc-skeleton-22",
+      "path": "assets/lpc/characters/skeleton-22.png",
+      "scale": 0.484,
+      "label": "Esqueleto 22",
+      "tint": 13164784
+    },
+    "skeleton-23": {
+      "texture": "lpc-skeleton-23",
+      "path": "assets/lpc/characters/skeleton-23.png",
+      "scale": 0.48,
+      "label": "Esqueleto 23",
+      "tint": 13164784
+    },
+    "specter-0": {
+      "texture": "lpc-specter-0",
+      "path": "assets/lpc/characters/specter-0.png",
+      "scale": 0.48,
+      "label": "Espectro 0",
+      "tint": 10083839
+    },
+    "specter-1": {
+      "texture": "lpc-specter-1",
+      "path": "assets/lpc/characters/specter-1.png",
+      "scale": 0.512,
+      "label": "Espectro 1",
+      "tint": 10083839
+    },
+    "specter-2": {
+      "texture": "lpc-specter-2",
+      "path": "assets/lpc/characters/specter-2.png",
+      "scale": 0.508,
+      "label": "Espectro 2",
+      "tint": 10083839
+    },
+    "specter-3": {
+      "texture": "lpc-specter-3",
+      "path": "assets/lpc/characters/specter-3.png",
+      "scale": 0.504,
+      "label": "Espectro 3",
+      "tint": 10083839
+    },
+    "specter-4": {
+      "texture": "lpc-specter-4",
+      "path": "assets/lpc/characters/specter-4.png",
+      "scale": 0.5,
+      "label": "Espectro 4",
+      "tint": 10083839
+    },
+    "specter-5": {
+      "texture": "lpc-specter-5",
+      "path": "assets/lpc/characters/specter-5.png",
+      "scale": 0.496,
+      "label": "Espectro 5",
+      "tint": 10083839
+    },
+    "specter-6": {
+      "texture": "lpc-specter-6",
+      "path": "assets/lpc/characters/specter-6.png",
+      "scale": 0.492,
+      "label": "Espectro 6",
+      "tint": 10083839
+    },
+    "specter-7": {
+      "texture": "lpc-specter-7",
+      "path": "assets/lpc/characters/specter-7.png",
+      "scale": 0.488,
+      "label": "Espectro 7",
+      "tint": 10083839
+    },
+    "specter-8": {
+      "texture": "lpc-specter-8",
+      "path": "assets/lpc/characters/specter-8.png",
+      "scale": 0.484,
+      "label": "Espectro 8",
+      "tint": 10083839
+    },
+    "specter-9": {
+      "texture": "lpc-specter-9",
+      "path": "assets/lpc/characters/specter-9.png",
+      "scale": 0.48,
+      "label": "Espectro 9",
+      "tint": 10083839
+    },
+    "specter-10": {
+      "texture": "lpc-specter-10",
+      "path": "assets/lpc/characters/specter-10.png",
+      "scale": 0.512,
+      "label": "Espectro 10",
+      "tint": 10083839
+    },
+    "specter-11": {
+      "texture": "lpc-specter-11",
+      "path": "assets/lpc/characters/specter-11.png",
+      "scale": 0.508,
+      "label": "Espectro 11",
+      "tint": 10083839
+    },
+    "specter-12": {
+      "texture": "lpc-specter-12",
+      "path": "assets/lpc/characters/specter-12.png",
+      "scale": 0.504,
+      "label": "Espectro 12",
+      "tint": 10083839
+    },
+    "specter-13": {
+      "texture": "lpc-specter-13",
+      "path": "assets/lpc/characters/specter-13.png",
+      "scale": 0.5,
+      "label": "Espectro 13",
+      "tint": 10083839
+    },
+    "specter-14": {
+      "texture": "lpc-specter-14",
+      "path": "assets/lpc/characters/specter-14.png",
+      "scale": 0.496,
+      "label": "Espectro 14",
+      "tint": 10083839
+    },
+    "specter-15": {
+      "texture": "lpc-specter-15",
+      "path": "assets/lpc/characters/specter-15.png",
+      "scale": 0.492,
+      "label": "Espectro 15",
+      "tint": 10083839
+    },
+    "specter-16": {
+      "texture": "lpc-specter-16",
+      "path": "assets/lpc/characters/specter-16.png",
+      "scale": 0.488,
+      "label": "Espectro 16",
+      "tint": 10083839
+    },
+    "specter-17": {
+      "texture": "lpc-specter-17",
+      "path": "assets/lpc/characters/specter-17.png",
+      "scale": 0.484,
+      "label": "Espectro 17",
+      "tint": 10083839
+    },
+    "specter-18": {
+      "texture": "lpc-specter-18",
+      "path": "assets/lpc/characters/specter-18.png",
+      "scale": 0.48,
+      "label": "Espectro 18",
+      "tint": 10083839
+    },
+    "specter-19": {
+      "texture": "lpc-specter-19",
+      "path": "assets/lpc/characters/specter-19.png",
+      "scale": 0.512,
+      "label": "Espectro 19",
+      "tint": 10083839
+    },
+    "specter-20": {
+      "texture": "lpc-specter-20",
+      "path": "assets/lpc/characters/specter-20.png",
+      "scale": 0.496,
+      "label": "Espectro 20",
+      "tint": 10083839
+    },
+    "specter-21": {
+      "texture": "lpc-specter-21",
+      "path": "assets/lpc/characters/specter-21.png",
+      "scale": 0.492,
+      "label": "Espectro 21",
+      "tint": 10083839
+    },
+    "specter-22": {
+      "texture": "lpc-specter-22",
+      "path": "assets/lpc/characters/specter-22.png",
+      "scale": 0.488,
+      "label": "Espectro 22",
+      "tint": 10083839
+    },
+    "specter-23": {
+      "texture": "lpc-specter-23",
+      "path": "assets/lpc/characters/specter-23.png",
+      "scale": 0.484,
+      "label": "Espectro 23",
+      "tint": 10083839
+    }
+  },
+  "roles": {
+    "player": "player",
+    "remote": "remote",
+    "bot": [
+      "bot-0",
+      "bot-1",
+      "bot-10",
+      "bot-100",
+      "bot-101",
+      "bot-102",
+      "bot-103",
+      "bot-11",
+      "bot-12",
+      "bot-13",
+      "bot-14",
+      "bot-15",
+      "bot-16",
+      "bot-17",
+      "bot-18",
+      "bot-19",
+      "bot-2",
+      "bot-20",
+      "bot-21",
+      "bot-22",
+      "bot-23",
+      "bot-24",
+      "bot-25",
+      "bot-26",
+      "bot-27",
+      "bot-28",
+      "bot-29",
+      "bot-3",
+      "bot-30",
+      "bot-31",
+      "bot-32",
+      "bot-33",
+      "bot-34",
+      "bot-35",
+      "bot-36",
+      "bot-37",
+      "bot-38",
+      "bot-39",
+      "bot-4",
+      "bot-40",
+      "bot-41",
+      "bot-42",
+      "bot-43",
+      "bot-44",
+      "bot-45",
+      "bot-46",
+      "bot-47",
+      "bot-48",
+      "bot-49",
+      "bot-5",
+      "bot-50",
+      "bot-51",
+      "bot-52",
+      "bot-53",
+      "bot-54",
+      "bot-55",
+      "bot-56",
+      "bot-57",
+      "bot-58",
+      "bot-59",
+      "bot-6",
+      "bot-60",
+      "bot-61",
+      "bot-62",
+      "bot-63",
+      "bot-64",
+      "bot-65",
+      "bot-66",
+      "bot-67",
+      "bot-68",
+      "bot-69",
+      "bot-7",
+      "bot-70",
+      "bot-71",
+      "bot-72",
+      "bot-73",
+      "bot-74",
+      "bot-75",
+      "bot-76",
+      "bot-77",
+      "bot-78",
+      "bot-79",
+      "bot-8",
+      "bot-80",
+      "bot-81",
+      "bot-82",
+      "bot-83",
+      "bot-84",
+      "bot-85",
+      "bot-86",
+      "bot-87",
+      "bot-88",
+      "bot-89",
+      "bot-9",
+      "bot-90",
+      "bot-91",
+      "bot-92",
+      "bot-93",
+      "bot-94",
+      "bot-95",
+      "bot-96",
+      "bot-97",
+      "bot-98",
+      "bot-99"
+    ],
+    "npc": [
+      "npc-0",
+      "npc-1",
+      "npc-10",
+      "npc-100",
+      "npc-101",
+      "npc-102",
+      "npc-103",
+      "npc-104",
+      "npc-105",
+      "npc-106",
+      "npc-107",
+      "npc-108",
+      "npc-109",
+      "npc-11",
+      "npc-110",
+      "npc-111",
+      "npc-112",
+      "npc-113",
+      "npc-114",
+      "npc-115",
+      "npc-116",
+      "npc-117",
+      "npc-118",
+      "npc-119",
+      "npc-12",
+      "npc-120",
+      "npc-121",
+      "npc-122",
+      "npc-123",
+      "npc-124",
+      "npc-125",
+      "npc-13",
+      "npc-14",
+      "npc-15",
+      "npc-16",
+      "npc-17",
+      "npc-18",
+      "npc-19",
+      "npc-2",
+      "npc-20",
+      "npc-21",
+      "npc-22",
+      "npc-23",
+      "npc-24",
+      "npc-25",
+      "npc-26",
+      "npc-27",
+      "npc-28",
+      "npc-29",
+      "npc-3",
+      "npc-30",
+      "npc-31",
+      "npc-32",
+      "npc-33",
+      "npc-34",
+      "npc-35",
+      "npc-36",
+      "npc-37",
+      "npc-38",
+      "npc-39",
+      "npc-4",
+      "npc-40",
+      "npc-41",
+      "npc-42",
+      "npc-43",
+      "npc-44",
+      "npc-45",
+      "npc-46",
+      "npc-47",
+      "npc-48",
+      "npc-49",
+      "npc-5",
+      "npc-50",
+      "npc-51",
+      "npc-52",
+      "npc-53",
+      "npc-54",
+      "npc-55",
+      "npc-56",
+      "npc-57",
+      "npc-58",
+      "npc-59",
+      "npc-6",
+      "npc-60",
+      "npc-61",
+      "npc-62",
+      "npc-63",
+      "npc-64",
+      "npc-65",
+      "npc-66",
+      "npc-67",
+      "npc-68",
+      "npc-69",
+      "npc-7",
+      "npc-70",
+      "npc-71",
+      "npc-72",
+      "npc-73",
+      "npc-74",
+      "npc-75",
+      "npc-76",
+      "npc-77",
+      "npc-78",
+      "npc-79",
+      "npc-8",
+      "npc-80",
+      "npc-81",
+      "npc-82",
+      "npc-83",
+      "npc-84",
+      "npc-85",
+      "npc-86",
+      "npc-87",
+      "npc-88",
+      "npc-89",
+      "npc-9",
+      "npc-90",
+      "npc-91",
+      "npc-92",
+      "npc-93",
+      "npc-94",
+      "npc-95",
+      "npc-96",
+      "npc-97",
+      "npc-98",
+      "npc-99",
+      "urban-0",
+      "urban-1",
+      "urban-10",
+      "urban-11",
+      "urban-12",
+      "urban-13",
+      "urban-14",
+      "urban-15",
+      "urban-16",
+      "urban-17",
+      "urban-18",
+      "urban-19",
+      "urban-2",
+      "urban-20",
+      "urban-21",
+      "urban-22",
+      "urban-23",
+      "urban-24",
+      "urban-25",
+      "urban-26",
+      "urban-27",
+      "urban-28",
+      "urban-29",
+      "urban-3",
+      "urban-30",
+      "urban-31",
+      "urban-32",
+      "urban-33",
+      "urban-34",
+      "urban-35",
+      "urban-36",
+      "urban-37",
+      "urban-38",
+      "urban-39",
+      "urban-4",
+      "urban-40",
+      "urban-41",
+      "urban-42",
+      "urban-43",
+      "urban-44",
+      "urban-45",
+      "urban-46",
+      "urban-47",
+      "urban-48",
+      "urban-49",
+      "urban-5",
+      "urban-50",
+      "urban-51",
+      "urban-52",
+      "urban-53",
+      "urban-54",
+      "urban-55",
+      "urban-56",
+      "urban-57",
+      "urban-58",
+      "urban-59",
+      "urban-6",
+      "urban-7",
+      "urban-8",
+      "urban-9"
+    ]
+  },
+  "archetypes": {
+    "aliases": {
+      "mendigo": "beggar",
+      "estudante": "student",
+      "alma": "specter",
+      "espectro": "specter",
+      "fantasma": "specter",
+      "esqueleto": "skeleton",
+      "profesor": "professor",
+      "cidadan": "walker",
+      "rival": "fighter"
+    },
+    "pools": {
+      "player": [
+        "player"
+      ],
+      "remote": [
+        "remote"
+      ],
+      "clergy": [
+        "priest"
+      ],
+      "receptionist": [
+        "receptionist"
+      ],
+      "director": [
+        "peleteiro-director"
+      ],
+      "walker": {
+        "role": "bot"
+      },
+      "fighter": {
+        "role": "npc"
+      },
+      "beggar": {
+        "pick": [
+          "peleteiro-mendigo-0",
+          "peleteiro-mendigo-1",
+          {
+            "prefix": "urban-",
+            "from": 10,
+            "to": 39
+          },
+          {
+            "prefix": "npc-",
+            "from": 20,
+            "to": 45
+          }
+        ]
+      },
+      "student": {
+        "pick": [
+          "peleteiro-student",
+          "peleteiro-student-1",
+          "peleteiro-student-2",
+          "peleteiro-student-3",
+          {
+            "prefix": "school-",
+            "from": 0,
+            "to": 29
+          },
+          {
+            "prefix": "bot-",
+            "from": 10,
+            "to": 35
+          }
+        ]
+      },
+      "specter": {
+        "pick": [
+          "peleteiro-ghost-0",
+          "peleteiro-ghost-1",
+          "peleteiro-ghost-2",
+          "peleteiro-ghost-3",
+          {
+            "prefix": "specter-",
+            "from": 0,
+            "to": 23
+          }
+        ]
+      },
+      "skeleton": {
+        "prefix": "skeleton-",
+        "from": 0,
+        "to": 23
+      },
+      "professor": [
+        "peleteiro-prof-0",
+        "peleteiro-prof-1",
+        "peleteiro-prof-2",
+        {
+          "prefix": "npc-",
+          "from": 80,
+          "to": 95
+        }
+      ],
+      "bandit": {
+        "pick": [
+          "bandit-0",
+          "bandit-1",
+          "bandit-2",
+          "bandit-3",
+          "bandit-4",
+          {
+            "prefix": "npc-",
+            "from": 6,
+            "to": 25
+          }
+        ]
+      },
+      "urban": {
+        "role": "npc"
+      },
+      "chatter": {
+        "pick": [
+          {
+            "prefix": "bot-",
+            "from": 0,
+            "to": 50
+          },
+          {
+            "prefix": "school-",
+            "from": 0,
+            "to": 15
+          },
+          "peleteiro-student-2",
+          "specter-1"
+        ]
+      },
+      "school": {
+        "prefix": "school-",
+        "from": 0,
+        "to": 29
+      }
+    },
+    "factionArchetype": {
+      "fontinas": "bandit",
+      "clergy": "clergy",
+      "urban": "urban",
+      "peleteiro": "student"
+    },
+    "battleProfiles": {
+      "street": {
+        "hpBase": 16,
+        "hpPerLevel": 7,
+        "movePool": [
+          "punetazo",
+          "empujon",
+          "patada",
+          "grito",
+          "insulto",
+          "cabezazo",
+          "golpe_bajo"
+        ]
+      },
+      "school": {
+        "hpBase": 14,
+        "hpPerLevel": 6,
+        "movePool": [
+          "insulto",
+          "grito",
+          "punetazo",
+          "cabezazo",
+          "patada"
+        ],
+        "tagIcons": {
+          "beggar": "🪙",
+          "specter": "👻",
+          "ghost": "👻",
+          "skeleton": "💀",
+          "student": "📚",
+          "professor": "🔥"
+        }
+      },
+      "crypt": {
+        "hpBase": 18,
+        "hpPerLevel": 8,
+        "movePool": [
+          "grito",
+          "cabezazo",
+          "golpe_bajo",
+          "patada",
+          "insulto"
+        ],
+        "tagIcons": {
+          "skeleton": "💀",
+          "specter": "👻",
+          "director": "🎓"
+        }
+      }
+    }
+  }
+}

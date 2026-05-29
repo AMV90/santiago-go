@@ -6,22 +6,22 @@ import { drawAreaCentralDoor } from '../door-art.js';
 import { AREA_CENTRAL } from '../../map-bounds.js';
 
 const OUTLET_PHRASES = [
-  'Outlet a -70 %… isto non se ve cada día.',
-  'Busco zapatillas de outlet, non de escaparate.',
-  'Marca premium a prezo de saldo. Apaño!',
-  'Unha bolsa máis e pechemos a tarde.',
-  'Isto si que é Área Central, nena.',
-  'Desconto do 50 %? Pois dous pares.',
-  'Vinde de outlet, volvede cargados.',
-  'A tempada pasada aquí a metade.',
-  'Compro agora, penso despois.',
-  'Talla XL en rebajas — o meu día de sorte.',
-  'Alcampo ao fondo e despois máis tiendas…',
-  'Parque ao centro, tiendas por dentro. Perfecto.',
-  'Saco tres camisetas e un café.',
-  'Se non leva etiqueta de outlet, non me interesa.',
-  'Marido espera no sofá; eu na galería.',
-  'Outfit entero por menos de trinta.',
+  'Outlet a -70 %… isto non se ve cada día, nin cada década.',
+  'Busco zapatillas de outlet, non de escaparate con actitude.',
+  'Marca premium a prezo de saldo. O meu banco non aplaude, eu si.',
+  'Unha bolsa máis e pechemos a tarde… ou a conta, primeiro.',
+  'Isto si que é Área Central, nena. O parque no medio é o descanso.',
+  'Desconto do 50 %? Pois dous pares. A matemática do outlet é fermosa.',
+  'Vinde de outlet, volvede cargados e coa fe rota do cartón.',
+  'A tempada pasada aquí a metade; este ano, a metade máis un suéter.',
+  'Compro agora, penso despois. Despois sempre chega tarde.',
+  'Talla XL en rebajas — o meu día de sorte e o teu de cola.',
+  'Marido espera no sofá; eu na galería, que é máis divertido.',
+  'De quen ves sendo? Con ese carriño, de quen ten cupón caducado.',
+  'Xa me quero xubilar, pero as rebajas non me deixan en paz.',
+  'Se non leva etiqueta vermella, non me interesa. Retranca de compradora.',
+  'Alcampo ao fondo, café no medio, culpa no final.',
+  'Picholeiro do outlet? Non, pero sei negociar como un profesional.',
 ];
 
 export const areaCentralPlace = {

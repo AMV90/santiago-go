@@ -36,14 +36,28 @@
         <section id="panel-game">
           <aside id="player-stats-hud" class="player-stats-hud" aria-live="polite">
             <img
-              class="hud-portrait"
-              src="assets/battle/player.svg"
+              class="hud-portrait hud-portrait-lpc"
+              src="assets/lpc/characters/player.png"
               alt=""
               width="36"
               height="36"
             />
             <div class="hud-stats-col">
-              <span class="hud-ps" id="hud-hp-text">PS —</span>
+              <div
+                class="hud-hp-row"
+                role="progressbar"
+                id="hud-hp-bar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                aria-label="Puntos de salud"
+              >
+                <span class="hud-hp-label">PS</span>
+                <div class="hp-bar hud-hp-bar hp-high">
+                  <div class="hp-fill" id="hud-hp-fill"></div>
+                </div>
+                <span class="hud-hp-text" id="hud-hp-text">—</span>
+              </div>
               <div class="hud-xp-bar" aria-hidden="true">
                 <div class="hud-xp-fill" id="hud-xp-fill"></div>
               </div>

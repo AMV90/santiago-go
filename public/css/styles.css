@@ -408,7 +408,14 @@ main {
   border-radius: 8px;
   pointer-events: none;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-  max-width: 140px;
+  max-width: 168px;
+}
+
+.hud-portrait-lpc {
+  object-fit: none;
+  /* Frame idle mirando á dereita (fila leste do walk.png, y=192) */
+  object-position: 0 -192px;
+  image-rendering: pixelated;
 }
 
 .hud-portrait {
@@ -431,12 +438,45 @@ main {
   flex: 1;
 }
 
-.hud-ps {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #2ecc71;
+.hud-hp-row {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  width: 100%;
+}
+
+.hud-hp-label {
+  flex-shrink: 0;
+  font-size: 0.58rem;
+  font-weight: 800;
   line-height: 1.15;
-  white-space: nowrap;
+  color: #fff8e0;
+  background: #c0392b;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.hud-hp-bar.hp-bar {
+  flex: 1;
+  height: 8px;
+  min-width: 52px;
+  background: rgba(30, 36, 48, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+.hud-hp-bar.hp-low .hp-fill {
+  background: linear-gradient(180deg, #ff7b7b 0%, #e53935 100%);
+  box-shadow: 0 0 6px rgba(229, 57, 53, 0.55);
+}
+
+.hud-hp-text {
+  flex-shrink: 0;
+  font-size: 0.58rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #c5d0de;
+  line-height: 1;
 }
 
 .hud-xp-bar {

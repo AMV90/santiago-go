@@ -1,0 +1,196 @@
+{
+  "zone": "floor-1",
+  "width": 1216,
+  "height": 832,
+  "tileSize": 16,
+  "tileset": "assets/tilesets/peleteiro.png",
+  "placements": [
+    {
+      "tx": 13,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 14,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 15,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 16,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 17,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 18,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 19,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 20,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 21,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 22,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 23,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 24,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 25,
+      "ty": 12,
+      "key": "bookshelf",
+      "frame": 29
+    },
+    {
+      "tx": 57,
+      "ty": 12,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 19,
+      "ty": 13,
+      "key": "blackboard",
+      "frame": 31
+    },
+    {
+      "tx": 53,
+      "ty": 15,
+      "key": "desk",
+      "frame": 27
+    },
+    {
+      "tx": 59,
+      "ty": 15,
+      "key": "desk",
+      "frame": 27
+    },
+    {
+      "tx": 53,
+      "ty": 16,
+      "key": "chair",
+      "frame": 26
+    },
+    {
+      "tx": 59,
+      "ty": 16,
+      "key": "chair",
+      "frame": 26
+    },
+    {
+      "tx": 15,
+      "ty": 18,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 20,
+      "ty": 18,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 19,
+      "ty": 34,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 57,
+      "ty": 34,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 15,
+      "ty": 37,
+      "key": "desk",
+      "frame": 27
+    },
+    {
+      "tx": 21,
+      "ty": 37,
+      "key": "desk",
+      "frame": 27
+    },
+    {
+      "tx": 53,
+      "ty": 37,
+      "key": "computer",
+      "frame": 33
+    },
+    {
+      "tx": 59,
+      "ty": 37,
+      "key": "computer",
+      "frame": 33
+    },
+    {
+      "tx": 15,
+      "ty": 38,
+      "key": "chair",
+      "frame": 26
+    },
+    {
+      "tx": 21,
+      "ty": 38,
+      "key": "chair",
+      "frame": 26
+    },
+    {
+      "tx": 53,
+      "ty": 38,
+      "key": "chair",
+      "frame": 26
+    },
+    {
+      "tx": 59,
+      "ty": 38,
+      "key": "chair",
+      "frame": 26
+    }
+  ],
+  "source": "forge-layout"
+}

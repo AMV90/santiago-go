@@ -7,7 +7,7 @@ import {
   CITIZEN_TALK_RANGE,
 } from './config.js';
 import { lonLatFromGame, isOldTown } from './zones.js';
-import { pickPersonality, randomPhrase } from './citizen-personalities.js';
+import { getPersonalityForBotIndex, randomPhrase } from './citizen-personalities.js';
 import { showChatBubble } from './chat-bubbles.js';
 import { fetchPath } from './game-api.js';
 
@@ -146,7 +146,7 @@ function createBotWithRoute(
       routeIdx: 0,
       segT: Math.random() * 0.25,
       speed,
-      sprite: `bot-${index % 4}`,
+      sprite: `bot-${index % 104}`,
       pauseMs: Math.random() * 800,
       phraseCooldown: 0,
     };
@@ -197,7 +197,7 @@ export function spawnWalkBots(
     : null;
 
   for (let i = 0; i < count; i++) {
-    const personality = pickPersonality(i);
+    const personality = getPersonalityForBotIndex(i);
     const bias = i < nearCount ? spawnBias : null;
     bots.push(createBotWithRoute(i, personality, streetGraph, streetWalker, points, bias));
   }

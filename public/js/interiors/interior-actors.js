@@ -1,11 +1,16 @@
 import { NPC_ENCOUNTER_RANGE } from '../config.js';
-import { MOVES } from '../moves.js';
 import { startBattle } from '../battle-ui.js';
 import { savePlayer, healPlayer } from '../player-state.js';
 import { applyCharacterSprite } from '../sprites.js';
+import { createBattleEnemy } from '../battle-enemies.js';
 import { showChatBubble } from '../chat-bubbles.js';
 import { resetMovementState } from '../movement-controller.js';
 import { clearNavigation } from '../path-navigation.js';
+import {
+  spawnKidsPlayingBall,
+  updateAmbientScenes,
+  destroyAmbientItems,
+} from './ambient-scenes.js';
 
 const TEXTURE_CACHE = new Map();
 
@@ -78,15 +83,16 @@ function pickInteriorRespawnTile(layout, awayX, awayY, minDistPx = 96) {
 function spawnInteriorBattleSprite(scene, battleCfg, npc, actorState) {
   const textureKey = battleCfg.texture?.key || 'char-npc';
   const spr = scene.add.sprite(npc.x, npc.y, textureKey);
-  if (!battleCfg.texture && battleCfg.spriteRole) {
-    applyCharacterSprite(spr, battleCfg.spriteRole, scene, battleCfg.spriteVariant ?? 0);
+  if (!battleCfg.texture && (battleCfg.spriteRole || battleCfg.lpcId || npc.characterId || npc.lpcId)) {
+    applyCharacterSprite(spr, battleCfg.spriteRole || 'npc', scene, battleCfg.spriteVariant ?? 0, {
+      lpcId: npc.characterId ?? npc.lpcId ?? battleCfg.lpcId,
+    });
   }
-  if (battleCfg.tint) spr.setTint(battleCfg.tint);
   spr.setDepth(22);
   spr.setData('npc', npc);
   spr.setData('interiorNpc', true);
 
-  if (battleCfg.tag) {
+  if (battleCfg.tag && battleCfg.showTag !== false) {
     const tag = scene.add.text(npc.x, npc.y - 20, battleCfg.tag(npc), {
       fontFamily: 'Segoe UI, system-ui, Arial, sans-serif',
       fontSize: '10px',
@@ -130,23 +136,6 @@ function respawnInteriorBattleNpc(scene, layout, battleCfg, actorState, defeated
   return newNpc;
 }
 
-function defaultBattleEnemy(npc) {
-  const level = npc.level || 1;
-  const movePool = ['cabezazo', 'golpe_bajo', 'grito', 'insulto', 'patada', 'punetazo'];
-  return {
-    name: npc.name,
-    title: npc.title,
-    level,
-    hp: 16 + level * 7,
-    maxHp: 16 + level * 7,
-    moves: movePool.filter((id) => MOVES[id]).slice(0, 4),
-    sprite: npc.sprite || 'npc-0',
-    faction: npc.faction || 'urban',
-    battleQuote: npc.battleQuote,
-    presentationLine: npc.presentationLine,
-  };
-}
-
 /**
  * Crea runtime de actores para unha instancia (combate + ambientación).
  */
@@ -154,11 +143,13 @@ export function createInteriorActors(placeId, layout, actorsDef) {
   const battleCfg = actorsDef?.battle;
   const chatterCfg = actorsDef?.chatter;
   const receptionistCfg = actorsDef?.receptionist;
+  const ambientCfg = actorsDef?.ambient;
 
   const state = {
     battleSprites: [],
     battleNpcs: [],
     chatterItems: [],
+    ambientItems: [],
     receptionist: null,
   };
 
@@ -206,15 +197,18 @@ export function createInteriorActors(placeId, layout, actorsDef) {
       chatterCfg.patrons.forEach((def, i) => {
         const pos = layout.tileToWorld(def.tx, def.ty);
         const spr = scene.add.sprite(pos.x, pos.y, chatterCfg.spriteKey || 'char-bot');
-        applyCharacterSprite(spr, chatterCfg.spriteRole || 'bot', scene, i % 6);
+        applyCharacterSprite(spr, chatterCfg.spriteRole || 'bot', scene, i % 6, {
+          lpcId: def.characterId ?? def.lpcId,
+        });
         if (def.tint != null) spr.setTint(def.tint);
         else if (chatterCfg.tint) spr.setTint(chatterCfg.tint);
         spr.setDepth(22);
         spr.setData('patron', def);
 
-        let tagEl = null;
-        if (def.emoji || chatterCfg.defaultEmoji) {
-          tagEl = scene.add.text(pos.x, pos.y - 14, def.emoji || chatterCfg.defaultEmoji, {
+        const headIcon =
+          def.emoji ?? (chatterCfg.showHeadIcon !== false ? chatterCfg.defaultEmoji : null);
+        if (headIcon) {
+          const tagEl = scene.add.text(pos.x, pos.y - 14, headIcon, {
             fontSize: '11px',
           });
           tagEl.setOrigin(0.5, 1);
@@ -231,19 +225,29 @@ export function createInteriorActors(placeId, layout, actorsDef) {
       });
     }
 
+    if (ambientCfg?.scenes?.length) {
+      for (const def of ambientCfg.scenes) {
+        if (def.kind === 'kidsPlayingBall') {
+          spawnKidsPlayingBall(scene, layout, def, state);
+        }
+      }
+    }
+
     if (receptionistCfg) {
-      ensureTexture(scene, 'char-receptionist', drawReceptionistTexture);
       const pos = layout.tileToWorld(receptionistCfg.tx, receptionistCfg.ty);
-      const spr = scene.add.sprite(pos.x, pos.y, 'char-receptionist');
+      const spr = scene.add.sprite(pos.x, pos.y, 'char-npc');
+      applyCharacterSprite(spr, 'npc', scene, 1, { lpcId: receptionistCfg.lpcId ?? 'receptionist' });
       spr.setDepth(22);
       spr.setData('receptionist', true);
 
-      const tag = scene.add.text(pos.x, pos.y - 20, '💊', {
-        fontSize: '11px',
-      });
-      tag.setOrigin(0.5, 1);
-      tag.setDepth(23);
-      spr.setData('actorTag', tag);
+      if (receptionistCfg.showHeadIcon !== false) {
+        const tag = scene.add.text(pos.x, pos.y - 20, receptionistCfg.headIcon ?? '💊', {
+          fontSize: '11px',
+        });
+        tag.setOrigin(0.5, 1);
+        tag.setDepth(23);
+        spr.setData('actorTag', tag);
+      }
 
       state.receptionist = {
         spr,
@@ -263,6 +267,7 @@ export function createInteriorActors(placeId, layout, actorsDef) {
       spr.getData('actorTag')?.destroy();
       spr.destroy();
     });
+    destroyAmbientItems(state);
     state.receptionist?.spr?.getData('actorTag')?.destroy();
     state.receptionist?.spr?.destroy();
     state.battleSprites = [];
@@ -280,6 +285,13 @@ export function createInteriorActors(placeId, layout, actorsDef) {
     for (const { spr } of state.chatterItems) {
       spr.setVisible(visible);
       spr.getData('actorTag')?.setVisible(visible);
+    }
+    for (const item of state.ambientItems) {
+      item.floorGfx?.setVisible(visible);
+      item.k1?.setVisible(visible);
+      item.k2?.setVisible(visible);
+      item.ball?.setVisible(visible);
+      item.gfx?.setVisible(visible);
     }
     if (state.receptionist?.spr) {
       state.receptionist.spr.setVisible(visible);
@@ -311,6 +323,10 @@ export function createInteriorActors(placeId, layout, actorsDef) {
         });
         item.nextChat = now + item.interval + Math.random() * 3000;
       }
+    }
+
+    if (state.ambientItems.length) {
+      updateAmbientScenes(state, performance.now());
     }
 
     if (receptionistCfg && state.receptionist) {
@@ -402,7 +418,7 @@ function checkBattleEncounters(scene, actorState, battleCfg, onBattleEnd, showTo
 
   if (!wantFight || scene.encounterCooldown > 0) return;
 
-  const createEnemy = battleCfg.createEnemy || defaultBattleEnemy;
+  const createEnemy = battleCfg.createEnemy || createBattleEnemy;
 
   scene.inBattle = true;
   clearNavigation(scene);
@@ -410,7 +426,7 @@ function checkBattleEncounters(scene, actorState, battleCfg, onBattleEnd, showTo
 
   startBattle({
     player: scene.playerState,
-    enemy: createEnemy(nearest.npc),
+    enemy: createEnemy(nearest.npc, nearest.spr),
     onEnd: (result, updatedPlayer) => {
       scene.inBattle = false;
       scene.encounterCooldown = 2000;
@@ -465,11 +481,6 @@ export function drawPriestTexture(g) {
   g.fillRect(9, 6, 2, 2);
   g.fillStyle(0xc9a227, 1);
   g.fillRect(7, 14, 2, 4);
-}
-
-export function createClergyEnemy(npc) {
-  const enemy = defaultBattleEnemy(npc);
-  return { ...enemy, sprite: 'priest', faction: 'clergy' };
 }
 
 /** Recepcionista do hospital (bata branca) */

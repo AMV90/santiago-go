@@ -116,7 +116,7 @@ npm run sprites       # PNGs 64×24 en public/assets/sprites/
 | **NPCs rojos/morados** | Combate (E o chocar); al vencer → respawn otro **mismo nivel** en otro punto |
 | **Bots verdes** | 120 cidadáns; caminan rutas; Espacio para charlar; velocidad 55–85 px/s |
 | **Multijugador** | Auto-conexión; sprites morados; zonas world/interior |
-| **Interiores** | Catedral, Bar Momo, Riquela, Modus Vivendi, Área Central, 3 hospitales |
+| **Interiores** | Catedral, pubs/clubs, Área Central, estación, 20 sitios emblemáticos, 3 hospitales |
 | **Perros / objetos** | Huesos, captura; pickups en calle |
 | **Progreso** | localStorage: `santiago-go-player`, `santiago-go-defeated`, etc. |
 
@@ -131,9 +131,12 @@ npm run sprites       # PNGs 64×24 en public/assets/sprites/
 | `riquela` | Riquela Club |
 | `modus-vivendi` | Modus Vivendi (2 plantas) |
 | `area-central` | Área Central outlet (~500 m) |
+| `estacion-tren` | Estación Daniel Castelao (viaxeiros) |
+| `peleteiro-patio` + `p1`–`p4` | Antigo Peleteiro (República Arxentina): patio, 4 pisos, combate |
+| `mercado-abastos`, `cgac`, `cidade-cultura`, … | 20 sitios en `santiago-sites-data.js` |
 | `hospital-chus` / `conxo` / `rosaleda` | Hospitales + recepcionista cura |
 
-Patrón: `interiors/layouts/*.layout.js` + `interiors/places/*.place.js` → registrar en `places/index.js`.
+Patrón: `interiors/layouts/*.layout.js` + `interiors/places/*.place.js` → registrar en `places/index.js`. Lote de 20: `santiago-sites-data.js` + planta única por sitio en `interiors/layouts/sites/`.
 
 ---
 
@@ -155,9 +158,17 @@ Socket.io: `join`, `move`, `chat`, `enter-zone`, etc.
 
 ## Sprites
 
-- PNGs: `npm run sprites` → `public/assets/sprites/{player,bot,npc,remote}.png`  
-- Carga: `sprites.js` → `queueSpriteAssets` + fallback procedural  
-- Bots: tintes de color; escala ~1.5
+- **LPC (incluídos no repo):** `public/assets/lpc/characters/*.png` + `lpc-manifest-data.js`  
+  - Xerador: [Universal LPC Spritesheet Character Generator](https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/)  
+  - Regenerar: `npm run lpc:sync` + `npm run sprites:lpc` · Definicións: `scripts/lpc/characters.json`  
+  - Docs: `public/assets/lpc/README.md` · Créditos: `public/assets/lpc/CREDITS.md`  
+- **Legacy:** `npm run sprites` → fallback 16×24 en `public/assets/sprites/`
+
+### Peleteiro (tileset pixel)
+
+- `npm run sprites:peleteiro` → `public/assets/tilesets/peleteiro.png` (35 tiles 16×16: suelo, escaleras, alfombras, mesas, sillas, expositor, estantería, pizarra…)  
+- Interiores `peleteiro-*`: `tileset: 'peleteiro'` + `peleteiro-tile-render.js` (RenderTexture, filtro NEAREST)  
+- Layout ASCII sin cambios (colisión, escaleras, NPCs); solo cambia el dibujo
 
 ---
 
@@ -204,6 +215,10 @@ Socket.io: `join`, `move`, `chat`, `enter-zone`, etc.
 En una sesión nueva, di por ejemplo:
 
 > Lee `docs/CONTEXTO-PROYECTO.md` y continúa con [tu tarea].
+
+Para **personajes, LPC, esqueletos, FX o interiores con Sprite Forge**:
+
+> Lee `docs/GUIA-GENERADORES-SPRITES.md`.
 
 O añade una regla en `.cursor/rules` que apunte a este archivo.
 

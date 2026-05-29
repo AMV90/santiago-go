@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Santiago Go — reglas del proyecto
 
-Al iniciar una tarea en este repo, **lee primero** `docs/CONTEXTO-PROYECTO.md` (mapa de arquitectura, Render, APIs, archivos clave).
+Al iniciar una tarea en este repo, **lee primero** `docs/CONTEXTO-PROYECTO.md` (mapa de arquitectura, Render, APIs, archivos clave). Para **NPCs, sprites, LPC o Sprite Forge**, lee también `docs/GUIA-GENERADORES-SPRITES.md`.
 
 ## Esencia
 

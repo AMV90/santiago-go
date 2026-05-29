@@ -1,0 +1,256 @@
+{
+  "zone": "patio",
+  "width": 928,
+  "height": 704,
+  "tileSize": 16,
+  "tileset": "assets/tilesets/peleteiro.png",
+  "placements": [
+    {
+      "tx": 40,
+      "ty": 22,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 41,
+      "ty": 22,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 42,
+      "ty": 22,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 43,
+      "ty": 22,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 44,
+      "ty": 22,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 40,
+      "ty": 23,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 41,
+      "ty": 23,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 42,
+      "ty": 23,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 43,
+      "ty": 23,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 44,
+      "ty": 23,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 40,
+      "ty": 24,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 41,
+      "ty": 24,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 42,
+      "ty": 24,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 43,
+      "ty": 24,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 44,
+      "ty": 24,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 40,
+      "ty": 25,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 41,
+      "ty": 25,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 42,
+      "ty": 25,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 43,
+      "ty": 25,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 44,
+      "ty": 25,
+      "key": "casita",
+      "frame": 20
+    },
+    {
+      "tx": 41,
+      "ty": 32,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 42,
+      "ty": 32,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 43,
+      "ty": 32,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 40,
+      "ty": 33,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 41,
+      "ty": 33,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 42,
+      "ty": 33,
+      "key": "palm-leaf",
+      "frame": 23
+    },
+    {
+      "tx": 43,
+      "ty": 33,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 44,
+      "ty": 33,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 40,
+      "ty": 34,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 41,
+      "ty": 34,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 42,
+      "ty": 34,
+      "key": "palm-trunk",
+      "frame": 22
+    },
+    {
+      "tx": 43,
+      "ty": 34,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 44,
+      "ty": 34,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 40,
+      "ty": 35,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 41,
+      "ty": 35,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 42,
+      "ty": 35,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 43,
+      "ty": 35,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 44,
+      "ty": 35,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 41,
+      "ty": 36,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 42,
+      "ty": 36,
+      "key": "palm-pot",
+      "frame": 21
+    },
+    {
+      "tx": 43,
+      "ty": 36,
+      "key": "palm-pot",
+      "frame": 21
+    }
+  ],
+  "source": "hd-patio"
+}

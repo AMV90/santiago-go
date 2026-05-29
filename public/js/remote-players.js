@@ -25,8 +25,6 @@ export function syncRemotePlayers(scene, players, localId) {
       applyCharacterSprite(spr, 'remote', scene, hashVariant(p.id));
       spr.setDepth(24);
       spr.setVisible(true);
-      spr.setScale(1.35);
-      spr.setTint(0xe040fb);
       spr.setData('isRemotePlayer', true);
 
       const ring = scene.add.circle(p.x, p.y + 10, 10, 0xe040fb, 0.35);

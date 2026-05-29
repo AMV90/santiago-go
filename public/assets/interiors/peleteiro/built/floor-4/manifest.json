@@ -1,0 +1,106 @@
+{
+  "zone": "floor-4",
+  "width": 1216,
+  "height": 832,
+  "tileSize": 16,
+  "tileset": "assets/tilesets/peleteiro.png",
+  "placements": [
+    {
+      "tx": 31,
+      "ty": 14,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 44,
+      "ty": 14,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 31,
+      "ty": 16,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 44,
+      "ty": 16,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 31,
+      "ty": 18,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 44,
+      "ty": 18,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 31,
+      "ty": 20,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 44,
+      "ty": 20,
+      "key": "display",
+      "frame": 30
+    },
+    {
+      "tx": 28,
+      "ty": 24,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 33,
+      "ty": 24,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 38,
+      "ty": 24,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 43,
+      "ty": 24,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 28,
+      "ty": 28,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 33,
+      "ty": 28,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 38,
+      "ty": 28,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 43,
+      "ty": 28,
+      "key": "bench",
+      "frame": 32
+    }
+  ],
+  "source": "hd-painted"
+}

@@ -1,0 +1,10 @@
+{
+  "generator": "agent-sprite-forge/layout-bases",
+  "forgeRepo": "tools/agent-sprite-forge",
+  "map_mode": "scene_mode",
+  "zone": "floor-1",
+  "width": 1216,
+  "height": 832,
+  "tileSize": 16,
+  "note": "Base = só terreno; props en manifest (peleteiro-bake.mjs)"
+}

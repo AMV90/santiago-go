@@ -1,0 +1,48 @@
+{
+  "zone": "floor-3",
+  "width": 1216,
+  "height": 832,
+  "tileSize": 16,
+  "tileset": "assets/tilesets/peleteiro.png",
+  "placements": [
+    {
+      "tx": 36,
+      "ty": 12,
+      "frame": 7
+    },
+    {
+      "tx": 56,
+      "ty": 12,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 45,
+      "ty": 14,
+      "frame": 7
+    },
+    {
+      "tx": 56,
+      "ty": 23,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 45,
+      "ty": 25,
+      "frame": 7
+    },
+    {
+      "tx": 56,
+      "ty": 34,
+      "key": "teacher-desk",
+      "frame": 28
+    },
+    {
+      "tx": 45,
+      "ty": 36,
+      "frame": 7
+    }
+  ],
+  "source": "forge-layout"
+}

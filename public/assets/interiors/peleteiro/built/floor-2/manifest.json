@@ -1,0 +1,58 @@
+{
+  "zone": "floor-2",
+  "width": 1216,
+  "height": 832,
+  "tileSize": 16,
+  "tileset": "assets/tilesets/peleteiro.png",
+  "placements": [
+    {
+      "tx": 14,
+      "ty": 22,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 26,
+      "ty": 22,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 38,
+      "ty": 22,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 50,
+      "ty": 22,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 14,
+      "ty": 30,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 26,
+      "ty": 30,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 38,
+      "ty": 30,
+      "key": "bench",
+      "frame": 32
+    },
+    {
+      "tx": 50,
+      "ty": 30,
+      "key": "bench",
+      "frame": 32
+    }
+  ],
+  "source": "forge-layout"
+}

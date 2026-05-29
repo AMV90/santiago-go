@@ -58,3 +58,24 @@ export const AREA_CENTRAL = {
   lat: 42.8828121,
   label: 'Área Central',
 };
+
+/** Estación de Santiago — Daniel Castelao (OSM node 12768629140) */
+export const ESTACION_TREN = {
+  lon: -8.5451964,
+  lat: 42.8704417,
+  label: 'Estación de Santiago · Daniel Castelao',
+};
+
+/** Antigo Colexio Peleteiro — Rúa da República Arxentina (Ensanche, 1957–2009) */
+export const PELETEIRO_ANTIGUO = {
+  lon: -8.5498501,
+  lat: 42.8722205,
+  label: 'Antigo Colexio Manuel Peleteiro',
+};
+
+/** El Corte Inglés — Rúa do Restollal, 50 */
+export const CORTE_INGLES = {
+  lon: -8.543086,
+  lat: 42.862577,
+  label: 'El Corte Inglés',
+};

@@ -1,32 +1,25 @@
-# Sprites opcionais
+# Sprites de personaje (copias legacy)
 
-Podes substituir os personaxes procedurais por PNG. Se falta un ficheiro, o xogo usa texturas xeradas automaticamente.
+Esta carpeta contiene **copias de compatibilidad** de los roles principales (`player`, `bot`, `npc`, `remote`).
 
-## Ficheiros
+## Fuente canónica
 
-| Ficheiro | Uso |
-|----------|-----|
-| `player.png` | O teu personaxe (spritesheet 64×24, igual que os demais) |
-| `bot.png` | Bots que andan polas ruas |
-| `npc.png` | Rivais de combate |
-| `remote.png` | Outros xogadores en liña |
+Los sprites LPC completos (15 personajes, 64×64, 4 direcciones) están en:
 
-## Xerar exemplos incluídos
+**`public/assets/lpc/characters/`**
+
+Ver `public/assets/lpc/README.md` y `public/assets/lpc/CREDITS.md`.
+
+## Regenerar
 
 ```bash
-npm run sprites
+npm run sprites:lpc
 ```
 
-Crea `player.png`, `bot.png`, `npc.png` e `remote.png` con pixel art de exemplo.
+Actualiza `lpc/characters/` y refresca estos cuatro PNG.
 
-## Spritesheet (todos os personaxes)
+## Fallback procedural
 
-- Tamaño por frame: **16×24** píxeles
-- Disposición horizontal: **4 frames** (animación de andar)
-- Exemplo: imaxe 64×24 = 4 columnas
+Si faltan PNG LPC, el juego usa texturas generadas en código (`sprites.js` → `createFallbackTextures`).
 
-## Notas
-
-- O mesmo `bot.png` serve para bots de rúa e pode reutilizarse como base visual.
-- Todos os PNG de personaxe usan o mesmo formato de 4 frames en fila.
-- Despois de engadir PNG, recarga a páxina (Ctrl+F5).
+El comando `npm run sprites` genera PNG 16×24 de ejemplo (formato antiguo); el proyecto usa LPC por defecto.

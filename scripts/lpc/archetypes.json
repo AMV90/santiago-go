@@ -1,0 +1,113 @@
+{
+  "$docs": "Arquetipos. Pools con role usan manifest.roles; prefix+count xera IDs; array = lista fixa.",
+  "aliases": {
+    "mendigo": "beggar",
+    "estudante": "student",
+    "alma": "specter",
+    "espectro": "specter",
+    "fantasma": "specter",
+    "esqueleto": "skeleton",
+    "profesor": "professor",
+    "cidadan": "walker",
+    "rival": "fighter"
+  },
+  "pools": {
+    "player": ["player"],
+    "remote": ["remote"],
+    "clergy": ["priest"],
+    "receptionist": ["receptionist"],
+    "director": ["peleteiro-director"],
+    "walker": { "role": "bot" },
+    "fighter": { "role": "npc" },
+    "beggar": {
+      "pick": [
+        "peleteiro-mendigo-0",
+        "peleteiro-mendigo-1",
+        { "prefix": "urban-", "from": 10, "to": 39 },
+        { "prefix": "npc-", "from": 20, "to": 45 }
+      ]
+    },
+    "student": {
+      "pick": [
+        "peleteiro-student",
+        "peleteiro-student-1",
+        "peleteiro-student-2",
+        "peleteiro-student-3",
+        { "prefix": "school-", "from": 0, "to": 29 },
+        { "prefix": "bot-", "from": 10, "to": 35 }
+      ]
+    },
+    "specter": {
+      "pick": [
+        "peleteiro-ghost-0",
+        "peleteiro-ghost-1",
+        "peleteiro-ghost-2",
+        "peleteiro-ghost-3",
+        { "prefix": "specter-", "from": 0, "to": 23 }
+      ]
+    },
+    "skeleton": { "prefix": "skeleton-", "from": 0, "to": 23 },
+    "professor": [
+      "peleteiro-prof-0",
+      "peleteiro-prof-1",
+      "peleteiro-prof-2",
+      { "prefix": "npc-", "from": 80, "to": 95 }
+    ],
+    "bandit": {
+      "pick": [
+        "bandit-0",
+        "bandit-1",
+        "bandit-2",
+        "bandit-3",
+        "bandit-4",
+        { "prefix": "npc-", "from": 6, "to": 25 }
+      ]
+    },
+    "urban": { "role": "npc" },
+    "chatter": {
+      "pick": [
+        { "prefix": "bot-", "from": 0, "to": 50 },
+        { "prefix": "school-", "from": 0, "to": 15 },
+        "peleteiro-student-2",
+        "specter-1"
+      ]
+    },
+    "school": { "prefix": "school-", "from": 0, "to": 29 }
+  },
+  "factionArchetype": {
+    "fontinas": "bandit",
+    "clergy": "clergy",
+    "urban": "urban",
+    "peleteiro": "student"
+  },
+  "battleProfiles": {
+    "street": {
+      "hpBase": 16,
+      "hpPerLevel": 7,
+      "movePool": ["punetazo", "empujon", "patada", "grito", "insulto", "cabezazo", "golpe_bajo"]
+    },
+    "school": {
+      "hpBase": 14,
+      "hpPerLevel": 6,
+      "movePool": ["insulto", "grito", "punetazo", "cabezazo", "patada"],
+      "tagIcons": {
+        "beggar": "🪙",
+        "specter": "👻",
+        "ghost": "👻",
+        "skeleton": "💀",
+        "student": "📚",
+        "professor": "🔥"
+      }
+    },
+    "crypt": {
+      "hpBase": 18,
+      "hpPerLevel": 8,
+      "movePool": ["grito", "cabezazo", "golpe_bajo", "patada", "insulto"],
+      "tagIcons": {
+        "skeleton": "💀",
+        "specter": "👻",
+        "director": "🎓"
+      }
+    }
+  }
+}

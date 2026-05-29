@@ -1,6 +1,6 @@
 import { buildCatedralLayout, CATHEDRAL_BATTLE_NPCS } from '../layouts/catedral.layout.js';
 import { drawCathedralDoor } from '../door-art.js';
-import { createClergyEnemy, drawPriestTexture } from '../interior-actors.js';
+import { createBattleEnemy } from '../../battle-enemies.js';
 
 export const catedralPlace = {
   id: 'catedral',
@@ -20,8 +20,8 @@ export const catedralPlace = {
     battle: {
       storageKey: 'santiago-go-priest-defeated',
       npcs: CATHEDRAL_BATTLE_NPCS,
-      texture: { key: 'char-priest', draw: drawPriestTexture },
-      createEnemy: createClergyEnemy,
+      spriteRole: 'npc',
+      createEnemy: createBattleEnemy,
       tag: () => '⛪ Nv30',
     },
   },

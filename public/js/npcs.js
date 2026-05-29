@@ -1,4 +1,5 @@
 import { lonLatFromGame, isFontinas } from './zones.js';
+import { assignCharacterId, resolveCharacterId } from './character-catalog.js';
 
 const NPC_NAMES = [
   'Peregrino borde',
@@ -62,7 +63,7 @@ function makeNpcRecord({
   faction,
   spriteIndex,
 }) {
-  return {
+  const record = {
     id,
     name,
     title,
@@ -71,9 +72,13 @@ function makeNpcRecord({
     y,
     street: street || 'rúa',
     defeated: false,
-    sprite: `npc-${spriteIndex % 6}`,
+    sprite: `npc-${spriteIndex % 120}`,
     faction: faction === 'fontinas' ? 'fontinas' : 'urban',
+    spriteIndex,
   };
+  record.characterId = assignCharacterId(record);
+  record.lpcId = record.characterId;
+  return record;
 }
 
 /**
@@ -239,7 +244,7 @@ export function spawnNpcs(mapData, options = {}) {
   return [...bandits, ...general];
 }
 
-export function createEnemyFromNpc(npc) {
+export function createEnemyFromNpc(npc, spr = null) {
   const movePool = ['punetazo', 'empujon', 'patada', 'grito', 'insulto', 'cabezazo', 'golpe_bajo'];
   const count = Math.min(4, 1 + Math.floor(npc.level / 3));
   const moves = [];
@@ -249,6 +254,8 @@ export function createEnemyFromNpc(npc) {
   }
   if (!moves.includes('punetazo')) moves.unshift('punetazo');
 
+  const characterId = resolveCharacterId(npc, spr);
+
   return {
     name: npc.name,
     title: npc.title,
@@ -257,6 +264,11 @@ export function createEnemyFromNpc(npc) {
     maxHp: 16 + npc.level * 7,
     moves: moves.slice(0, 4),
     sprite: npc.sprite,
+    characterId,
+    lpcId: characterId,
+    tint: npc.tint,
     faction: npc.faction,
+    battleQuote: npc.battleQuote,
+    presentationLine: npc.presentationLine,
   };
 }

@@ -3,11 +3,12 @@ import { drawRiquelaDoor } from '../door-art.js';
 import { RIQUELA } from '../../map-bounds.js';
 
 const SINGER_LINES = [
-  '♪ La la la… outro tema máis! ♪',
-  'Grazas, Santiago! Volvede mañá.',
-  'Isto é ao vivo no Riquela Club!',
-  'Un, dous, tres… e aínda queda máis!',
-  'Para os que viñestes desde o bar… grazas!',
+  '♪ La la la… outro tema máis, que o primeiro foi probas ♪',
+  'Grazas, Santiago! Volvede mañá… ou agora, tamén vale.',
+  'Isto é ao vivo no Riquela — sen playback nin vergoña!',
+  'Un, dous, tres… e se me salto o catro, aplaudide igual.',
+  'Para os que viñestes desde o Momo: benvidos á continuación.',
+  'Ermos máis de rock ou de rumba? Hoxe tocamos «si».',
 ];
 
 export const riquelaPlace = {

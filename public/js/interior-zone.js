@@ -9,6 +9,16 @@ import {
   setPlaceDoorsVisible,
 } from './interiors/index.js';
 import { requestInteriorNavigate, clearInteriorNavigation } from './interiors/interior-pathfinding.js';
+import { findLinkCharForScene } from './interiors/interior-links.js';
+import { buildPeleteiroForgeInterior } from './interiors/peleteiro-forge-render.js';
+import { resetCameraPanState, notifyPlayerMoved } from './camera-pan.js';
+
+const STAIR_LINK_COOLDOWN_MS = 700;
+
+function primeInteriorLinkState(scene) {
+  scene._linkTilePrev = findLinkCharForScene(scene) || '';
+  scene._linkCooldownUntil = performance.now() + STAIR_LINK_COOLDOWN_MS;
+}
 
 function tileCharAtWorld(cfg, x, y) {
   const tx = Math.floor(x / cfg.tileSize);
@@ -33,7 +43,11 @@ function makeCollision(cfg) {
   };
 }
 
-function buildInteriorGraphics(scene, cfg) {
+function buildInteriorGraphics(scene, cfg, placeId) {
+  if (cfg.tileset === 'peleteiro-forge') {
+    return buildPeleteiroForgeInterior(scene, cfg, placeId);
+  }
+
   const { rows, tileSize, tileColors, label } = cfg;
   const g = scene.add.graphics();
   g.setDepth(3);
@@ -54,6 +68,23 @@ function buildInteriorGraphics(scene, cfg) {
       cfg.drawTileExtra?.(g, ch, x, y, tileSize);
     }
   }
+  cfg.drawOverlay?.(g, tileSize, rows);
+
+  const zoneTexts = cfg.spawnZoneBanners?.(scene, tileSize) ?? [];
+
+  const stairTexts = [];
+  cfg.stairLabels?.forEach((lab) => {
+    const t = scene.add.text(lab.x, lab.y, lab.text, {
+      fontFamily: 'Segoe UI, system-ui, Arial, sans-serif',
+      fontSize: '11px',
+      color: '#eceff1',
+      backgroundColor: 'rgba(38, 50, 56, 0.92)',
+      padding: { x: 6, y: 3 },
+    });
+    t.setOrigin(0.5, 0.5);
+    t.setDepth(6);
+    stairTexts.push(t);
+  });
 
   const walls = scene.add.graphics();
   walls.setDepth(4);
@@ -76,7 +107,7 @@ function buildInteriorGraphics(scene, cfg) {
   title.setOrigin(0.5, 0);
   title.setDepth(30);
 
-  return { floor: g, walls, label: title };
+  return { floor: g, walls, label: title, stairTexts, zoneTexts };
 }
 
 function setOverworldVisible(scene, visible) {
@@ -192,13 +223,21 @@ export function enterInterior(scene, interiorId, showToast) {
       scene.interiorLayer = scene.add.container(0, 0);
       scene.interiorLayer.setDepth(5);
 
-      const gfx = buildInteriorGraphics(scene, cfg);
-      scene.interiorLayer.add([gfx.floor, gfx.walls, gfx.label]);
+      const gfx = buildInteriorGraphics(scene, cfg, interiorId);
+      scene.interiorLayer.add([
+        gfx.floor,
+        gfx.walls,
+        gfx.label,
+        ...gfx.stairTexts,
+        ...gfx.zoneTexts,
+        ...(gfx.propSprites || []),
+      ]);
 
       scene.interiorZone = interiorId;
       scene.interiorConfig = cfg;
       scene.mapBounds = { width: cfg.width, height: cfg.height };
       scene.interiorCollision = makeCollision(cfg);
+      resetCameraPanState(scene);
 
       const spawn = cfg.getEntrySpawn();
       scene.player.setPosition(spawn.x, spawn.y);
@@ -206,6 +245,7 @@ export function enterInterior(scene, interiorId, showToast) {
       scene.lastValid = { x: spawn.x, y: spawn.y };
 
       cfg.onEnter?.(scene);
+      primeInteriorLinkState(scene);
       enterMultiplayerZone(interiorId, spawn.x, spawn.y, scene.playerState?.level);
       showToast?.(cfg.enterToast);
     },
@@ -213,6 +253,54 @@ export function enterInterior(scene, interiorId, showToast) {
   );
 
   bindInteriorClickToMove(scene);
+  return true;
+}
+
+/** Cambia de instancia ligada (pisos Peleteiro) sen saír ao mapa. */
+export function switchLinkedInterior(scene, nextId, showToast, opts = {}) {
+  if (scene.interiorTransition || scene.inBattle) return false;
+  const nextCfg = getInteriorConfig(nextId);
+  if (!nextCfg) return false;
+
+  runTransition(
+    scene,
+    () => {
+      const prevCfg = scene.interiorConfig;
+      prevCfg?.onExit?.(scene);
+
+      scene.interiorLayer?.destroy(true);
+      scene.interiorLayer = scene.add.container(0, 0);
+      scene.interiorLayer.setDepth(5);
+
+      const gfx = buildInteriorGraphics(scene, nextCfg, nextId);
+      scene.interiorLayer.add([
+        gfx.floor,
+        gfx.walls,
+        gfx.label,
+        ...gfx.stairTexts,
+        ...gfx.zoneTexts,
+        ...(gfx.propSprites || []),
+      ]);
+
+      scene.interiorZone = nextId;
+      scene.interiorConfig = nextCfg;
+      scene.mapBounds = { width: nextCfg.width, height: nextCfg.height };
+      scene.interiorCollision = makeCollision(nextCfg);
+      resetCameraPanState(scene);
+
+      const spawn = nextCfg.getSpawnForLink?.(opts.via) ?? nextCfg.getEntrySpawn();
+      scene.player.setPosition(spawn.x, spawn.y);
+      resetMovementState(scene);
+      scene.lastValid = { x: spawn.x, y: spawn.y };
+
+      nextCfg.onEnter?.(scene);
+      primeInteriorLinkState(scene);
+      enterMultiplayerZone(nextId, spawn.x, spawn.y, scene.playerState?.level);
+      showToast?.(nextCfg.enterToast);
+    },
+    { centerInterior: true }
+  );
+
   return true;
 }
 
@@ -231,6 +319,7 @@ function applyExitToOverworld(scene, ret, showToast) {
   scene.interiorConfig = null;
   scene.interiorCollision = null;
   clearInteriorNavigation(scene);
+  resetCameraPanState(scene);
 
   scene.mapBounds = ret.mapBounds;
   scene.player.setPosition(ret.x, ret.y);
@@ -283,6 +372,7 @@ export function updateInteriorZone(scene, delta, showToast, onPriestBattleEnd) {
   const cfg = scene.interiorConfig;
   const moved = updateInteriorMovement(scene, delta, scene.interiorCollision);
   if (moved) {
+    notifyPlayerMoved(scene);
     const { dx, dy } = getLastMoveDelta(scene);
     updateWalkAnim(scene.player, dx, dy, scene, 'player');
     scene._moveSendAcc = (scene._moveSendAcc || 0) + delta;
@@ -303,4 +393,11 @@ export function updateInteriorZone(scene, delta, showToast, onPriestBattleEnd) {
   return true;
 }
 
-export { CATHEDRAL_ZONE_ID, BAR_MOMO_ZONE_ID, RIQUELA_ZONE_ID, MODUS_VIVENDI_ZONE_ID, AREA_CENTRAL_ZONE_ID } from './interiors/index.js';
+export {
+  CATHEDRAL_ZONE_ID,
+  BAR_MOMO_ZONE_ID,
+  RIQUELA_ZONE_ID,
+  MODUS_VIVENDI_ZONE_ID,
+  AREA_CENTRAL_ZONE_ID,
+  ESTACION_TREN_ZONE_ID,
+} from './interiors/index.js';

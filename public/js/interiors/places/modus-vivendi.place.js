@@ -7,10 +7,10 @@ import { drawModusVivendiDoor } from '../door-art.js';
 import { MODUS_VIVENDI } from '../../map-bounds.js';
 
 const SINGER_LINES = [
-  '♪ Nas caballerizas soa distinto… ♪',
-  'Modus Vivendi, desde os setenta!',
-  'Baixo terra, música en directo.',
-  'Un, dous… grazas, compostela!',
+  '♪ Nas caballerizas soa distinto… aquí abaixo non chove ♪',
+  'Modus Vivendi dende os setenta — e seguimos sen pedir permiso!',
+  'Un, dous, tres… e se fallo, dillo que foi estilo vintage.',
+  'Grazas, Santiago! Volvede… que a caveira non se aluga barata.',
 ];
 
 export const modusVivendiPlace = {
@@ -38,9 +38,11 @@ export const modusVivendiPlace = {
           tint: 0xffb6c1,
           emoji: '🍺',
           phrases: [
-            'Caña a 2,5 — Estrella Galicia',
-            'Estrella Galicia ben fría, dous con cincuenta.',
-            'Caña ou doble? Estrella, por suposto.',
+            'Caña a 2,5 — Estrella Galicia, que non traizoa.',
+            'Estrella ben fría, dous con cincuenta e un sorriso de retranca.',
+            'Caña ou doble? Estrella, por suposto. Auga, no bar de en fronte.',
+            'De quen ves sendo? Con ese pedido, de quen sabe o que quere.',
+            'Se pides sen alcohol, tamén te servimos. Non fas chistes, vale.',
           ],
         },
         {

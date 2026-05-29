@@ -1,0 +1,5031 @@
+{
+  "$docs": "Capas walk.png — repo Universal LPC. Xerador: https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/",
+  "sourcesRoot": ".lpc-src/spritesheets",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "walkSheetSize": {
+    "width": 576,
+    "height": 256
+  },
+  "characters": {
+    "player": {
+      "label": "Xogador",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ]
+    },
+    "remote": {
+      "label": "Multixogador",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ]
+    },
+    "bot-0": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 16777215
+    },
+    "bot-1": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/idol/adult/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16775408
+    },
+    "bot-2": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 15792383
+    },
+    "bot-3": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16773365
+    },
+    "npc-0": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "npc-1": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long/adult/walk.png"
+      ]
+    },
+    "npc-2": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/boots/fold/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ]
+    },
+    "npc-3": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ]
+    },
+    "npc-4": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ]
+    },
+    "npc-5": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants2/thin/walk.png",
+        "feet/boots/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/extensions/ponytails/relm_ponytail/adult/fg/walk.png"
+      ]
+    },
+    "peleteiro-student": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangs/adult/walk.png"
+      ]
+    },
+    "priest": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ]
+    },
+    "receptionist": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ]
+    },
+    "urban-0": {
+      "label": "Peregrino",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "urban-1": {
+      "label": "Turista",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long/adult/walk.png"
+      ]
+    },
+    "urban-2": {
+      "label": "Hosteleiro",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ]
+    },
+    "urban-3": {
+      "label": "Músico",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/boots/fold/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ]
+    },
+    "urban-4": {
+      "label": "Pensionista",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ]
+    },
+    "urban-5": {
+      "label": "Estudante rúa",
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangs/adult/walk.png"
+      ]
+    },
+    "urban-6": {
+      "label": "Vendedor",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ]
+    },
+    "urban-7": {
+      "label": "Guía",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob/adult/walk.png"
+      ]
+    },
+    "urban-8": {
+      "label": "Veciño",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ]
+    },
+    "urban-9": {
+      "label": "Rival",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants2/thin/walk.png",
+        "feet/boots/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ]
+    },
+    "bandit-0": {
+      "label": "Bandido",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ]
+    },
+    "bandit-1": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/boots/fold/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ]
+    },
+    "bandit-2": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants2/thin/walk.png",
+        "feet/boots/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ]
+    },
+    "bandit-3": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ]
+    },
+    "bandit-4": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/boots/fold/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "peleteiro-mendigo-0": {
+      "label": "Mendigo Peleteiro",
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ]
+    },
+    "peleteiro-mendigo-1": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ]
+    },
+    "peleteiro-student-1": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ]
+    },
+    "peleteiro-student-2": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangs/adult/walk.png"
+      ]
+    },
+    "peleteiro-student-3": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob/adult/walk.png"
+      ]
+    },
+    "peleteiro-ghost-0": {
+      "label": "Alma en pena",
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long/adult/walk.png"
+      ]
+    },
+    "peleteiro-ghost-1": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ]
+    },
+    "peleteiro-ghost-2": {
+      "scale": 0.46,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "peleteiro-ghost-3": {
+      "scale": 0.45,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ]
+    },
+    "peleteiro-director": {
+      "label": "Director espectro",
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ]
+    },
+    "peleteiro-prof-0": {
+      "label": "Profesor",
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ]
+    },
+    "peleteiro-prof-1": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "peleteiro-prof-2": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants2/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ]
+    },
+    "bot-4": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 16121845
+    },
+    "bot-5": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16777200
+    },
+    "bot-6": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/goblin/adult/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 16777215
+    },
+    "bot-7": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16775408
+    },
+    "bot-8": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 15792383
+    },
+    "bot-9": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16773365
+    },
+    "bot-10": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 16121845
+    },
+    "bot-11": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16777200
+    },
+    "bot-12": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 16777215
+    },
+    "bot-13": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16775408
+    },
+    "bot-14": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 15792383
+    },
+    "bot-15": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/orc/male/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16773365
+    },
+    "bot-16": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 16121845
+    },
+    "bot-17": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16777200
+    },
+    "bot-18": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 16777215
+    },
+    "bot-19": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16775408
+    },
+    "bot-20": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 15792383
+    },
+    "bot-21": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16773365
+    },
+    "bot-22": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 16121845
+    },
+    "bot-23": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16777200
+    },
+    "bot-24": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 16777215
+    },
+    "bot-25": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16775408
+    },
+    "bot-26": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 15792383
+    },
+    "bot-27": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16773365
+    },
+    "bot-28": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 16121845
+    },
+    "bot-29": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16777200
+    },
+    "bot-30": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 16777215
+    },
+    "bot-31": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/vampire/adult/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16775408
+    },
+    "bot-32": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 15792383
+    },
+    "bot-33": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16773365
+    },
+    "bot-34": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked2/adult/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 16121845
+    },
+    "bot-35": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16777200
+    },
+    "bot-36": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 16777215
+    },
+    "bot-37": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16775408
+    },
+    "bot-38": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 15792383
+    },
+    "bot-39": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16773365
+    },
+    "bot-40": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/zombie/adult/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 16121845
+    },
+    "bot-41": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16777200
+    },
+    "bot-42": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 16777215
+    },
+    "bot-43": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16775408
+    },
+    "bot-44": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 15792383
+    },
+    "bot-45": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16773365
+    },
+    "bot-46": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page/adult/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 16121845
+    },
+    "bot-47": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/jack/adult/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16777200
+    },
+    "bot-48": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 16777215
+    },
+    "bot-49": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page/adult/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16775408
+    },
+    "bot-50": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 15792383
+    },
+    "bot-51": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/messy2/adult/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16773365
+    },
+    "bot-52": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 16121845
+    },
+    "bot-53": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16777200
+    },
+    "bot-54": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/jack/adult/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 16777215
+    },
+    "bot-55": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16775408
+    },
+    "bot-56": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 15792383
+    },
+    "bot-57": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob/adult/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16773365
+    },
+    "bot-58": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 16121845
+    },
+    "bot-59": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16777200
+    },
+    "bot-60": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 16777215
+    },
+    "bot-61": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16775408
+    },
+    "bot-62": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 15792383
+    },
+    "bot-63": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/troll/adult/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16773365
+    },
+    "bot-64": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 16121845
+    },
+    "bot-65": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/pixie/adult/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16777200
+    },
+    "bot-66": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/swoop/adult/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 16777215
+    },
+    "bot-67": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16775408
+    },
+    "bot-68": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 15792383
+    },
+    "bot-69": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16773365
+    },
+    "bot-70": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 16121845
+    },
+    "bot-71": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16777200
+    },
+    "bot-72": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_liberty/adult/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 16777215
+    },
+    "bot-73": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16775408
+    },
+    "bot-74": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 15792383
+    },
+    "bot-75": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16773365
+    },
+    "bot-76": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 16121845
+    },
+    "bot-77": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16777200
+    },
+    "bot-78": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 16777215
+    },
+    "bot-79": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/frankenstein/adult/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16775408
+    },
+    "bot-80": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 15792383
+    },
+    "bot-81": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16773365
+    },
+    "bot-82": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 16121845
+    },
+    "bot-83": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16777200
+    },
+    "bot-84": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 16777215
+    },
+    "bot-85": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16775408
+    },
+    "bot-86": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 15792383
+    },
+    "bot-87": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/lob/adult/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16773365
+    },
+    "bot-88": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/swoop/adult/walk.png"
+      ],
+      "label": "Retrancero",
+      "personalityId": "retrancero",
+      "tint": 16121845
+    },
+    "bot-89": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Maior",
+      "personalityId": "maior",
+      "tint": 16777200
+    },
+    "bot-90": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Hosteleira",
+      "personalityId": "hosteleira",
+      "tint": 16777215
+    },
+    "bot-91": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Guía",
+      "personalityId": "guia",
+      "tint": 16775408
+    },
+    "bot-92": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ],
+      "label": "Mariscador",
+      "personalityId": "mariscador",
+      "tint": 15792383
+    },
+    "bot-93": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Gaiteiro",
+      "personalityId": "gaiteiro",
+      "tint": 16773365
+    },
+    "bot-94": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Ciclista",
+      "personalityId": "ciclista",
+      "tint": 16121845
+    },
+    "bot-95": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/lizard/child/walk.png"
+      ],
+      "label": "Foraneiro",
+      "personalityId": "foraneiro",
+      "tint": 16777200
+    },
+    "bot-96": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Peregrino",
+      "personalityId": "peregrino",
+      "tint": 16777215
+    },
+    "bot-97": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Comerciante",
+      "personalityId": "comerciante",
+      "tint": 16775408
+    },
+    "bot-98": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Veciña",
+      "personalityId": "abuela",
+      "tint": 15792383
+    },
+    "bot-99": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Estudiante",
+      "personalityId": "estudiante",
+      "tint": 16773365
+    },
+    "bot-100": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/boots/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Artesán",
+      "personalityId": "artesao",
+      "tint": 16121845
+    },
+    "bot-101": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Xubilado",
+      "personalityId": "jubilado",
+      "tint": 16777200
+    },
+    "bot-102": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png",
+        "head/heads/minotaur/child/walk.png"
+      ],
+      "label": "Visitante",
+      "personalityId": "turista",
+      "tint": 16777215
+    },
+    "bot-103": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Profesor",
+      "personalityId": "profesor",
+      "tint": 16775408
+    },
+    "npc-6": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ],
+      "label": "Rival 6"
+    },
+    "npc-7": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ],
+      "label": "Rival 7"
+    },
+    "npc-8": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob/adult/walk.png"
+      ],
+      "label": "Rival 8"
+    },
+    "npc-9": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ],
+      "label": "Rival 9"
+    },
+    "npc-10": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Rival 10"
+    },
+    "npc-11": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ],
+      "label": "Rival 11"
+    },
+    "npc-12": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Rival 12"
+    },
+    "npc-13": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Rival 13"
+    },
+    "npc-14": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 14"
+    },
+    "npc-15": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Rival 15"
+    },
+    "npc-16": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long/adult/walk.png"
+      ],
+      "label": "Rival 16"
+    },
+    "npc-17": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Rival 17"
+    },
+    "npc-18": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy1/adult/walk.png"
+      ],
+      "label": "Rival 18"
+    },
+    "npc-19": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy2/adult/walk.png"
+      ],
+      "label": "Rival 19"
+    },
+    "npc-20": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/messy3/adult/walk.png"
+      ],
+      "label": "Rival 20"
+    },
+    "npc-21": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Rival 21"
+    },
+    "npc-22": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Rival 22"
+    },
+    "npc-23": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Rival 23"
+    },
+    "npc-24": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 24"
+    },
+    "npc-25": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 25"
+    },
+    "npc-26": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Rival 26"
+    },
+    "npc-27": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Rival 27"
+    },
+    "npc-28": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ],
+      "label": "Rival 28"
+    },
+    "npc-29": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ],
+      "label": "Rival 29"
+    },
+    "npc-30": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/dreadlocks_short/adult/walk.png"
+      ],
+      "label": "Rival 30"
+    },
+    "npc-31": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Rival 31"
+    },
+    "npc-32": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Rival 32"
+    },
+    "npc-33": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 33"
+    },
+    "npc-34": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/idol/adult/walk.png"
+      ],
+      "label": "Rival 34"
+    },
+    "npc-35": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/lob/adult/walk.png"
+      ],
+      "label": "Rival 35"
+    },
+    "npc-36": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 36"
+    },
+    "npc-37": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 37"
+    },
+    "npc-38": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ],
+      "label": "Rival 38"
+    },
+    "npc-39": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 39"
+    },
+    "npc-40": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/page/adult/walk.png"
+      ],
+      "label": "Rival 40"
+    },
+    "npc-41": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/page2/adult/walk.png"
+      ],
+      "label": "Rival 41"
+    },
+    "npc-42": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/pixie/adult/walk.png"
+      ],
+      "label": "Rival 42"
+    },
+    "npc-43": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/relm_short/adult/walk.png"
+      ],
+      "label": "Rival 43"
+    },
+    "npc-44": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 44"
+    },
+    "npc-45": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/shorthawk/adult/walk.png"
+      ],
+      "label": "Rival 45"
+    },
+    "npc-46": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 46"
+    },
+    "npc-47": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 47"
+    },
+    "npc-48": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 48"
+    },
+    "npc-49": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/spiked/adult/walk.png"
+      ],
+      "label": "Rival 49"
+    },
+    "npc-50": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked2/adult/walk.png"
+      ],
+      "label": "Rival 50"
+    },
+    "npc-51": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Rival 51"
+    },
+    "npc-52": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked_liberty/adult/walk.png"
+      ],
+      "label": "Rival 52"
+    },
+    "npc-53": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/spiked_porcupine/adult/walk.png"
+      ],
+      "label": "Rival 53"
+    },
+    "npc-54": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/swoop/adult/walk.png"
+      ],
+      "label": "Rival 54"
+    },
+    "npc-55": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/twists_fade/adult/walk.png"
+      ],
+      "label": "Rival 55"
+    },
+    "npc-56": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ],
+      "label": "Rival 56"
+    },
+    "npc-57": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 57"
+    },
+    "npc-58": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 58"
+    },
+    "npc-59": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 59"
+    },
+    "npc-60": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ],
+      "label": "Rival 60"
+    },
+    "npc-61": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ],
+      "label": "Rival 61"
+    },
+    "npc-62": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bob/adult/walk.png"
+      ],
+      "label": "Rival 62"
+    },
+    "npc-63": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ],
+      "label": "Rival 63"
+    },
+    "npc-64": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Rival 64"
+    },
+    "npc-65": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ],
+      "label": "Rival 65"
+    },
+    "npc-66": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Rival 66"
+    },
+    "npc-67": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Rival 67"
+    },
+    "npc-68": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 68"
+    },
+    "npc-69": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Rival 69"
+    },
+    "npc-70": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/long/adult/walk.png"
+      ],
+      "label": "Rival 70"
+    },
+    "npc-71": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Rival 71"
+    },
+    "npc-72": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/messy1/adult/walk.png"
+      ],
+      "label": "Rival 72"
+    },
+    "npc-73": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/messy2/adult/walk.png"
+      ],
+      "label": "Rival 73"
+    },
+    "npc-74": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy3/adult/walk.png"
+      ],
+      "label": "Rival 74"
+    },
+    "npc-75": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Rival 75"
+    },
+    "npc-76": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Rival 76"
+    },
+    "npc-77": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Rival 77"
+    },
+    "npc-78": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 78"
+    },
+    "npc-79": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 79"
+    },
+    "npc-80": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Rival 80"
+    },
+    "npc-81": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Rival 81"
+    },
+    "npc-82": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ],
+      "label": "Rival 82"
+    },
+    "npc-83": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ],
+      "label": "Rival 83"
+    },
+    "npc-84": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/dreadlocks_short/adult/walk.png"
+      ],
+      "label": "Rival 84"
+    },
+    "npc-85": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Rival 85"
+    },
+    "npc-86": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Rival 86"
+    },
+    "npc-87": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 87"
+    },
+    "npc-88": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/idol/adult/walk.png"
+      ],
+      "label": "Rival 88"
+    },
+    "npc-89": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/lob/adult/walk.png"
+      ],
+      "label": "Rival 89"
+    },
+    "npc-90": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 90"
+    },
+    "npc-91": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 91"
+    },
+    "npc-92": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ],
+      "label": "Rival 92"
+    },
+    "npc-93": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 93"
+    },
+    "npc-94": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page/adult/walk.png"
+      ],
+      "label": "Rival 94"
+    },
+    "npc-95": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page2/adult/walk.png"
+      ],
+      "label": "Rival 95"
+    },
+    "npc-96": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/pixie/adult/walk.png"
+      ],
+      "label": "Rival 96"
+    },
+    "npc-97": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/relm_short/adult/walk.png"
+      ],
+      "label": "Rival 97"
+    },
+    "npc-98": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 98"
+    },
+    "npc-99": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/shorthawk/adult/walk.png"
+      ],
+      "label": "Rival 99"
+    },
+    "npc-100": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 100"
+    },
+    "npc-101": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 101"
+    },
+    "npc-102": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 102"
+    },
+    "npc-103": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked/adult/walk.png"
+      ],
+      "label": "Rival 103"
+    },
+    "npc-104": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked2/adult/walk.png"
+      ],
+      "label": "Rival 104"
+    },
+    "npc-105": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ],
+      "label": "Rival 105"
+    },
+    "npc-106": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_liberty/adult/walk.png"
+      ],
+      "label": "Rival 106"
+    },
+    "npc-107": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_porcupine/adult/walk.png"
+      ],
+      "label": "Rival 107"
+    },
+    "npc-108": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/swoop/adult/walk.png"
+      ],
+      "label": "Rival 108"
+    },
+    "npc-109": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/twists_fade/adult/walk.png"
+      ],
+      "label": "Rival 109"
+    },
+    "npc-110": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ],
+      "label": "Rival 110"
+    },
+    "npc-111": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 111"
+    },
+    "npc-112": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Rival 112"
+    },
+    "npc-113": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Rival 113"
+    },
+    "npc-114": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ],
+      "label": "Rival 114"
+    },
+    "npc-115": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ],
+      "label": "Rival 115"
+    },
+    "npc-116": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob/adult/walk.png"
+      ],
+      "label": "Rival 116"
+    },
+    "npc-117": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ],
+      "label": "Rival 117"
+    },
+    "npc-118": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Rival 118"
+    },
+    "npc-119": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ],
+      "label": "Rival 119"
+    },
+    "npc-120": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Rival 120"
+    },
+    "npc-121": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/parted2/adult/walk.png"
+      ],
+      "label": "Rival 121"
+    },
+    "npc-122": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Rival 122"
+    },
+    "npc-123": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Rival 123"
+    },
+    "npc-124": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/long/adult/walk.png"
+      ],
+      "label": "Rival 124"
+    },
+    "npc-125": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Rival 125"
+    },
+    "urban-10": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/messy1/adult/walk.png"
+      ]
+    },
+    "urban-11": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy2/adult/walk.png"
+      ]
+    },
+    "urban-12": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy3/adult/walk.png"
+      ]
+    },
+    "urban-13": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/afro/adult/walk.png"
+      ]
+    },
+    "urban-14": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/balding/adult/walk.png"
+      ]
+    },
+    "urban-15": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangs/adult/walk.png"
+      ]
+    },
+    "urban-16": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-17": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ]
+    },
+    "urban-18": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ]
+    },
+    "urban-19": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ]
+    },
+    "urban-20": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ]
+    },
+    "urban-21": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ]
+    },
+    "urban-22": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/dreadlocks_short/adult/walk.png"
+      ]
+    },
+    "urban-23": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ]
+    },
+    "urban-24": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ]
+    },
+    "urban-25": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ]
+    },
+    "urban-26": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/idol/adult/walk.png"
+      ]
+    },
+    "urban-27": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/lob/adult/walk.png"
+      ]
+    },
+    "urban-28": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-29": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ]
+    },
+    "urban-30": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ]
+    },
+    "urban-31": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-32": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page/adult/walk.png"
+      ]
+    },
+    "urban-33": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/page2/adult/walk.png"
+      ]
+    },
+    "urban-34": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/pixie/adult/walk.png"
+      ]
+    },
+    "urban-35": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/relm_short/adult/walk.png"
+      ]
+    },
+    "urban-36": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-37": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/shorthawk/adult/walk.png"
+      ]
+    },
+    "urban-38": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ]
+    },
+    "urban-39": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-40": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-41": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked/adult/walk.png"
+      ]
+    },
+    "urban-42": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/spiked2/adult/walk.png"
+      ]
+    },
+    "urban-43": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_beehive/adult/walk.png"
+      ]
+    },
+    "urban-44": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_liberty/adult/walk.png"
+      ]
+    },
+    "urban-45": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked_porcupine/adult/walk.png"
+      ]
+    },
+    "urban-46": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/swoop/adult/walk.png"
+      ]
+    },
+    "urban-47": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/twists_fade/adult/walk.png"
+      ]
+    },
+    "urban-48": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ]
+    },
+    "urban-49": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ]
+    },
+    "urban-50": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ]
+    },
+    "urban-51": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ]
+    },
+    "urban-52": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bangslong/adult/walk.png"
+      ]
+    },
+    "urban-53": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/buzzcut/adult/walk.png"
+      ]
+    },
+    "urban-54": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bob/adult/walk.png"
+      ]
+    },
+    "urban-55": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ]
+    },
+    "urban-56": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ]
+    },
+    "urban-57": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ]
+    },
+    "urban-58": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/parted/adult/walk.png"
+      ]
+    },
+    "urban-59": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/muscular/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted2/adult/walk.png"
+      ]
+    },
+    "school-0": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png"
+      ],
+      "label": "Alumno 0"
+    },
+    "school-1": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/ponytail2/adult/fg/walk.png"
+      ],
+      "label": "Alumno 1"
+    },
+    "school-2": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/long/adult/walk.png"
+      ],
+      "label": "Alumno 2"
+    },
+    "school-3": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/high_and_tight/adult/walk.png"
+      ],
+      "label": "Alumno 3"
+    },
+    "school-4": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy1/adult/walk.png"
+      ],
+      "label": "Alumno 4"
+    },
+    "school-5": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/messy2/adult/walk.png"
+      ],
+      "label": "Alumno 5"
+    },
+    "school-6": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/messy3/adult/walk.png"
+      ],
+      "label": "Alumno 6"
+    },
+    "school-7": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Alumno 7"
+    },
+    "school-8": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Alumno 8"
+    },
+    "school-9": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Alumno 9"
+    },
+    "school-10": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Alumno 10"
+    },
+    "school-11": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Alumno 11"
+    },
+    "school-12": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/cornrows/adult/walk.png"
+      ],
+      "label": "Alumno 12"
+    },
+    "school-13": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/cowlick/adult/walk.png"
+      ],
+      "label": "Alumno 13"
+    },
+    "school-14": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/cowlick_tall/adult/walk.png"
+      ],
+      "label": "Alumno 14"
+    },
+    "school-15": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/curly_long/adult/walk.png"
+      ],
+      "label": "Alumno 15"
+    },
+    "school-16": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/dreadlocks_short/adult/walk.png"
+      ],
+      "label": "Alumno 16"
+    },
+    "school-17": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Alumno 17"
+    },
+    "school-18": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Alumno 18"
+    },
+    "school-19": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Alumno 19"
+    },
+    "school-20": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/idol/adult/walk.png"
+      ],
+      "label": "Alumno 20"
+    },
+    "school-21": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/lob/adult/walk.png"
+      ],
+      "label": "Alumno 21"
+    },
+    "school-22": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Alumno 22"
+    },
+    "school-23": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Alumno 23"
+    },
+    "school-24": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt/male/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/long_messy/adult/walk.png"
+      ],
+      "label": "Alumno 24"
+    },
+    "school-25": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Alumno 25"
+    },
+    "school-26": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/page/adult/walk.png"
+      ],
+      "label": "Alumno 26"
+    },
+    "school-27": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/teen/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "head/heads/human/male_small/walk.png",
+        "hair/page2/adult/walk.png"
+      ],
+      "label": "Alumno 27"
+    },
+    "school-28": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/pants/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/shortsleeve/tshirt_vneck/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/pixie/adult/walk.png"
+      ],
+      "label": "Alumno 28"
+    },
+    "school-29": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/pants/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/relm_short/adult/walk.png"
+      ],
+      "label": "Alumno 29"
+    },
+    "skeleton-0": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 0",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-1": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/black.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 1",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-2": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/blue.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 2",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-3": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/brown.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 3",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-4": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/dark_brown.png",
+        "torso/waist/belt_robe/female/walk/teal.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 4",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-5": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/dark_gray.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 5",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-6": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/forest_green.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 6",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-7": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/light_gray.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 7",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-8": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/purple.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 8",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-9": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/red.png",
+        "torso/waist/belt_robe/female/walk/white.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 9",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-10": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/white.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 10",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-11": {
+      "scale": 0.504,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 11",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-12": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/black.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 12",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-13": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/blue.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 13",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-14": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/brown.png",
+        "torso/waist/belt_robe/male/walk/teal.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 14",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-15": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/dark_brown.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 15",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-16": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/dark_gray.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 16",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-17": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/forest_green.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 17",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-18": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/light_gray.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 18",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-19": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/purple.png",
+        "torso/waist/belt_robe/female/walk/teal.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 19",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-20": {
+      "scale": 0.492,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/red.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 20",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-21": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/white.png",
+        "head/heads/skeleton/adult/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 21",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-22": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 22",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "skeleton-23": {
+      "scale": 0.48,
+      "layers": [
+        "body/bodies/skeleton/walk/skeleton.png",
+        "torso/clothes/robe/female/walk/black.png",
+        "head/heads/skeleton/walk/skeleton.png"
+      ],
+      "label": "Esqueleto 23",
+      "tint": 13164784,
+      "archetype": "skeleton"
+    },
+    "specter-0": {
+      "scale": 0.48,
+      "layers": [
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/messy2/adult/walk.png"
+      ],
+      "label": "Espectro 0",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-1": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/dreadlocks_short/adult/walk.png"
+      ],
+      "label": "Espectro 1",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-2": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/page2/adult/walk.png"
+      ],
+      "label": "Espectro 2",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-3": {
+      "scale": 0.504,
+      "layers": [
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/spiked_liberty/adult/walk.png"
+      ],
+      "label": "Espectro 3",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-4": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bob_side_part/adult/walk.png"
+      ],
+      "label": "Espectro 4",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-5": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/messy3/adult/walk.png"
+      ],
+      "label": "Espectro 5",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-6": {
+      "scale": 0.492,
+      "layers": [
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/flat_top_fade/adult/walk.png"
+      ],
+      "label": "Espectro 6",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-7": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/pixie/adult/walk.png"
+      ],
+      "label": "Espectro 7",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-8": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/spiked_porcupine/adult/walk.png"
+      ],
+      "label": "Espectro 8",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-9": {
+      "scale": 0.48,
+      "layers": [
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/curly_short/adult/walk.png"
+      ],
+      "label": "Espectro 9",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-10": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/afro/adult/walk.png"
+      ],
+      "label": "Espectro 10",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-11": {
+      "scale": 0.508,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/flat_top_straight/adult/walk.png"
+      ],
+      "label": "Espectro 11",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-12": {
+      "scale": 0.504,
+      "layers": [
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/relm_short/adult/walk.png"
+      ],
+      "label": "Espectro 12",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-13": {
+      "scale": 0.5,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/swoop/adult/walk.png"
+      ],
+      "label": "Espectro 13",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-14": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/curly_short2/adult/walk.png"
+      ],
+      "label": "Espectro 14",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-15": {
+      "scale": 0.492,
+      "layers": [
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/balding/adult/walk.png"
+      ],
+      "label": "Espectro 15",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-16": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png"
+      ],
+      "label": "Espectro 16",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-17": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png"
+      ],
+      "label": "Espectro 17",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-18": {
+      "scale": 0.48,
+      "layers": [
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/twists_fade/adult/walk.png"
+      ],
+      "label": "Espectro 18",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-19": {
+      "scale": 0.512,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/parted/adult/walk.png"
+      ],
+      "label": "Espectro 19",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-20": {
+      "scale": 0.496,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/bangs/adult/walk.png"
+      ],
+      "label": "Espectro 20",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-21": {
+      "scale": 0.492,
+      "layers": [
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/idol/adult/walk.png"
+      ],
+      "label": "Espectro 21",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-22": {
+      "scale": 0.488,
+      "layers": [
+        "body/bodies/female/walk.png",
+        "legs/leggings/thin/walk.png",
+        "feet/shoes/basic/thin/walk.png",
+        "torso/clothes/shortsleeve/tshirt_scoop/female/walk.png",
+        "head/heads/human/female/walk.png",
+        "hair/shorthawk/adult/walk.png"
+      ],
+      "label": "Espectro 22",
+      "tint": 10083839,
+      "archetype": "specter"
+    },
+    "specter-23": {
+      "scale": 0.484,
+      "layers": [
+        "body/bodies/male/walk.png",
+        "legs/leggings/male/walk.png",
+        "feet/shoes/basic/male/walk.png",
+        "torso/clothes/longsleeve/formal/male/walk.png",
+        "head/heads/human/male/walk.png",
+        "hair/twists_straight/adult/walk.png"
+      ],
+      "label": "Espectro 23",
+      "tint": 10083839,
+      "archetype": "specter"
+    }
+  },
+  "roles": {
+    "player": "player",
+    "remote": "remote",
+    "bot": [
+      "bot-0",
+      "bot-1",
+      "bot-10",
+      "bot-100",
+      "bot-101",
+      "bot-102",
+      "bot-103",
+      "bot-11",
+      "bot-12",
+      "bot-13",
+      "bot-14",
+      "bot-15",
+      "bot-16",
+      "bot-17",
+      "bot-18",
+      "bot-19",
+      "bot-2",
+      "bot-20",
+      "bot-21",
+      "bot-22",
+      "bot-23",
+      "bot-24",
+      "bot-25",
+      "bot-26",
+      "bot-27",
+      "bot-28",
+      "bot-29",
+      "bot-3",
+      "bot-30",
+      "bot-31",
+      "bot-32",
+      "bot-33",
+      "bot-34",
+      "bot-35",
+      "bot-36",
+      "bot-37",
+      "bot-38",
+      "bot-39",
+      "bot-4",
+      "bot-40",
+      "bot-41",
+      "bot-42",
+      "bot-43",
+      "bot-44",
+      "bot-45",
+      "bot-46",
+      "bot-47",
+      "bot-48",
+      "bot-49",
+      "bot-5",
+      "bot-50",
+      "bot-51",
+      "bot-52",
+      "bot-53",
+      "bot-54",
+      "bot-55",
+      "bot-56",
+      "bot-57",
+      "bot-58",
+      "bot-59",
+      "bot-6",
+      "bot-60",
+      "bot-61",
+      "bot-62",
+      "bot-63",
+      "bot-64",
+      "bot-65",
+      "bot-66",
+      "bot-67",
+      "bot-68",
+      "bot-69",
+      "bot-7",
+      "bot-70",
+      "bot-71",
+      "bot-72",
+      "bot-73",
+      "bot-74",
+      "bot-75",
+      "bot-76",
+      "bot-77",
+      "bot-78",
+      "bot-79",
+      "bot-8",
+      "bot-80",
+      "bot-81",
+      "bot-82",
+      "bot-83",
+      "bot-84",
+      "bot-85",
+      "bot-86",
+      "bot-87",
+      "bot-88",
+      "bot-89",
+      "bot-9",
+      "bot-90",
+      "bot-91",
+      "bot-92",
+      "bot-93",
+      "bot-94",
+      "bot-95",
+      "bot-96",
+      "bot-97",
+      "bot-98",
+      "bot-99"
+    ],
+    "npc": [
+      "npc-0",
+      "npc-1",
+      "npc-10",
+      "npc-100",
+      "npc-101",
+      "npc-102",
+      "npc-103",
+      "npc-104",
+      "npc-105",
+      "npc-106",
+      "npc-107",
+      "npc-108",
+      "npc-109",
+      "npc-11",
+      "npc-110",
+      "npc-111",
+      "npc-112",
+      "npc-113",
+      "npc-114",
+      "npc-115",
+      "npc-116",
+      "npc-117",
+      "npc-118",
+      "npc-119",
+      "npc-12",
+      "npc-120",
+      "npc-121",
+      "npc-122",
+      "npc-123",
+      "npc-124",
+      "npc-125",
+      "npc-13",
+      "npc-14",
+      "npc-15",
+      "npc-16",
+      "npc-17",
+      "npc-18",
+      "npc-19",
+      "npc-2",
+      "npc-20",
+      "npc-21",
+      "npc-22",
+      "npc-23",
+      "npc-24",
+      "npc-25",
+      "npc-26",
+      "npc-27",
+      "npc-28",
+      "npc-29",
+      "npc-3",
+      "npc-30",
+      "npc-31",
+      "npc-32",
+      "npc-33",
+      "npc-34",
+      "npc-35",
+      "npc-36",
+      "npc-37",
+      "npc-38",
+      "npc-39",
+      "npc-4",
+      "npc-40",
+      "npc-41",
+      "npc-42",
+      "npc-43",
+      "npc-44",
+      "npc-45",
+      "npc-46",
+      "npc-47",
+      "npc-48",
+      "npc-49",
+      "npc-5",
+      "npc-50",
+      "npc-51",
+      "npc-52",
+      "npc-53",
+      "npc-54",
+      "npc-55",
+      "npc-56",
+      "npc-57",
+      "npc-58",
+      "npc-59",
+      "npc-6",
+      "npc-60",
+      "npc-61",
+      "npc-62",
+      "npc-63",
+      "npc-64",
+      "npc-65",
+      "npc-66",
+      "npc-67",
+      "npc-68",
+      "npc-69",
+      "npc-7",
+      "npc-70",
+      "npc-71",
+      "npc-72",
+      "npc-73",
+      "npc-74",
+      "npc-75",
+      "npc-76",
+      "npc-77",
+      "npc-78",
+      "npc-79",
+      "npc-8",
+      "npc-80",
+      "npc-81",
+      "npc-82",
+      "npc-83",
+      "npc-84",
+      "npc-85",
+      "npc-86",
+      "npc-87",
+      "npc-88",
+      "npc-89",
+      "npc-9",
+      "npc-90",
+      "npc-91",
+      "npc-92",
+      "npc-93",
+      "npc-94",
+      "npc-95",
+      "npc-96",
+      "npc-97",
+      "npc-98",
+      "npc-99",
+      "urban-0",
+      "urban-1",
+      "urban-10",
+      "urban-11",
+      "urban-12",
+      "urban-13",
+      "urban-14",
+      "urban-15",
+      "urban-16",
+      "urban-17",
+      "urban-18",
+      "urban-19",
+      "urban-2",
+      "urban-20",
+      "urban-21",
+      "urban-22",
+      "urban-23",
+      "urban-24",
+      "urban-25",
+      "urban-26",
+      "urban-27",
+      "urban-28",
+      "urban-29",
+      "urban-3",
+      "urban-30",
+      "urban-31",
+      "urban-32",
+      "urban-33",
+      "urban-34",
+      "urban-35",
+      "urban-36",
+      "urban-37",
+      "urban-38",
+      "urban-39",
+      "urban-4",
+      "urban-40",
+      "urban-41",
+      "urban-42",
+      "urban-43",
+      "urban-44",
+      "urban-45",
+      "urban-46",
+      "urban-47",
+      "urban-48",
+      "urban-49",
+      "urban-5",
+      "urban-50",
+      "urban-51",
+      "urban-52",
+      "urban-53",
+      "urban-54",
+      "urban-55",
+      "urban-56",
+      "urban-57",
+      "urban-58",
+      "urban-59",
+      "urban-6",
+      "urban-7",
+      "urban-8",
+      "urban-9"
+    ]
+  },
+  "$generated": {
+    "at": "2026-05-29T14:10:08.438Z",
+    "added": 248,
+    "total": 391
+  }
+}
