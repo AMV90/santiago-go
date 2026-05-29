@@ -8,6 +8,7 @@ import { estacionTrenPlace } from './estacion-tren.place.js';
 import { santiagoSitePlaces } from './santiago-sites.place.js';
 import { peleteiroPlaces } from './peleteiro.place.js';
 import { corteInglesPlaces } from './corte-ingles.place.js';
+import { casinaMisteriosaPlaces } from './casiña-misteriosa.place.js';
 
 /** Lista de todos os lugares interiores — engade aquí cada instancia nova */
 export const ALL_PLACES = [
@@ -19,6 +20,7 @@ export const ALL_PLACES = [
   estacionTrenPlace,
   ...peleteiroPlaces,
   ...corteInglesPlaces,
+  ...casinaMisteriosaPlaces,
   ...santiagoSitePlaces,
   ...hospitalPlaces,
 ];

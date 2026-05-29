@@ -1,15 +1,41 @@
 import { requestNavigateTo } from './path-navigation.js';
 import { isBattleOpen } from './battle-ui.js';
 import { isInInterior } from './interior-zone.js';
+import { isMapTapSlop } from './camera-pan.js';
 
 /**
- * Clic no mapa principal → ruta calculada no servidor (A*).
+ * Clic / tap no mapa principal → ruta calculada no servidor (A*).
+ * En móbil: só conta como tap se non houbo pinch/pan.
  */
 export function setupMapClickNavigation(scene) {
   scene.input.on('pointerdown', (pointer) => {
-    if (!pointer.leftButtonDown()) return;
     if (isInInterior(scene)) return;
     if (scene.inBattle || isBattleOpen()) return;
+    if (pointer.pointerType === 'mouse' && !pointer.leftButtonDown()) return;
+
+    scene._mapTapPending = {
+      id: pointer.id,
+      x: pointer.x,
+      y: pointer.y,
+    };
+  });
+
+  scene.input.on('pointerup', (pointer) => {
+    const pending = scene._mapTapPending;
+    if (!pending || pending.id !== pointer.id) return;
+    scene._mapTapPending = null;
+
+    if (isInInterior(scene)) return;
+    if (scene.inBattle || isBattleOpen()) return;
+
+    if (scene.input.pointer1?.isDown || scene.input.pointer2?.isDown) return;
+
+    if (scene._touchCameraGesture) {
+      scene._touchCameraGesture = false;
+      return;
+    }
+
+    if (!isMapTapSlop(scene, pointer, pending.x, pending.y)) return;
 
     const cam = scene.cameras.main;
     const world = cam.getWorldPoint(pointer.x, pointer.y);

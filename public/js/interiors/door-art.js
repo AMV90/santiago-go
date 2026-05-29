@@ -152,6 +152,23 @@ export function drawCorteInglesDoor(g) {
   g.fillRect(5, 6, 4, 1);
 }
 
+export function drawCasinaMisteriosaDoor(g) {
+  g.fillStyle(0x1a1020, 1);
+  g.fillRect(0, 0, 14, 18);
+  g.fillStyle(0x3d2848, 1);
+  g.fillRect(2, 3, 10, 14);
+  g.fillStyle(0x2e7d32, 0.85);
+  g.fillRect(3, 4, 8, 3);
+  g.fillStyle(0x7b1fa2, 0.7);
+  g.fillCircle(7, 6, 2);
+  g.fillStyle(0x4a148c, 1);
+  g.fillRect(4, 9, 6, 7);
+  g.fillStyle(0xc9a227, 1);
+  g.fillCircle(10, 11, 1);
+  g.fillStyle(0x1b5e20, 0.9);
+  g.fillRect(3, 15, 8, 2);
+}
+
 export function drawEstacionTrenDoor(g) {
   g.fillStyle(0x546e7a, 1);
   g.fillRect(0, 0, 14, 18);

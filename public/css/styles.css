@@ -293,6 +293,7 @@ main {
   height: 100%;
   background: #d8e8d4;
   overflow: hidden;
+  touch-action: none;
 }
 
 #game-container canvas {
@@ -412,20 +413,21 @@ main {
 }
 
 .hud-portrait-lpc {
-  object-fit: none;
-  /* Frame idle mirando á dereita (fila leste do walk.png, y=192) */
-  object-position: 0 -192px;
+  background-repeat: no-repeat;
+  background-color: #1a2332;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .hud-portrait {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: #1a2332;
+  overflow: hidden;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }

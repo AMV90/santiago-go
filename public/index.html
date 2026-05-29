@@ -2,7 +2,7 @@
 <html lang="gl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Santiago Go</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/battle.css" />
@@ -35,13 +35,12 @@
       <main>
         <section id="panel-game">
           <aside id="player-stats-hud" class="player-stats-hud" aria-live="polite">
-            <img
+            <div
+              id="hud-portrait"
               class="hud-portrait hud-portrait-lpc"
-              src="assets/lpc/characters/player.png"
-              alt=""
-              width="36"
-              height="36"
-            />
+              role="img"
+              aria-label="Retrato do xogador"
+            ></div>
             <div class="hud-stats-col">
               <div
                 class="hud-hp-row"

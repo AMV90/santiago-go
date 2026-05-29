@@ -14,7 +14,7 @@ import {
 } from './sprites.js';
 import { ensurePeleteiroTextureFilter } from './interiors/peleteiro-tile-render.js';
 import { ensureLpcTextureFilter } from './sprites.js';
-import { setupCameraPan, notifyPlayerMoved } from './camera-pan.js';
+import { setupCameraPan, notifyPlayerMoved, clampCameraZoom, zoomCameraAt } from './camera-pan.js';
 import {
   connectMultiplayer,
   joinMultiplayer,
@@ -39,6 +39,7 @@ import { clearNavigation } from './path-navigation.js';
 import { loadPlayer, savePlayer, xpProgress, resetPlayer } from './player-state.js';
 import { createEnemyFromNpc } from './npcs.js';
 import { initBattleUI, startBattle, isBattleOpen } from './battle-ui.js';
+import { getLpcHudPortrait } from './battle-sprites.js';
 import { createMapProjection } from './map-projection.js';
 import { createWalkBotSprites, updateWalkBots, tryCitizenInteraction, countCitizensNear } from './walk-bots.js';
 import {
@@ -63,6 +64,7 @@ import { createTileManager } from './tile-manager.js';
 import { setupMapClickNavigation } from './map-click.js';
 import { getTabPlayerName, getTabSpawnOffset } from './player-identity.js';
 import { initAllPlaceDoors } from './interiors/index.js';
+import { queueCasinaMalinoisAssets, ensureCasinaMalinoisAnims } from './interiors/casina-malinois-sprites.js';
 import {
   isInInterior,
   updateInteriorZone,
@@ -212,6 +214,7 @@ export async function initGame(mpOptions = null, onProgress) {
         });
         createFallbackTextures(this);
         queueSpriteAssets(this);
+        queueCasinaMalinoisAssets(this);
         this.load.image('first-aid', 'assets/icons/first-aid.svg');
       },
       create() {
@@ -220,6 +223,7 @@ export async function initGame(mpOptions = null, onProgress) {
         ensurePeleteiroTextureFilter(this);
         ensureLpcTextureFilter(this);
         setupSpriteAnimations(this);
+        ensureCasinaMalinoisAnims(this);
         this.applyBotSprite = (spr, i) => applyCharacterSprite(spr, 'bot', this, i);
         this.updateBotWalkAnim = (spr, dx, dy) => updateWalkAnim(spr, dx, dy, this, 'bot');
 
@@ -484,7 +488,17 @@ function updateStatsHud(player) {
   const hpText = document.getElementById('hud-hp-text');
   const xpFill = document.getElementById('hud-xp-fill');
   const xpText = document.getElementById('hud-xp-text');
+  const portraitEl = document.getElementById('hud-portrait');
   if (!hpRow) return;
+
+  if (portraitEl) {
+    const portrait = getLpcHudPortrait('player', 40);
+    if (portrait) {
+      portraitEl.style.backgroundImage = `url('${portrait.url}')`;
+      portraitEl.style.backgroundPosition = `${portrait.posX}px ${portrait.posY}px`;
+      portraitEl.style.backgroundSize = `${portrait.bgW}px ${portrait.bgH}px`;
+    }
+  }
 
   const xp = xpProgress(player);
   const pct =
@@ -705,17 +719,12 @@ function setupCameraZoom(scene) {
   const cam = scene.cameras?.main;
   if (!cam) return;
 
-  const clampZoom = (z) => Phaser.Math.Clamp(z, 0.7, 2.1);
+  scene.input.on('wheel', (_pointer, _gameObjects, _deltaX, deltaY) => {
+    if (scene.inBattle || isInInterior(scene)) return;
 
-  // Cando o usuario roda no rato, cambiamos zoom e deixamos que a cámara siga ó xogador.
-  scene.input.on('wheel', (pointer, gameObjects, deltaX, deltaY) => {
-    // Se está en combate/non xogando, non cambiamos o zoom.
-    if (scene.inBattle) return;
-
-    // deltaY < 0 -> zoom in
     const factor = Math.pow(1.0018, -deltaY);
-    const nextZoom = clampZoom(cam.zoom * factor);
-    cam.setZoom(nextZoom);
+    const nextZoom = clampCameraZoom(cam.zoom * factor);
+    zoomCameraAt(cam, nextZoom, cam.midPoint.x, cam.midPoint.y);
   });
 }
 

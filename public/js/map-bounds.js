@@ -79,3 +79,10 @@ export const CORTE_INGLES = {
   lat: 42.862577,
   label: 'El Corte Inglés',
 };
+
+/** Casiña misteriosa — Rúa da Virxe do Rial, 8 (Conxo) */
+export const CASINA_VIRXE_RIAL = {
+  lon: -8.5671,
+  lat: 42.8589,
+  label: 'Casiña misteriosa · Rúa da Virxe do Rial, 8',
+};

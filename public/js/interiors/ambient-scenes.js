@@ -1,5 +1,7 @@
 /** Escenas ambientais (sen icono na cabeza): propósito visual, non combate. */
 
+import { ensureCasinaMalinoisAnims } from './casina-malinois-sprites.js';
+
 function drawKidSmallTexture(g, variant = 0) {
   const shirt = variant === 0 ? 0x42a5f5 : 0xff8a65;
   g.fillStyle(shirt, 1);
@@ -63,6 +65,39 @@ export function spawnKidsPlayingBall(scene, layout, def, state) {
   });
 }
 
+/**
+ * Pastor belga malinois (Forge) — patrulla entre dous puntos do pasillo ou parque.
+ */
+export function spawnMalinoisPatrol(scene, layout, def, state) {
+  ensureCasinaMalinoisAnims(scene);
+  const textureKey = def.textureKey || 'casina-malinois-1';
+  if (!scene.textures.exists(textureKey)) return;
+
+  const a = layout.tileToWorld(def.tx0, def.ty);
+  const b = layout.tileToWorld(def.tx1, def.ty);
+  const x0 = Math.min(a.x, b.x);
+  const x1 = Math.max(a.x, b.x);
+  const y = a.y + (def.yOffset ?? 4);
+
+  const spr = scene.add.sprite(x0, y, textureKey, 0);
+  spr.setOrigin(0.5, 0.82);
+  spr.setScale(def.scale ?? 0.22);
+  spr.setDepth(22);
+  spr.play(`${textureKey}-walk`);
+
+  state.ambientItems.push({
+    kind: 'malinoisPatrol',
+    spr,
+    x0,
+    x1,
+    y,
+    dir: 1,
+    speed: def.speed ?? 22,
+    pauseMs: def.pauseMs ?? 900,
+    pauseUntil: 0,
+  });
+}
+
 function drawBall(gfx, x, y) {
   gfx.fillStyle(0xf5f5f5, 1);
   gfx.fillCircle(x, y, 5);
@@ -77,8 +112,29 @@ function drawBall(gfx, x, y) {
   gfx.strokePath();
 }
 
-export function updateAmbientScenes(state, now) {
+export function updateAmbientScenes(state, now, delta = 16) {
   for (const item of state.ambientItems) {
+    if (item.kind === 'malinoisPatrol') {
+      const spr = item.spr;
+      if (!spr?.active) continue;
+      if (now < item.pauseUntil) continue;
+
+      const step = (item.speed * delta) / 1000;
+      spr.x += item.dir * step;
+      spr.setFlipX(item.dir < 0);
+
+      if (spr.x >= item.x1) {
+        spr.x = item.x1;
+        item.dir = -1;
+        item.pauseUntil = now + item.pauseMs;
+      } else if (spr.x <= item.x0) {
+        spr.x = item.x0;
+        item.dir = 1;
+        item.pauseUntil = now + item.pauseMs;
+      }
+      continue;
+    }
+
     if (item.kind !== 'kidsPlayingBall') continue;
     const t = now * 0.0035 + item.phase;
     const bounce = Math.sin(t);
@@ -103,6 +159,7 @@ export function destroyAmbientItems(state) {
     item.k2?.destroy();
     item.ball?.destroy();
     item.gfx?.destroy();
+    item.spr?.destroy();
   }
   state.ambientItems = [];
 }

@@ -1,0 +1,155 @@
+{
+  "target": "creature",
+  "mode": "walk",
+  "prompt": "",
+  "role": "",
+  "input": "C:\\Users\\Veto\\.cursor\\projects\\c-Users-Veto-Desktop-Santiago-Go\\assets\\malinois-1-raw.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 128,
+  "fit_scale": 0.85,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "walk-1",
+    "walk-2",
+    "walk-3",
+    "walk-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        366,
+        38,
+        496,
+        476
+      ],
+      "edge_touch": false,
+      "output_size": [
+        31,
+        106
+      ],
+      "paste_position": [
+        48,
+        13
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        768,
+        0,
+        1536,
+        512
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        268,
+        38,
+        400,
+        480
+      ],
+      "edge_touch": false,
+      "output_size": [
+        32,
+        107
+      ],
+      "paste_position": [
+        48,
+        12
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        512,
+        768,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        357,
+        33,
+        490,
+        465
+      ],
+      "edge_touch": false,
+      "output_size": [
+        32,
+        105
+      ],
+      "paste_position": [
+        48,
+        14
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        768,
+        512,
+        1536,
+        1024
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        264,
+        18,
+        395,
+        465
+      ],
+      "edge_touch": false,
+      "output_size": [
+        31,
+        108
+      ],
+      "paste_position": [
+        48,
+        11
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

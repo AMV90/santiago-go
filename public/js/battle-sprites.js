@@ -22,18 +22,30 @@ const BATTLE_FACING = {
   enemy: 'left',
 };
 
-export function getLpcBattlePortrait(lpcId, facing = 'down', displayPx = BATTLE_SPRITE_PX.enemy) {
+/** Punto de enfoque dentro do frame 64×64 (0–1). */
+const PORTRAIT_FOCUS = {
+  right: { x: 0.54, y: 0.42 },
+  left: { x: 0.46, y: 0.42 },
+  down: { x: 0.5, y: 0.4 },
+  up: { x: 0.5, y: 0.58 },
+};
+
+export function getLpcBattlePortrait(lpcId, facing = 'down', displayPx = BATTLE_SPRITE_PX.enemy, options = {}) {
   const manifest = getLpcManifest();
   const def = getCharacterDef(manifest, lpcId);
   if (!def?.path) return null;
 
-  const scale = displayPx / FRAME;
+  const zoom = options.zoom ?? 1;
+  const scale = (displayPx / FRAME) * zoom;
   const dirs = LPC_WALK_DIRS;
   const frame = dirs[facing]?.start ?? dirs.down?.start ?? 18;
   const col = frame % 9;
   const row = Math.floor(frame / 9);
-  const posX = -col * FRAME * scale;
-  const posY = -row * FRAME * scale;
+  const focus = options.focus ?? PORTRAIT_FOCUS[facing] ?? PORTRAIT_FOCUS.down;
+  const focusX = col * FRAME + FRAME * focus.x;
+  const focusY = row * FRAME + FRAME * focus.y;
+  const posX = displayPx / 2 - focusX * scale;
+  const posY = displayPx / 2 - focusY * scale;
 
   return {
     url: def.path,
@@ -43,6 +55,14 @@ export function getLpcBattlePortrait(lpcId, facing = 'down', displayPx = BATTLE_
     bgH: SHEET_H * scale,
     displayPx,
   };
+}
+
+/** Retrato pequeno do HUD (barra PS) — zoom á cara. */
+export function getLpcHudPortrait(lpcId = 'player', displayPx = 40) {
+  return getLpcBattlePortrait(lpcId, 'right', displayPx, {
+    zoom: 1.85,
+    focus: { x: 0.52, y: 0.3 },
+  });
 }
 
 export function renderBattleSprite(role, context = {}) {

@@ -8,9 +8,11 @@ import { resetMovementState } from '../movement-controller.js';
 import { clearNavigation } from '../path-navigation.js';
 import {
   spawnKidsPlayingBall,
+  spawnMalinoisPatrol,
   updateAmbientScenes,
   destroyAmbientItems,
 } from './ambient-scenes.js';
+import { queueCasinaMalinoisAssets, ensureCasinaMalinoisAnims } from './casina-malinois-sprites.js';
 
 const TEXTURE_CACHE = new Map();
 
@@ -226,9 +228,18 @@ export function createInteriorActors(placeId, layout, actorsDef) {
     }
 
     if (ambientCfg?.scenes?.length) {
+      const needsMalinois = ambientCfg.scenes.some((d) => d.kind === 'malinoisPatrol');
+      if (needsMalinois) {
+        queueCasinaMalinoisAssets(scene);
+        if (scene.load.list.size && !scene.load.isLoading()) scene.load.start();
+        ensureCasinaMalinoisAnims(scene);
+      }
       for (const def of ambientCfg.scenes) {
         if (def.kind === 'kidsPlayingBall') {
           spawnKidsPlayingBall(scene, layout, def, state);
+        }
+        if (def.kind === 'malinoisPatrol') {
+          spawnMalinoisPatrol(scene, layout, def, state);
         }
       }
     }
@@ -292,6 +303,7 @@ export function createInteriorActors(placeId, layout, actorsDef) {
       item.k2?.setVisible(visible);
       item.ball?.setVisible(visible);
       item.gfx?.setVisible(visible);
+      item.spr?.setVisible(visible);
     }
     if (state.receptionist?.spr) {
       state.receptionist.spr.setVisible(visible);
@@ -326,7 +338,7 @@ export function createInteriorActors(placeId, layout, actorsDef) {
     }
 
     if (state.ambientItems.length) {
-      updateAmbientScenes(state, performance.now());
+      updateAmbientScenes(state, performance.now(), delta);
     }
 
     if (receptionistCfg && state.receptionist) {
