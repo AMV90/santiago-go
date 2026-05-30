@@ -1,20 +1,18 @@
 {
   "pipeline": "generate2dsprite",
-  "target": "creature",
-  "mode": "walk",
-  "prompt": "Belgian Malinois guard dog, top-down RPG, fawn tan and black saddle coat",
-  "rows": 2,
-  "cols": 2,
+  "target": "player",
+  "mode": "player_sheet",
+  "prompt": "Belgian Malinois guard dog fawn/black, top-down RPG, 4-direction walk",
+  "rows": 4,
+  "cols": 4,
   "cell_size": 128,
   "align": "feet",
   "shared_scale": true,
-  "source_raw": "malinois-2-raw.png",
-  "outputs": [
-    "sheet-transparent.png",
-    "walk-1.png",
-    "walk-2.png",
-    "walk-3.png",
-    "walk-4.png",
-    "animation.gif"
-  ]
+  "layout": {
+    "down": "frames 0-3",
+    "left": "frames 4-7",
+    "right": "frames 8-11",
+    "up": "frames 12-15"
+  },
+  "outputs": ["sheet-transparent.png", "player_sheet-1..16.png", "animation.gif"]
 }

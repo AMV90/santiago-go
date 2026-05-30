@@ -1,6 +1,22 @@
 /** Escenas ambientais (sen icono na cabeza): propósito visual, non combate. */
 
-import { ensureCasinaMalinoisAnims } from './casina-malinois-sprites.js';
+import { ensureCasinaMalinoisAnims, malinoisWalkAnimKey, MALINOIS_WALK_DIRS } from './casina-malinois-sprites.js';
+
+function playMalinoisFacing(spr, textureKey, facing, { idle = false } = {}) {
+  spr.setFlipX(false);
+  if (idle) {
+    spr.anims.stop();
+    spr.setFrame(MALINOIS_WALK_DIRS.down.start);
+    return;
+  }
+  const animKey = malinoisWalkAnimKey(textureKey, facing);
+  if (spr.anims.currentAnim?.key !== animKey) spr.play(animKey);
+}
+
+function malinoisMoveFacing(item) {
+  if (item.axis === 'y') return item.dir > 0 ? 'down' : 'up';
+  return item.dir > 0 ? 'right' : 'left';
+}
 
 function drawKidSmallTexture(g, variant = 0) {
   const shirt = variant === 0 ? 0x42a5f5 : 0xff8a65;
@@ -73,24 +89,46 @@ export function spawnMalinoisPatrol(scene, layout, def, state) {
   const textureKey = def.textureKey || 'casina-malinois-1';
   if (!scene.textures.exists(textureKey)) return;
 
-  const a = layout.tileToWorld(def.tx0, def.ty);
-  const b = layout.tileToWorld(def.tx1, def.ty);
-  const x0 = Math.min(a.x, b.x);
-  const x1 = Math.max(a.x, b.x);
-  const y = a.y + (def.yOffset ?? 4);
+  const a = layout.tileToWorld(def.tx0, def.ty0 ?? def.ty);
+  const b = layout.tileToWorld(def.tx1, def.ty1 ?? def.ty);
+  const axis = def.ty0 != null && def.ty1 != null && def.ty0 !== def.ty1 ? 'y' : 'x';
 
-  const spr = scene.add.sprite(x0, y, textureKey, 0);
+  let x0;
+  let x1;
+  let y0;
+  let y1;
+  let startX;
+  let startY;
+
+  if (axis === 'y') {
+    x0 = x1 = a.x;
+    y0 = Math.min(a.y, b.y);
+    y1 = Math.max(a.y, b.y);
+    startX = a.x;
+    startY = y0;
+  } else {
+    x0 = Math.min(a.x, b.x);
+    x1 = Math.max(a.x, b.x);
+    y0 = y1 = a.y + (def.yOffset ?? 4);
+    startX = x0;
+    startY = y0;
+  }
+
+  const spr = scene.add.sprite(startX, startY, textureKey, 0);
   spr.setOrigin(0.5, 0.82);
   spr.setScale(def.scale ?? 0.22);
   spr.setDepth(22);
-  spr.play(`${textureKey}-walk`);
+  spr.play(malinoisWalkAnimKey(textureKey, 'down'));
 
   state.ambientItems.push({
     kind: 'malinoisPatrol',
     spr,
+    textureKey,
+    axis,
     x0,
     x1,
-    y,
+    y0,
+    y1,
     dir: 1,
     speed: def.speed ?? 22,
     pauseMs: def.pauseMs ?? 900,
@@ -117,20 +155,37 @@ export function updateAmbientScenes(state, now, delta = 16) {
     if (item.kind === 'malinoisPatrol') {
       const spr = item.spr;
       if (!spr?.active) continue;
-      if (now < item.pauseUntil) continue;
+
+      if (now < item.pauseUntil) {
+        playMalinoisFacing(spr, item.textureKey, 'down', { idle: true });
+        continue;
+      }
 
       const step = (item.speed * delta) / 1000;
-      spr.x += item.dir * step;
-      spr.setFlipX(item.dir < 0);
+      playMalinoisFacing(spr, item.textureKey, malinoisMoveFacing(item));
 
-      if (spr.x >= item.x1) {
-        spr.x = item.x1;
-        item.dir = -1;
-        item.pauseUntil = now + item.pauseMs;
-      } else if (spr.x <= item.x0) {
-        spr.x = item.x0;
-        item.dir = 1;
-        item.pauseUntil = now + item.pauseMs;
+      if (item.axis === 'y') {
+        spr.y += item.dir * step;
+        if (spr.y >= item.y1) {
+          spr.y = item.y1;
+          item.dir = -1;
+          item.pauseUntil = now + item.pauseMs;
+        } else if (spr.y <= item.y0) {
+          spr.y = item.y0;
+          item.dir = 1;
+          item.pauseUntil = now + item.pauseMs;
+        }
+      } else {
+        spr.x += item.dir * step;
+        if (spr.x >= item.x1) {
+          spr.x = item.x1;
+          item.dir = -1;
+          item.pauseUntil = now + item.pauseMs;
+        } else if (spr.x <= item.x0) {
+          spr.x = item.x0;
+          item.dir = 1;
+          item.pauseUntil = now + item.pauseMs;
+        }
       }
       continue;
     }
